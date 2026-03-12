@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from dotenv import load_dotenv
 import os
+import psycopg
 
 from pathlib import Path
 
@@ -17,3 +18,20 @@ def read_root():
 def config_check():
     api_key = os.getenv("GOOGLE_API_KEY")
     return {"gemini_key_loaded": bool(api_key)}
+
+@app.get("/db-check")
+def db_check():
+    database_url = os.getenv("DATABASE_URL")
+    return {"database_url_loaded": bool(database_url)}
+
+@app.get("/db-connect")
+def db_connect():
+    database_url = os.getenv("DATABASE_URL")
+    try:
+        with psycopg.connect(database_url) as conn:
+            with conn.cursor() as cur:
+                cur.execute("SELECT version();")
+                version = cur.fetchone()[0]
+        return {"connected": True, "version": version}
+    except Exception as e:
+        return {"connected": False, "error": str(e)}
