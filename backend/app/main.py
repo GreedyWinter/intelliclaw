@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from dotenv import load_dotenv
+from backend.app.db import get_connection
 import os
 import psycopg
 
@@ -26,9 +27,8 @@ def db_check():
 
 @app.get("/db-connect")
 def db_connect():
-    database_url = os.getenv("DATABASE_URL")
     try:
-        with psycopg.connect(database_url) as conn:
+        with get_connection() as conn:
             with conn.cursor() as cur:
                 cur.execute("SELECT version();")
                 version = cur.fetchone()[0]
