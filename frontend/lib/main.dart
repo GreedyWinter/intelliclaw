@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'projects_page.dart';
 
 void main() {
   runApp(const IntelliclawApp());
@@ -13,7 +14,7 @@ class IntelliclawApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Intelliclaw',
-      home: const HomePage(),
+      home: const ProjectsPage(),
     );
   }
 }
