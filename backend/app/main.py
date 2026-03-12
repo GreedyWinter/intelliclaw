@@ -35,3 +35,22 @@ def db_connect():
         return {"connected": True, "version": version}
     except Exception as e:
         return {"connected": False, "error": str(e)}
+    
+@app.post("/projects/{name}")
+def create_project(name: str):
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "INSERT INTO projects (name) VALUES (%s) RETURNING id, name, created_at;",
+                    (name,)
+                )
+                row = cur.fetchone()
+            conn.commit()
+        return {
+            "id": row[0],
+            "name": row[1],
+            "created_at": str(row[2])
+        }
+    except Exception as e:
+        return {"error": str(e)}
