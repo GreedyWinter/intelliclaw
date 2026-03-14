@@ -68,3 +68,24 @@ def get_projects():
         ]
     except Exception as e:
         return {"error": str(e)}
+    
+@app.get("/documents")
+def get_documents():
+    try:
+        with get_connection() as conn:
+            with conn.cursor() as cur:
+                cur.execute(
+                    "SELECT id, project_id, filename, created_at FROM documents ORDER BY id;"
+                )
+                rows = cur.fetchall()
+        return [
+            {
+                "id": row[0],
+                "project_id": row[1],
+                "filename": row[2],
+                "created_at": str(row[3]),
+            }
+            for row in rows
+        ]
+    except Exception as e:
+        return {"error": str(e)}
