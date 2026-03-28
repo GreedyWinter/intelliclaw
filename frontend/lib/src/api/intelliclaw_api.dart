@@ -51,6 +51,58 @@ class IntelliclawApi {
     return Project.fromJson(jsonDecode(response.body) as Map<String, dynamic>);
   }
 
+  Future<ProjectDetail> fetchProjectDetail(int projectId) async {
+    final response = await _client.get(_uri('/projects/$projectId'));
+    _ensureSuccess(response);
+    return ProjectDetail.fromJson(
+      jsonDecode(response.body) as Map<String, dynamic>,
+    );
+  }
+
+  Future<ProjectDocument> uploadDocument({
+    required int projectId,
+    required String filename,
+    required List<int> bytes,
+    String? contentType,
+  }) async {
+    final request = http.MultipartRequest(
+      'POST',
+      _uri('/projects/$projectId/documents'),
+    );
+    request.files.add(
+      http.MultipartFile.fromBytes(
+        'file',
+        bytes,
+        filename: filename,
+      ),
+    );
+
+    final streamedResponse = await request.send();
+    final response = await http.Response.fromStream(streamedResponse);
+    _ensureSuccess(response);
+    return ProjectDocument.fromJson(
+      jsonDecode(response.body) as Map<String, dynamic>,
+    );
+  }
+
+  Future<AnalysisRun> createAnalysisRun({
+    required int projectId,
+    String? prompt,
+  }) async {
+    final response = await _client.post(
+      _uri('/projects/$projectId/analysis-runs'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'prompt': prompt ??
+            'Analyze uploaded competitor PDFs for feature gaps and produce a comparison summary plus output artifacts.',
+      }),
+    );
+    _ensureSuccess(response);
+    return AnalysisRun.fromJson(
+      jsonDecode(response.body) as Map<String, dynamic>,
+    );
+  }
+
   void _ensureSuccess(http.Response response) {
     if (response.statusCode >= 200 && response.statusCode < 300) {
       return;

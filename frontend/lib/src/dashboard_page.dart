@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'api/intelliclaw_api.dart';
 import 'models.dart';
+import 'project_detail_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key, this.api});
@@ -212,6 +213,7 @@ class _DashboardPageState extends State<DashboardPage> {
                           child: _ProjectsCard(
                             isLoading: _isLoading,
                             projects: _projects,
+                            api: _api,
                           ),
                         ),
                       ],
@@ -358,10 +360,12 @@ class _ProjectsCard extends StatelessWidget {
   const _ProjectsCard({
     required this.isLoading,
     required this.projects,
+    required this.api,
   });
 
   final bool isLoading;
   final List<Project> projects;
+  final IntelliclawApi api;
 
   @override
   Widget build(BuildContext context) {
@@ -404,46 +408,61 @@ class _ProjectsCard extends StatelessWidget {
                   color: const Color(0xFFF9FBFF),
                   border: Border.all(color: const Color(0xFFE1E8F3)),
                 ),
-                child: Row(
-                  children: [
-                    const CircleAvatar(
-                      backgroundColor: Color(0xFFE4ECFF),
-                      foregroundColor: Color(0xFF0B5FFF),
-                      child: Icon(Icons.folder_outlined),
-                    ),
-                    const SizedBox(width: 16),
-                    Expanded(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                child: InkWell(
+                  borderRadius: BorderRadius.circular(20),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute<void>(
+                        builder: (context) => ProjectDetailPage(
+                          projectId: project.id,
+                          api: api,
+                        ),
+                      ),
+                    );
+                  },
+                  child: Row(
+                    children: [
+                      const CircleAvatar(
+                        backgroundColor: Color(0xFFE4ECFF),
+                        foregroundColor: Color(0xFF0B5FFF),
+                        child: Icon(Icons.folder_outlined),
+                      ),
+                      const SizedBox(width: 16),
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              project.name,
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text('Project #${project.id}'),
+                          ],
+                        ),
+                      ),
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
                         children: [
                           Text(
-                            project.name,
-                            style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                                  fontWeight: FontWeight.w700,
+                            '${project.documentCount} documents',
+                            style: Theme.of(context).textTheme.labelLarge?.copyWith(
+                                  color: const Color(0xFF43556F),
                                 ),
                           ),
                           const SizedBox(height: 4),
-                          Text('Project #${project.id}'),
+                          Text(
+                            project.createdAt,
+                            style: Theme.of(context).textTheme.bodySmall,
+                          ),
                         ],
                       ),
-                    ),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.end,
-                      children: [
-                        Text(
-                          '${project.documentCount} documents',
-                          style: Theme.of(context).textTheme.labelLarge?.copyWith(
-                                color: const Color(0xFF43556F),
-                              ),
-                        ),
-                        const SizedBox(height: 4),
-                        Text(
-                          project.createdAt,
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
-                      ],
-                    ),
-                  ],
+                      const SizedBox(width: 12),
+                      const Icon(Icons.chevron_right),
+                    ],
+                  ),
                 ),
               ),
             ),

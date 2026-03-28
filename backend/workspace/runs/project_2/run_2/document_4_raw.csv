@@ -1,0 +1,174 @@
+source_document,page,feature
+video-security-cd22-datasheet.pdf,1,Dome Series
+video-security-cd22-datasheet.pdf,1,CD22 Indoor Dome Camera
+video-security-cd22-datasheet.pdf,1,Essential 3MP Coverage for
+video-security-cd22-datasheet.pdf,1,Monitoring Indoor Environments
+video-security-cd22-datasheet.pdf,1,Overview
+video-security-cd22-datasheet.pdf,1,The CD22 dome camera provides essential 3MP coverage in a variety of indoor spaces. With its 1 / 2.8” progressive CMOS
+video-security-cd22-datasheet.pdf,1,"image sensor and 10 meters / 33 feet of IR range, the CD22 offers reliable visibility for organizations seeking quick and"
+video-security-cd22-datasheet.pdf,1,scalable deployments. The CD22 includes an onboard CV25S Ambarella processor to detect and alert on the presence of
+video-security-cd22-datasheet.pdf,1,people and vehicles. The CD22 is optimized for covering spaces like storage closets and store aisles where supplemental
+video-security-cd22-datasheet.pdf,1,visibility is necessary.
+video-security-cd22-datasheet.pdf,1,"The CD22’s sleek design and IK08 impact rating enable organizations to deploy a durable, tamper-resistant camera while"
+video-security-cd22-datasheet.pdf,1,"also keeping aesthetics top-of-mind. Installation is simple and intuitive, and setup is easy to track with an LED status"
+video-security-cd22-datasheet.pdf,1,indicator. The included mount plate additionally allows the camera to be mounted to a wall or ceiling without any
+video-security-cd22-datasheet.pdf,1,additional hardware.
+video-security-cd22-datasheet.pdf,1,Key features
+video-security-cd22-datasheet.pdf,1,Clear image quality Hybrid cloud architecture
+video-security-cd22-datasheet.pdf,1,• 1 / 2.8” progressive CMOS image sensor • Onboard storage and processing for reduced
+video-security-cd22-datasheet.pdf,1,• 3MP resolution bandwidth consumption and coverage at scale
+video-security-cd22-datasheet.pdf,1,• 10 meters / 33 feet of IR range for nighttime viewing • 30 - 90 days (256GB - 768GB) of onboard storage
+video-security-cd22-datasheet.pdf,1,• Redundant cloud backup and unlimited cloud-based
+video-security-cd22-datasheet.pdf,1,archiving of footage
+video-security-cd22-datasheet.pdf,1,Essential detection Easy installation
+video-security-cd22-datasheet.pdf,1,• Onboard CV25S Ambarella processor enables people • Mounting plate and screw pack included
+video-security-cd22-datasheet.pdf,1,and vehicle detection • LED light status indicator
+video-security-cd22-datasheet.pdf,1,wwwwww..vveerrkkaaddaa..ccoomm 10122254 ssaalleess@@vveerrkkaaddaa..ccoomm 11
+video-security-cd22-datasheet.pdf,2,Dome Series
+video-security-cd22-datasheet.pdf,2,CD22
+video-security-cd22-datasheet.pdf,2,Tech Specs
+video-security-cd22-datasheet.pdf,2,Camera features
+video-security-cd22-datasheet.pdf,2,"Image Sensor 1 / 2.8"" Progressive CMOS Shutter Speed 1 / 30 sec. to 1 / 10,000 sec."
+video-security-cd22-datasheet.pdf,2,Sensor Resolution1 3MP (2048 x 1536) Day/Night IR-cut fi lter for day and night function
+video-security-cd22-datasheet.pdf,2,Lens Type Fixed IR Cut Filter Yes
+video-security-cd22-datasheet.pdf,2,Focal Length 2.8mm IR Range 10m / 33ft
+video-security-cd22-datasheet.pdf,2,0.009 lux @ F1.9 (Color)
+video-security-cd22-datasheet.pdf,2,Aperture F1.6 Minimum Illumination
+video-security-cd22-datasheet.pdf,2,0 lux with IR Illuminators on
+video-security-cd22-datasheet.pdf,2,Capacity: From 256GB to 768GB
+video-security-cd22-datasheet.pdf,2,Iris Fixed Onboard Storage
+video-security-cd22-datasheet.pdf,2,"Card: MicroSD, SDXC"
+video-security-cd22-datasheet.pdf,2,Horizontal: 97° (78°)
+video-security-cd22-datasheet.pdf,2,Field of View (after LDC2) Vertical: 71° (63°) CPU Ambarella CV25S88
+video-security-cd22-datasheet.pdf,2,Diagonal: 128° (91°)
+video-security-cd22-datasheet.pdf,2,Tilt: 60°
+video-security-cd22-datasheet.pdf,2,Sensor Movement Pan: 355°
+video-security-cd22-datasheet.pdf,2,Rotation: 180°
+video-security-cd22-datasheet.pdf,2,Standard video settings
+video-security-cd22-datasheet.pdf,2,"Compression H.265, H.264 Historical Video Settings Adaptive quality1"
+video-security-cd22-datasheet.pdf,2,"High quality (HQ): Up to 3,000 Kbps (default)"
+video-security-cd22-datasheet.pdf,2,Frame Rate3 24fps Live Streaming Settings
+video-security-cd22-datasheet.pdf,2,Standard quality (SQ): Up to 600 Kbps
+video-security-cd22-datasheet.pdf,2,Standard audio settings
+video-security-cd22-datasheet.pdf,2,Audio Not Supported
+video-security-cd22-datasheet.pdf,2,Power and network
+video-security-cd22-datasheet.pdf,2,With IR: IEEE 802.3af Type 1 PoE
+video-security-cd22-datasheet.pdf,2,RJ-45 cable connector for network/PoE
+video-security-cd22-datasheet.pdf,2,Power Input4 Without IR: IEEE 802.3af Type 1 PoE Connectivity
+video-security-cd22-datasheet.pdf,2,connection; 10 / 100 Mbps
+video-security-cd22-datasheet.pdf,2,Extended temperature range: N/A
+video-security-cd22-datasheet.pdf,2,RTSP 1.0
+video-security-cd22-datasheet.pdf,2,"With IR: 37-57V, 0.23-0.15A, 8.6W"
+video-security-cd22-datasheet.pdf,2,RFC 2326
+video-security-cd22-datasheet.pdf,2,"Power Consumption4 Without IR: 37-57V, 0.11-0.07A, 4.3W RTSP"
+video-security-cd22-datasheet.pdf,2,Max concurrent streams: 2
+video-security-cd22-datasheet.pdf,2,Extended temperature range: N/A
+video-security-cd22-datasheet.pdf,2,Audio support: No
+video-security-cd22-datasheet.pdf,2,"1. All our cameras record in ""adaptive quality,"" capturing both standard (SQ) and high quality (HQ) streams. SQ video is stored up to the amount of retention specifi ed by"
+video-security-cd22-datasheet.pdf,2,"the customer. The amount of HQ video stored on the camera will depend on the amount of motion detected by the camera over time. To learn more, visit our website:"
+video-security-cd22-datasheet.pdf,2,https://docs.verkada.com/docs/adaptive-quality-recording-whitepaper.pdf
+video-security-cd22-datasheet.pdf,2,"2. Lens Distortion Correction (LDC) crops the sensor fi eld of view to deliver a rectifi ed, undistorted output image."
+video-security-cd22-datasheet.pdf,2,3. Frame rate can be adjusted by support.
+video-security-cd22-datasheet.pdf,2,4. Extended temperature range includes operating temperatures below -10°C / 14°F and assumes IR will be enabled.
+video-security-cd22-datasheet.pdf,2,www.verkada.com sales@verkada.com 2
+video-security-cd22-datasheet.pdf,3,Dome Series
+video-security-cd22-datasheet.pdf,3,CD22
+video-security-cd22-datasheet.pdf,3,Tech Specs
+video-security-cd22-datasheet.pdf,3,General
+video-security-cd22-datasheet.pdf,3,Operating Temperature -10°C to 50°C / 14°F to 122°F LED Indicator System power and status indicator
+video-security-cd22-datasheet.pdf,3,Humidity 0 to 90% Warranty 5 Years
+video-security-cd22-datasheet.pdf,3,"FCC, ICES, CE, UKCA, RCM, CB,"
+video-security-cd22-datasheet.pdf,3,"VCCI, KCC, BIS, NOM, UL/cUL/IEC Setup guide, T10 security torx screwdriver,"
+video-security-cd22-datasheet.pdf,3,Certifi cations Included Accessories
+video-security-cd22-datasheet.pdf,3,"62368-1, IK08 impact rating, FY2019 screw pack, mounting template"
+video-security-cd22-datasheet.pdf,3,NDAA compliant
+video-security-cd22-datasheet.pdf,3,Mechanical
+video-security-cd22-datasheet.pdf,3,Camera: 608g / 21.45oz
+video-security-cd22-datasheet.pdf,3,"Weight Body Aluminum, plastic dome trim"
+video-security-cd22-datasheet.pdf,3,Mountplate: 140g / 4.94oz
+video-security-cd22-datasheet.pdf,3,"Ø: 146.0mm / 5.75in, H: 104.3mm / 4.11in"
+video-security-cd22-datasheet.pdf,3,with mount plate
+video-security-cd22-datasheet.pdf,3,Dimensions
+video-security-cd22-datasheet.pdf,3,"Ø: 146.0mm / 5.75in, H: 99.8mm / 3.93in"
+video-security-cd22-datasheet.pdf,3,without mount plate
+video-security-cd22-datasheet.pdf,3,Dimensions
+video-security-cd22-datasheet.pdf,3,Software capabilities
+video-security-cd22-datasheet.pdf,3,"Camera status, motion detection,"
+video-security-cd22-datasheet.pdf,3,"Cloud backup, confi gurable retention days,"
+video-security-cd22-datasheet.pdf,3,"people detection, vehicle detection,"
+video-security-cd22-datasheet.pdf,3,"Alerts Streaming and Storage selectable storage location, low bandwidth"
+video-security-cd22-datasheet.pdf,3,"crowd detection, line-crossing"
+video-security-cd22-datasheet.pdf,3,"mode, timelapse, RTSP"
+video-security-cd22-datasheet.pdf,3,"detection, loitering detection"
+video-security-cd22-datasheet.pdf,3,"Live links, live face blur, privacy regions,"
+video-security-cd22-datasheet.pdf,3,"People Analytics Motion search, trajectory analysis Sharing and Privacy"
+video-security-cd22-datasheet.pdf,3,audit log
+video-security-cd22-datasheet.pdf,3,"Vehicle Analytics Motion search, trajectory analysis"
+video-security-cd22-datasheet.pdf,3,www.verkada.com sales@verkada.com 3
+video-security-cd22-datasheet.pdf,3,104.3mm
+video-security-cd22-datasheet.pdf,3,/
+video-security-cd22-datasheet.pdf,3,4.11in
+video-security-cd22-datasheet.pdf,3,146.0mm / 5.75in
+video-security-cd22-datasheet.pdf,4,Dome Series
+video-security-cd22-datasheet.pdf,4,Ordering Information
+video-security-cd22-datasheet.pdf,4,CD22 pricing
+video-security-cd22-datasheet.pdf,4,Maximum People/
+video-security-cd22-datasheet.pdf,4,Onboard Cost
+video-security-cd22-datasheet.pdf,4,Model Number MP1 WDR Lens IR Range Storage SQ Onboard Vehicle (MSRP) USD
+video-security-cd22-datasheet.pdf,4,Retention1 Analytics
+video-security-cd22-datasheet.pdf,4,CD22-256-HW 3MP Fixed 10m / 33ft 256GB 30 Days – $599
+video-security-cd22-datasheet.pdf,4,CD22-512-HW 3MP Fixed 10m / 33ft 512GB 60 Days – $999
+video-security-cd22-datasheet.pdf,4,"CD22-768-HW 3MP Fixed 10m / 33ft 768GB 90 Days – $1,399"
+video-security-cd22-datasheet.pdf,4,"1. All our cameras record in ""adaptive quality,"" capturing both standard and high quality streams. Standard quality (SQ) video is stored up to the amount of retention specified by"
+video-security-cd22-datasheet.pdf,4,"the customer. The amount of high quality video stored on the camera will depend on the amount of motion detected by the camera over time. To learn more, visit our website:"
+video-security-cd22-datasheet.pdf,4,https://docs.verkada.com/docs/adaptive-quality-recording-whitepaper.pdf
+video-security-cd22-datasheet.pdf,4,www.verkada.com sales@verkada.com 4
+video-security-cd22-datasheet.pdf,5,Dome Series
+video-security-cd22-datasheet.pdf,5,Ordering Information
+video-security-cd22-datasheet.pdf,5,Video Security Cloud License pricing (New/Capacity Increase)
+video-security-cd22-datasheet.pdf,5,Model Number Description Cost (MSRP) USD
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-1Y-CAP 1-Year Camera License, Capacity Increase $219"
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-3Y-CAP 3-Year Camera License, Capacity Increase $599"
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-5Y-CAP 5-Year Camera License, Capacity Increase $999"
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-10Y-CAP 10-Year Camera License, Capacity Increase $1,999"
+video-security-cd22-datasheet.pdf,5,Video Security Cloud License pricing (Renewal)
+video-security-cd22-datasheet.pdf,5,Model Number Description Cost (MSRP) USD
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-1Y-RNW 1-Year Camera License, Renewal $219"
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-3Y-RNW 3-Year Camera License, Renewal $599"
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-5Y-RNW 5-Year Camera License, Renewal $999"
+video-security-cd22-datasheet.pdf,5,"LIC-CAM-10Y-RNW 10-Year Camera License, Renewal $1,999"
+video-security-cd22-datasheet.pdf,5,www.verkada.com sales@verkada.com 5
+video-security-cd22-datasheet.pdf,6,Dome Series
+video-security-cd22-datasheet.pdf,6,Ordering Information
+video-security-cd22-datasheet.pdf,6,Accessories pricing
+video-security-cd22-datasheet.pdf,6,Model Number Description Cost (MSRP) USD
+video-security-cd22-datasheet.pdf,6,ACC-CAM-SHIELD-1 Camera Weather Shield $79
+video-security-cd22-datasheet.pdf,6,ACC-MNT-ANGLE-1 Angle Mount $149
+video-security-cd22-datasheet.pdf,6,ACC-MNT-ARM-1 Arm Mount $99
+video-security-cd22-datasheet.pdf,6,ACC-MNT-CJBOX-1 Circle Junction Box Mount $109
+video-security-cd22-datasheet.pdf,6,ACC-MNT-CLIP-1 Tile Clip Mount $99
+video-security-cd22-datasheet.pdf,6,ACC-MNT-CORNER-1 Corner Mount $199
+video-security-cd22-datasheet.pdf,6,ACC-MNT-LBRAC-1 L-Bracket Mount $129
+video-security-cd22-datasheet.pdf,6,ACC-MNT-PEND-1 Pendant Cap Mount $69
+video-security-cd22-datasheet.pdf,6,ACC-MNT-POLE-1 Pole Mount $209
+video-security-cd22-datasheet.pdf,6,ACC-MNT-REC-2 Recess Ceiling Mount $149
+video-security-cd22-datasheet.pdf,6,"INJ-POE-PLUS PoE Plus (802.3at Type 2) Injector, GigE $129"
+video-security-cd22-datasheet.pdf,6,www.verkada.com sales@verkada.com 6
+video-security-cd22-datasheet.pdf,7,Dome Series
+video-security-cd22-datasheet.pdf,7,Ordering Information
+video-security-cd22-datasheet.pdf,7,Viewing Station pricing
+video-security-cd22-datasheet.pdf,7,Model Number Description Cost (MSRP) USD
+video-security-cd22-datasheet.pdf,7,VX52-HW VX52 Viewing Station $499
+video-security-cd22-datasheet.pdf,7,Viewing Station License pricing (New/Capacity Increase)
+video-security-cd22-datasheet.pdf,7,Model Number Description Cost (MSRP) USD
+video-security-cd22-datasheet.pdf,7,"LIC-VX-1Y-CAP 1-Year Viewing Station License, Capacity Increase $499"
+video-security-cd22-datasheet.pdf,7,"LIC-VX-3Y-CAP 3-Year Viewing Station License, Capacity Increase $1,299"
+video-security-cd22-datasheet.pdf,7,"LIC-VX-5Y-CAP 5-Year Viewing Station License, Capacity Increase $1,999"
+video-security-cd22-datasheet.pdf,7,"LIC-VX-10Y-CAP 10-Year Viewing Station License, Capacity Increase $3,999"
+video-security-cd22-datasheet.pdf,7,Viewing Station License pricing (Renewal)
+video-security-cd22-datasheet.pdf,7,Model Number Description Cost (MSRP) USD
+video-security-cd22-datasheet.pdf,7,"LIC-VX-1Y-RNW 1-Year Viewing Station License, Renewal $499"
+video-security-cd22-datasheet.pdf,7,"LIC-VX-3Y-RNW 3-Year Viewing Station License, Renewal $1,299"
+video-security-cd22-datasheet.pdf,7,"LIC-VX-5Y-RNW 5-Year Viewing Station License, Renewal $1,999"
+video-security-cd22-datasheet.pdf,7,"LIC-VX-10Y-RNW 10-Year Viewing Station License, Renewal $3,999"
+video-security-cd22-datasheet.pdf,7,www.verkada.com sales@verkada.com 7

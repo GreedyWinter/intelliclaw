@@ -1,0 +1,321 @@
+source_document,page,feature,normalized_feature
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,Datasheet,datasheet
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,AXISM3905-RDomeCamera,axism3905-rdomecamera
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,AXIS M3905-R Dome Camera,axis m3905-r dome camera
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,For indoor surveillance onboard buses,for indoor surveillance onboard buses
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,This compact and discreet 2 MP onboard camera for indoor surveillance complies with transportation-industry,this compact and discreet 2 mp onboard camera for indoor surveillance complies with transportation-industry
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,"regulations including fire-safety for buses. It can withstand vibrations and a wide range of temperatures. Additionally,","regulations including fire-safety for buses. it can withstand vibrations and a wide range of temperatures. additionally,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,with AXIS TP3826-E housing this dome camera can be mounted on the outside of a bus. Thanks to Lightfinder and,with axis tp3826-e housing this dome camera can be mounted on the outside of a bus. thanks to lightfinder and
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,"Forensic WDR, it provides details even in challenging light conditions. With traffic light mode, it can distinguish the","forensic wdr, it provides details even in challenging light conditions. with traffic light mode, it can distinguish the"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,coloroftrafficlightsindarkscenes.OptionalM12lensesareavailabletoadjustfieldofviewforcustomizedmonitoring,coloroftrafficlightsindarkscenes.optionalm12lensesareavailabletoadjustfieldofviewforcustomizedmonitoring
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,purposes.,purposes.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,"> Compact,ruggeddesign","> compact,ruggeddesign"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,> Indoorcamera,> indoorcamera
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,> 88°Horizontalfieldofview,> 88°horizontalfieldofview
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,> LightfinderandForensicWDR,> lightfinderandforensicwdr
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,1,> TrafficLightmode,> trafficlightmode
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,AXIS M3905-R Dome Camera,axis m3905-r dome camera
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Variants,variants
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Video,video
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,AXISM3905-RRJ453.6mm,axism3905-rrj453.6mm
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,AXISM3905-RM123.6mm,axism3905-rm123.6mm
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,AXISM3905-RRJ452.8mm Videocompression,axism3905-rrj452.8mm videocompression
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,AXISM3905-RM122.8mm H.264(MPEG-4Part10/AVC)MainandHighProfiles,axism3905-rm122.8mm h.264(mpeg-4part10/avc)mainandhighprofiles
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,H.265(MPEG-HPart2/HEVC)MainProfile,h.265(mpeg-hpart2/hevc)mainprofile
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Camera MotionJPEG,camera motionjpeg
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Imagesensor Resolution,imagesensor resolution
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,1/2.9”ProgressivescanRGBCMOS 16:9:1920x1080to640X360,1/2.9”progressivescanrgbcmos 16:9:1920x1080to640x360
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Pixelsize2.8µm 16:10:1280x800to640x400,pixelsize2.8µm 16:10:1280x800to640x400
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,4:3:1280x960to320x240,4:3:1280x960to320x240
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Lens,lens
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"3.6mm,F2.0: Frame rate","3.6mm,f2.0: frame rate"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Horizontalfieldofview:88° H.264andH.265:25/30fps(50/60Hz)inallresolutions,horizontalfieldofview:88° h.264andh.265:25/30fps(50/60hz)inallresolutions
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Verticalfieldofview:47° MotionJPEG:15fps(50/60Hz)inallresolutions,verticalfieldofview:47° motionjpeg:15fps(50/60hz)inallresolutions
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Minimumfocusdistance:0.3m(1ft),minimumfocusdistance:0.3m(1ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"M12mount,fixediris","m12mount,fixediris"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Videostreaming,videostreaming
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"2.8mm,F1.2:","2.8mm,f1.2:"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Upto4uniqueandconfigurablevideostreams1,upto4uniqueandconfigurablevideostreams1
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Horizontalfieldofview:107°,horizontalfieldofview:107°
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"Multiple,individuallyconfigurablestreamsinH.264,","multiple,individuallyconfigurablestreamsinh.264,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Verticalfieldofview:56°,verticalfieldofview:56°
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,H.265andMotionJPEG,h.265andmotionjpeg
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Minimumfocusdistance:0.3m(1ft),minimumfocusdistance:0.3m(1ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,AxisZipstreamtechnologyinH.264andH.265,axiszipstreamtechnologyinh.264andh.265
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"M12mount,fixediris","m12mount,fixediris"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Controllableframerateandbandwidth,controllableframerateandbandwidth
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,SeeOptionalaccessoriesforexchangeablelenses,seeoptionalaccessoriesforexchangeablelenses
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,VBR/ABR/MBRH.264andH.265,vbr/abr/mbrh.264andh.265
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Videostreamingindicator,videostreamingindicator
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Minimum illumination,minimum illumination
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"3.6mm,F2.0:","3.6mm,f2.0:"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,WDR,wdr
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Color:0.04luxat30IREF2.0,color:0.04luxat30iref2.0
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,ForensicWDR:Upto120dBdependingonscene,forensicwdr:upto120dbdependingonscene
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Color:0.13luxat50IREF2.0,color:0.13luxat50iref2.0
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"2.8mm,F1.2:","2.8mm,f1.2:"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Color:0.02luxat30IREF1.2 Noisereduction,color:0.02luxat30iref1.2 noisereduction
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Color:0.07luxat50IREF1.2 Spatialfilter(2Dnoisereduction),color:0.07luxat50iref1.2 spatialfilter(2dnoisereduction)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Temporalfilter(3Dnoisereduction),temporalfilter(3dnoisereduction)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Shutterspeed,shutterspeed
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,WithWDR:1/19000sto1/5s Imagesettings,withwdr:1/19000sto1/5s imagesettings
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"NoWDR:1/17000sto1/5s Compression,brightness,sharpness,contrast,white","nowdr:1/17000sto1/5s compression,brightness,sharpness,contrast,white"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"balance,ForensicWDR,exposurecontrol,exposure","balance,forensicwdr,exposurecontrol,exposure"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"zones,finetuningofbehavioratlowlight,rotation:0°,","zones,finetuningofbehavioratlowlight,rotation:0°,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Camera adjustment,camera adjustment
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"90°,180°,270°includingCorridorFormat,dynamic","90°,180°,270°includingcorridorformat,dynamic"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Pan:±30°,pan:±30°
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"overlay,32individualpolygonalprivacymask,mirroring","overlay,32individualpolygonalprivacymask,mirroring"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Tilt:15-90°,tilt:15-90°
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,ofimages,ofimages
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Rotation:±175°,rotation:±175°
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"Sceneprofiles:forensic,vivid,trafficoverview","sceneprofiles:forensic,vivid,trafficoverview"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,System on chip (SoC),system on chip (soc)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Imageprocessing,imageprocessing
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"AxisZipstream,ForensicWDR,Lightfinder","axiszipstream,forensicwdr,lightfinder"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Model,model
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,S6LM55,s6lm55
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Pan/Tilt/Zoom,pan/tilt/zoom
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"DigitalPTZ,presetpositions,guardtour,controlqueue","digitalptz,presetpositions,guardtour,controlqueue"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,Memory,memory
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"1024MBRAM,512MBFlash","1024mbram,512mbflash"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,"1. Werecommendamaximumof3uniquevideostreamspercameraorchannel,foroptimizeduserexperience,networkbandwidth,andstorage","1. werecommendamaximumof3uniquevideostreamspercameraorchannel,foroptimizeduserexperience,networkbandwidth,andstorage"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,utilization.Auniquevideostreamcanbeservedtomanyvideoclientsinthenetworkusingmulticastorunicasttransportmethodviabuilt-in,utilization.auniquevideostreamcanbeservedtomanyvideoclientsinthenetworkusingmulticastorunicasttransportmethodviabuilt-in
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,2,streamreusefunctionality.,streamreusefunctionality.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Eventactions,eventactions
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Network,network
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Guardtours,guardtours
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"Uploadimagesorvideoclips:FTP,HTTP,HTTPS,SFTP,","uploadimagesorvideoclips:ftp,http,https,sftp,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Network protocols emailandnetworkshare,network protocols emailandnetworkshare
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"IPv4,IPv6USGv6,HTTP,HTTPS2,HTTP/2,TLS2,QoSLayer Notification:HTTP,HTTPS,TCPandemail","ipv4,ipv6usgv6,http,https2,http/2,tls2,qoslayer notification:http,https,tcpandemail"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"3DiffServ,FTP,SFTP,CIFS/SMB,SMTP,mDNS(Bonjour), Overlaytext","3diffserv,ftp,sftp,cifs/smb,smtp,mdns(bonjour), overlaytext"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"UPnP®,SNMPv1/v2c/v3(MIB-II),DNS/DNSv6,DDNS, Presetpositions","upnp®,snmpv1/v2c/v3(mib-ii),dns/dnsv6,ddns, presetpositions"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"NTP,PTP,RTSP,RTP,SRTP,TCP,UDP,IGMPv1/v2/v3, Recordvideo:SDcardandnetworkshare","ntp,ptp,rtsp,rtp,srtp,tcp,udp,igmpv1/v2/v3, recordvideo:sdcardandnetworkshare"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"RTCP,ICMP,DHCPv4/v6,ARP,SOCKS,SSH,LLDP,CDP, SNMPtrapmessages","rtcp,icmp,dhcpv4/v6,arp,socks,ssh,lldp,cdp, snmptrapmessages"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"MQTTv3.1.1,Syslog,Link-Localaddress(ZeroConf) WDRmode","mqttv3.1.1,syslog,link-localaddress(zeroconf) wdrmode"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,MQTTpublish,mqttpublish
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,System integration,system integration
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Built-in installationaids,built-in installationaids
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Pixelcounter,pixelcounter
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,ApplicationProgramming Interface,applicationprogramming interface
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"OpenAPIforsoftwareintegration,includingVAPIX® Analytics","openapiforsoftwareintegration,includingvapix® analytics"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,andAXISCameraApplicationPlatform(ACAP);,andaxiscameraapplicationplatform(acap);
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,specificationsataxis.com/developer-community.,specificationsataxis.com/developer-community.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,One-clickcloudconnection Applications,one-clickcloudconnection applications
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"ONVIF®ProfileG,ONVIF®ProfileM,ONVIF®ProfileS Included","onvif®profileg,onvif®profilem,onvif®profiles included"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"andONVIF®ProfileT,specificationatonvif.org AXISVideoMotionDetection,activetamperingalarm3","andonvif®profilet,specificationatonvif.org axisvideomotiondetection,activetamperingalarm3"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Supported,supported
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"AXISFenceGuard,AXISLoiteringGuard,AXISMotion","axisfenceguard,axisloiteringguard,axismotion"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Videomanagementsystems,videomanagementsystems
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Guard,guard
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"CompatiblewithAXISCameraStationEdge,","compatiblewithaxiscamerastationedge,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,SupportforAXISCameraApplicationPlatformenabling,supportforaxiscameraapplicationplatformenabling
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"AXISCameraStationPro,AXISCameraStation5,and","axiscamerastationpro,axiscamerastation5,and"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"installationofthird-partyapplications,seeaxis.com/","installationofthird-partyapplications,seeaxis.com/"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,videomanagementsoftwarefromAxis’partners,videomanagementsoftwarefromaxis’partners
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,acap,acap
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,availableataxis.com/vms.,availableataxis.com/vms.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Approvals,approvals
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Onscreencontrols,onscreencontrols
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Videostreamingindicator,videostreamingindicator
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Widedynamicrange,widedynamicrange
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Product markings,product markings
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Privacymasks,privacymasks
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"CE,ECE,KC,RCM,UL/cUL,UKCA,VCCI,WEEE","ce,ece,kc,rcm,ul/cul,ukca,vcci,weee"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Eventconditions,eventconditions
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Supply chain,supply chain
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"Devicestatus:aboveoperatingtemperature,aboveor","devicestatus:aboveoperatingtemperature,aboveor"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,TAAcompliant,taacompliant
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"belowoperatingtemperature,belowoperating","belowoperatingtemperature,belowoperating"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,NDAAcompliant,ndaacompliant
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"temperature,IPaddressremoved,networklost,newIP","temperature,ipaddressremoved,networklost,newip"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"address,storagefailure,systemready,withinoperating","address,storagefailure,systemready,withinoperating"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,temperature EMC,temperature emc
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"Edgestorage:recordingongoing,storagedisruption EN55032ClassA,EN55035,EN61000-6-1,","edgestorage:recordingongoing,storagedisruption en55032classa,en55035,en61000-6-1,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"I/O:manualtrigger,virtualinput EN61000-6-2,ECER10rev.06(Eapproval),EN50498,","i/o:manualtrigger,virtualinput en61000-6-2,ecer10rev.06(eapproval),en50498,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,MQTTsubscribe Australia/NewZealand:RCMAS/NZSCISPR32ClassA,mqttsubscribe australia/newzealand:rcmas/nzscispr32classa
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Scheduledandrecurring:scheduledevent Canada:ICES-3(A)/NMB-3(A),scheduledandrecurring:scheduledevent canada:ices-3(a)/nmb-3(a)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"Video:averagebitratedegradation,livestreamopen, Japan:VCCIClassA,","video:averagebitratedegradation,livestreamopen, japan:vcciclassa,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"tampering Korea:KSC9835,KSC9832ClassA,","tampering korea:ksc9835,ksc9832classa,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,USA:FCCPart15SubpartBClassA,usa:fccpart15subpartbclassa
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,Safety,safety
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"IEC/EN/UL62368-1,CAN/CSAC22.2No.62368-1,","iec/en/ul62368-1,can/csac22.2no.62368-1,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,UNECER118,unecer118
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,IS13252,is13252
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,"2. ThisproductincludessoftwaredevelopedbytheOpenSSLProjectforuseintheOpenSSLToolkit.(openssl.org),andcryptographicsoftware","2. thisproductincludessoftwaredevelopedbytheopensslprojectforuseintheopenssltoolkit.(openssl.org),andcryptographicsoftware"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,writtenbyEricYoung(eay@cryptsoft.com).,writtenbyericyoung(eay@cryptsoft.com).
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,3,3. Fordetectionoftamperingattemptsinstaticandnon-crowdedscenes.,3. fordetectionoftamperingattemptsinstaticandnon-crowdedscenes.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Environment Power,environment power
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEC/EN60529IP66,IEC/EN60529IP67, PoweroverEthernet(PoE)IEEE802.3af/802.3atType1","iec/en60529ip66,iec/en60529ip67, poweroverethernet(poe)ieee802.3af/802.3attype1"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEC/EN62262IK10, Class1","iec/en62262ik10, class1"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEC60721-3-5Class5M3(vibrationandshock), Typical2.2W,max3.8W","iec60721-3-5class5m3(vibrationandshock), typical2.2w,max3.8w"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEC60068-2-1,IEC60068-2-2,IEC60068-2-27,","iec60068-2-1,iec60068-2-2,iec60068-2-27,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEC60068-2-64,IEC60068-2-78,IEC60068–2–14","iec60068-2-64,iec60068-2-78,iec60068–2–14"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Connectors,connectors
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"RJ45:male,10BASE-T/100BASE-TX","rj45:male,10base-t/100base-tx"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Network M12:female,rugged,D-codedwithrotatablecoupling","network m12:female,rugged,d-codedwithrotatablecoupling"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,NISTSP500-267 nut,nistsp500-267 nut
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,AllconnectorssupportPoE,allconnectorssupportpoe
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Cybersecurity,cybersecurity
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"ETSIEN303645,BSIITSecurityLabel Storage","etsien303645,bsiitsecuritylabel storage"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,SupportformicroSD/microSDHC/microSDXCcardwith,supportformicrosd/microsdhc/microsdxccardwith
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,UHSSpeedClassU1,uhsspeedclassu1
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Cybersecurity,cybersecurity
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Supportforrecordingtonetwork-attachedstorage,supportforrecordingtonetwork-attachedstorage
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,(NAS),(nas)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,ForSDcardandNASrecommendationsseeaxis.com,forsdcardandnasrecommendationsseeaxis.com
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Edge security,edge security
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Software:SignedOS,bruteforcedelayprotection,","software:signedos,bruteforcedelayprotection,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,digestauthenticationandOAuth2.0RFC6749Client Operating conditions,digestauthenticationandoauth2.0rfc6749client operating conditions
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,CredentialFlow/OpenIDAuthorizationCodeFlowfor -30°Cto55°C(-22°Fto131°F),credentialflow/openidauthorizationcodeflowfor -30°cto55°c(-22°fto131°f)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"centralizedADFSaccountmanagement,password Maximum(intermittent):70°C(158°F)","centralizedadfsaccountmanagement,password maximum(intermittent):70°c(158°f)"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"protection,AES-XTS-Plain64256bitSDcardencryption Humidity:10-100%RH(condensing)","protection,aes-xts-plain64256bitsdcardencryption humidity:10-100%rh(condensing)"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Hardware:AxisEdgeVaultcybersecurityplatform,hardware:axisedgevaultcybersecurityplatform
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Secureelement(CCEAL6+),system-on-chipsecurity","secureelement(cceal6+),system-on-chipsecurity"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"(TEE),AxisdeviceID,securekeystore,signedvideo, Storage conditions","(tee),axisdeviceid,securekeystore,signedvideo, storage conditions"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"secureboot,encryptedfilesystem(AES-XTS-Plain64 -40°Cto65°C(-40°Fto149°F)","secureboot,encryptedfilesystem(aes-xts-plain64 -40°cto65°c(-40°fto149°f)"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,256bit),256bit)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Dimensions,dimensions
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Network security Height:50mm(1.97in),ø110mm(4.33in)","network security height:50mm(1.97in),ø110mm(4.33in)"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEEE802.1x(EAP-TLS,PEAP-MSCHAPv2)4,","ieee802.1x(eap-tls,peap-mschapv2)4,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IEEE802.1AE(MACsecPSK/EAP-TLS),IEEE802.1AR,","ieee802.1ae(macsecpsk/eap-tls),ieee802.1ar,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Weight,weight
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"HTTPS/HSTS4,TLSv1.2/v1.34,NetworkTimeSecurity","https/hsts4,tlsv1.2/v1.34,networktimesecurity"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,241g(0.53lb),241g(0.53lb)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"(NTS),X.509CertificatePKI,host-basedfirewall","(nts),x.509certificatepki,host-basedfirewall"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Boxcontent,boxcontent
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Documentation,documentation
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Camera,Installationguide,Windows®decoder1-user","camera,installationguide,windows®decoder1-user"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,AXISHardeningGuide,axishardeningguide
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"license,lenstool","license,lenstool"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,AXISVulnerabilityManagementPolicy,axisvulnerabilitymanagementpolicy
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,AXISSecurityDevelopmentModel,axissecuritydevelopmentmodel
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,AXISOSSoftwareBillofMaterial(SBOM) Optional accessories,axisossoftwarebillofmaterial(sbom) optional accessories
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Todownloaddocuments,gotoaxis.com/support/ Lenses","todownloaddocuments,gotoaxis.com/support/ lenses"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"cybersecurity/resources LensM122.1mm,F2.2:horizontalfieldofview145°","cybersecurity/resources lensm122.1mm,f2.2:horizontalfieldofview145°"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"ToreadmoreaboutAxiscybersecuritysupport,goto LensM122.8mm,F1.2:horizontalfieldofview107°","toreadmoreaboutaxiscybersecuritysupport,goto lensm122.8mm,f1.2:horizontalfieldofview107°"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"axis.com/cybersecurity LensM123.6mm,F2.0:horizontalfieldofview88°","axis.com/cybersecurity lensm123.6mm,f2.0:horizontalfieldofview88°"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"LensM126mm,F1.6:horizontalfieldofview51°","lensm126mm,f1.6:horizontalfieldofview51°"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"General LensM128mm,F1.6:horizontalfieldofview39°","general lensm128mm,f1.6:horizontalfieldofview39°"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Other,other
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"AXIST94D01SMountBracket,","axist94d01smountbracket,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Casing AXIST94D02SCurvedMountBracket,","casing axist94d02scurvedmountbracket,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"IP66/67-andIK10-ratedaluminumandpolycarbonate NetworkcouplerIP66,Networkcablecouplerindoor,","ip66/67-andik10-ratedaluminumandpolycarbonate networkcouplerip66,networkcablecouplerindoor,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"casing TM3101PendantWallMount,AXISTP3826-Ehousing,","casing tm3101pendantwallmount,axistp3826-ehousing,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"TP3827ClearDomeCover,TP3830TopBlackCover","tp3827cleardomecover,tp3830topblackcover"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"Formoreaccessories,seeaxis.com/products/axis-","formoreaccessories,seeaxis.com/products/axis-"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Mounting,mounting
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,m3905-r#accessories,m3905-r#accessories
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,Insidevehicles,insidevehicles
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,"4. ThisproductincludessoftwaredevelopedbytheOpenSSLProjectforuseintheOpenSSLToolkit.(openssl.org),andcryptographicsoftware","4. thisproductincludessoftwaredevelopedbytheopensslprojectforuseintheopenssltoolkit.(openssl.org),andcryptographicsoftware"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,4,writtenbyEricYoung(eay@cryptsoft.com).,writtenbyericyoung(eay@cryptsoft.com).
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,System tools,system tools
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"AXISSiteDesigner,AXISDeviceManager,product","axissitedesigner,axisdevicemanager,product"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"selector,accessoryselector,lenscalculator","selector,accessoryselector,lenscalculator"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Availableataxis.com,availableataxis.com
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Languages,languages
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"English,German,French,Spanish,Italian,Russian,","english,german,french,spanish,italian,russian,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"SimplifiedChinese,Japanese,Korean,Portuguese,","simplifiedchinese,japanese,korean,portuguese,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"Polish,TraditionalChinese,Dutch,Czech,Swedish,","polish,traditionalchinese,dutch,czech,swedish,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"Finnish,Turkish,Thai,Vietnamese","finnish,turkish,thai,vietnamese"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Warranty,warranty
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"5-yearwarranty,seeaxis.com/warranty","5-yearwarranty,seeaxis.com/warranty"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Partnumbers,partnumbers
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Availableataxis.com/products/axis-m3905-r#part-,availableataxis.com/products/axis-m3905-r#part-
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,numbers,numbers
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Sustainability,sustainability
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Substancecontrol,substancecontrol
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"PVCfree,BFR/CFRfree","pvcfree,bfr/cfrfree"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,RoHSinaccordancewithEURoHSDirective2011/65/,rohsinaccordancewitheurohsdirective2011/65/
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,EU/andEN63000:2018,eu/anden63000:2018
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,REACHinaccordancewith(EC)No1907/2006.ForSCIP,reachinaccordancewith(ec)no1907/2006.forscip
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"UUID,seeaxis.com/partner.","uuid,seeaxis.com/partner."
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Materials,materials
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Recycledaluminum:95%,recycledaluminum:95%
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,ScreenedforconflictmineralsinaccordancewithOECD,screenedforconflictmineralsinaccordancewithoecd
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,guidelines,guidelines
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"ToreadmoreaboutsustainabilityatAxis,gotoaxis.","toreadmoreaboutsustainabilityataxis,gotoaxis."
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,com/about-axis/sustainability,com/about-axis/sustainability
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,Environmentalresponsibility,environmentalresponsibility
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,axis.com/environmental-responsibility,axis.com/environmental-responsibility
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,AxisCommunicationsisasignatoryoftheUNGlobal,axiscommunicationsisasignatoryoftheunglobal
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,5,"Compact,readmoreatunglobalcompact.org","compact,readmoreatunglobalcompact.org"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,"Detect,Observe,Recognize, Identify(DORI)","detect,observe,recognize, identify(dori)"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,3.6mmlens DORIdefinition Distance,3.6mmlens doridefinition distance
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Detect 25px/m(8px/ft) 50.6m(166.0ft),detect 25px/m(8px/ft) 50.6m(166.0ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Observe 63px/m(19px/ft) 20.1m(65.9ft),observe 63px/m(19px/ft) 20.1m(65.9ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Recognize 125px/m(38px/ft) 10.1m(33.1ft),recognize 125px/m(38px/ft) 10.1m(33.1ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Identify 250px/m(76px/ft) 5.1m(16.7ft),identify 250px/m(76px/ft) 5.1m(16.7ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,2.8mmlens DORIdefinition Distance,2.8mmlens doridefinition distance
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Detect 25px/m(8px/ft) 21.1m(69.2ft),detect 25px/m(8px/ft) 21.1m(69.2ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Observe 63px/m(19px/ft) 7.4m(24.3ft),observe 63px/m(19px/ft) 7.4m(24.3ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Recognize 125px/m(38px/ft) 4.2m(13.8ft),recognize 125px/m(38px/ft) 4.2m(13.8ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Identify 250px/m(76px/ft) 2.1m(6.9ft),identify 250px/m(76px/ft) 2.1m(6.9ft)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,Axis calculates the DORI values using pixel densities for,axis calculates the dori values using pixel densities for
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,different use cases as recommended by the EN-62676-4,different use cases as recommended by the en-62676-4
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,standard. The calculations use the center of the image as,standard. the calculations use the center of the image as
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,the reference point and consider lens distortion. The,the reference point and consider lens distortion. the
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,possibility to recognize or identify a person or object,possibility to recognize or identify a person or object
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,"depends on factors such as object motion, video","depends on factors such as object motion, video"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,"compression, lighting conditions, and camera focus. Use","compression, lighting conditions, and camera focus. use"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,margins when planning. The pixel density varies across,margins when planning. the pixel density varies across
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,"the image, and the calculated values can differ from the","the image, and the calculated values can differ from the"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,6,distancesintherealworld.,distancesintherealworld.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,www.axis.com T10184436/EN/M22.2/202511,www.axis.com t10184436/en/m22.2/202511
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,Highlightedcapabilities,highlightedcapabilities
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"Axis EdgeVault color may be the critical factor to identify a person, an","axis edgevault color may be the critical factor to identify a person, an"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"object,oravehicle.","object,oravehicle."
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,Axis Edge Vault is the hardware-based cybersecurity,axis edge vault is the hardware-based cybersecurity
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,platform that safeguards the Axis device. It forms the,platform that safeguards the axis device. it forms the
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"Formoreinformation,seeaxis.com/glossary","formoreinformation,seeaxis.com/glossary"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,foundation that all secure operations depend on and,foundation that all secure operations depend on and
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"offer features to protect the device’s identity, safeguard","offer features to protect the device’s identity, safeguard"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,its integrity and protect sensitive information from,its integrity and protect sensitive information from
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"unauthorized access. For instance, secure boot ensures","unauthorized access. for instance, secure boot ensures"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"that a device can boot only with signed OS, which","that a device can boot only with signed os, which"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,prevents physical supply chain tampering. With signed,prevents physical supply chain tampering. with signed
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"OS, the device is also able to validate new device","os, the device is also able to validate new device"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,software before accepting to install it. And the secure,software before accepting to install it. and the secure
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,keystore is the critical building-block for protecting,keystore is the critical building-block for protecting
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,cryptographic information used for secure,cryptographic information used for secure
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"communication (IEEE 802.1X, HTTPS, Axis device ID,","communication (ieee 802.1x, https, axis device id,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,access control keys etc.) against malicious extraction in,access control keys etc.) against malicious extraction in
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,the event of a security breach. The secure keystore and,the event of a security breach. the secure keystore and
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,secure connections are provided through a Common,secure connections are provided through a common
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,Criteria or FIPS 140 certified hardware-based,criteria or fips 140 certified hardware-based
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,cryptographiccomputingmodule.,cryptographiccomputingmodule.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"Furthermore, signed video ensures that video evidence","furthermore, signed video ensures that video evidence"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,can be verified as untampered. Each camera uses its,can be verified as untampered. each camera uses its
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"unique video signing key, which is securely stored in the","unique video signing key, which is securely stored in the"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"secure keystore, to add a signature into the video stream","secure keystore, to add a signature into the video stream"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,allowingvideotobetracedbacktotheAxiscamerafrom,allowingvideotobetracedbacktotheaxiscamerafrom
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,whereitoriginated.,whereitoriginated.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"To read more about Axis Edge Vault, go to axis.com/","to read more about axis edge vault, go to axis.com/"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,solutions/edge-vault.,solutions/edge-vault.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,Zipstream,zipstream
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,The Axis Zipstream technology preserves all the,the axis zipstream technology preserves all the
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,important forensic in the video stream while lowering,important forensic in the video stream while lowering
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,bandwidth and storage requirements by an average of,bandwidth and storage requirements by an average of
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,50%. Zipstream also includes three intelligent,50%. zipstream also includes three intelligent
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"algorithms, which ensure that relevant forensic","algorithms, which ensure that relevant forensic"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"information is identified, recorded, and sent in full","information is identified, recorded, and sent in full"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,resolutionandframerate.,resolutionandframerate.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,ForensicWDR,forensicwdr
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,Axis cameras with wide dynamic range (WDR),axis cameras with wide dynamic range (wdr)
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,technology make the difference between seeing,technology make the difference between seeing
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,important forensic details clearly and seeing nothing but,important forensic details clearly and seeing nothing but
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,a blur in challenging light conditions. The difference,a blur in challenging light conditions. the difference
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,between the darkest and the brightest spots can spell,between the darkest and the brightest spots can spell
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,trouble for image usability and clarity. Forensic WDR,trouble for image usability and clarity. forensic wdr
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,effectively reduces visible noise and artifacts to deliver,effectively reduces visible noise and artifacts to deliver
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,videotunedformaximalforensicusability.,videotunedformaximalforensicusability.
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,Lightfinder,lightfinder
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"The Axis Lightfinder technology delivers high-resolution,","the axis lightfinder technology delivers high-resolution,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,full-color video with a minimum of motion blur even in,full-color video with a minimum of motion blur even in
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"near darkness. Because it strips away noise, Lightfinder","near darkness. because it strips away noise, lightfinder"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,makes dark areas in a scene visible and captures details,makes dark areas in a scene visible and captures details
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,in very low light. Cameras with Lightfinder discern color,in very low light. cameras with lightfinder discern color
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"in low light better than the human eye. In surveillance,","in low light better than the human eye. in surveillance,"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,"©2022–2025AxisCommunicationsAB.AXISCOMMUNICATIONS,AXIS,ARTPECandVAPIXareregisteredtrademarksof","©2022–2025axiscommunicationsab.axiscommunications,axis,artpecandvapixareregisteredtrademarksof"
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,AxisABinvariousjurisdictions.Allothertrademarksarethepropertyoftheirrespectiveowners.Wereservetherightto,axisabinvariousjurisdictions.allothertrademarksarethepropertyoftheirrespectiveowners.wereservetherightto
+datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf,10,introducemodificationswithoutnotice.,introducemodificationswithoutnotice.

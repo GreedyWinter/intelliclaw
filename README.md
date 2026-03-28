@@ -23,8 +23,8 @@ The first web iteration is intentionally small:
 Backend:
 
 ```powershell
-python -m backend.app.init_db
-uvicorn backend.app.main:app --reload
+backend\.venv\Scripts\python.exe -m backend.app.init_db
+.\backend\run_backend.ps1
 ```
 
 Frontend web:
