@@ -1,0 +1,468 @@
+{
+  "project_id": 4,
+  "run_id": 4,
+  "status": "failed",
+  "stage": "extraction",
+  "human_review_status": "not_requested",
+  "summary": null,
+  "error_message": "Evaluator agent could not approve extraction for datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf. See the run diagnostics for feedback history and candidate scores.",
+  "result_path": null,
+  "current_iteration": 1,
+  "failure_details": {
+    "reason": "extraction_not_approved",
+    "document_id": 7,
+    "filename": "datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf",
+    "current_iteration": 1,
+    "max_attempts": 3,
+    "latest_decision": {
+      "accepted": false,
+      "chosen_strategy": "sentence_rewrite_agent:text_extraction_agent",
+      "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_3.csv",
+      "score": 0.9422675026123302,
+      "retry_requested": false,
+      "feedback": [
+        "Improve source coverage by balancing table and text extraction when possible."
+      ]
+    },
+    "feedback_history": [
+      "Use verbs and fuller sentence phrasing that humans would naturally write.",
+      "Improve source coverage by balancing table and text extraction when possible."
+    ]
+  },
+  "agent_feedback_history": {
+    "7": [
+      "Use verbs and fuller sentence phrasing that humans would naturally write.",
+      "Improve source coverage by balancing table and text extraction when possible."
+    ]
+  },
+  "human_feedback_history": {},
+  "step_results": [
+    {
+      "name": "document_listing_agent",
+      "status": "completed",
+      "document_id": null,
+      "attempt": null,
+      "details": {
+        "document_count": 3
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_table_extraction_agent_attempt_1.csv",
+        "row_count": 10
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_text_extraction_agent_attempt_1.csv",
+        "row_count": 319
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 6.0,
+          "unique_ratio": 1.0,
+          "score": 0.75,
+          "coverage_row_count": 10.0
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": []
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.705329153605016,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.8928944618599791,
+          "coverage_row_count": 319.0
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": []
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 6.0,
+          "unique_ratio": 1.0,
+          "score": 0.75
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_1.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "row_count": 10,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_1.csv"
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.705329153605016,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.8928944618599791
+        },
+        "feedback": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "row_count": 319,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "retry_requested",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "accepted": false,
+        "retry_requested": true,
+        "chosen_strategy": "sentence_rewrite_agent:text_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv",
+        "score": 0.8928944618599791,
+        "feedback": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write.",
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_table_extraction_agent_attempt_2.csv",
+        "row_count": 10
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_text_extraction_agent_attempt_2.csv",
+        "row_count": 319
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_2.csv",
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.0,
+          "unique_ratio": 1.0,
+          "score": 0.8,
+          "coverage_row_count": 10.0
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write.",
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_2.csv",
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.66771159874608,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.9422675026123302,
+          "coverage_row_count": 319.0
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write.",
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.0,
+          "unique_ratio": 1.0,
+          "score": 0.8
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_2.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "row_count": 10,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_2.csv"
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.66771159874608,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.9422675026123302
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_2.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "row_count": 319,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_2.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "retry_requested",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "accepted": false,
+        "retry_requested": true,
+        "chosen_strategy": "sentence_rewrite_agent:text_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_2.csv",
+        "score": 0.9422675026123302,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_table_extraction_agent_attempt_3.csv",
+        "row_count": 10
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_text_extraction_agent_attempt_3.csv",
+        "row_count": 319
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_3.csv",
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.0,
+          "unique_ratio": 1.0,
+          "score": 0.8,
+          "coverage_row_count": 10.0
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write.",
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_3.csv",
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.66771159874608,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.9422675026123302,
+          "coverage_row_count": 319.0
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write.",
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.0,
+          "unique_ratio": 1.0,
+          "score": 0.8
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_3.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "row_count": 10,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_3.csv"
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.66771159874608,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.9422675026123302
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_3.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "row_count": 319,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_3.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "warning",
+      "document_id": 7,
+      "attempt": 3,
+      "details": {
+        "accepted": false,
+        "retry_requested": false,
+        "chosen_strategy": "sentence_rewrite_agent:text_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_4\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_3.csv",
+        "score": 0.9422675026123302,
+        "feedback": [
+          "Improve source coverage by balancing table and text extraction when possible."
+        ]
+      }
+    }
+  ],
+  "trace_event_count": 63
+}

@@ -13,3 +13,8 @@ class AnalysisRunCreate(BaseModel):
         ),
         min_length=1,
     )
+
+
+class HumanReviewSubmission(BaseModel):
+    approved: bool
+    feedback: str = Field(default="", max_length=4000)

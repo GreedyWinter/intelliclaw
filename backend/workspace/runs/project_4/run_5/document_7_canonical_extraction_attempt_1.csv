@@ -1,0 +1,313 @@
+feature,source_strategy,source_kind
+The product provides 3.6mmlens DORIdefinition Distance.,table_extraction_agent,raw_table
+The product provides detect 25px/m(8px/ft) 50.6m(166.0ft).,table_extraction_agent,raw_table
+The product provides observe 63px/m(19px/ft) 20.1m(65.9ft).,table_extraction_agent,raw_table
+The product provides recognize 125px/m(38px/ft) 10.1m(33.1ft).,table_extraction_agent,raw_table
+The product provides identify 250px/m(76px/ft) 5.1m(16.7ft).,table_extraction_agent,raw_table
+The product provides 2.8mmlens DORIdefinition Distance.,table_extraction_agent,raw_table
+The product provides detect 25px/m(8px/ft) 21.1m(69.2ft).,table_extraction_agent,raw_table
+The product provides observe 63px/m(19px/ft) 7.4m(24.3ft).,table_extraction_agent,raw_table
+The product provides recognize 125px/m(38px/ft) 4.2m(13.8ft).,table_extraction_agent,raw_table
+The product provides identify 250px/m(76px/ft) 2.1m(6.9ft).,table_extraction_agent,raw_table
+The product provides datasheet.,text_extraction_agent,raw_text
+The product provides aXISM3905-RDomeCamera.,text_extraction_agent,raw_text
+The product provides aXIS M3905-R Dome Camera.,text_extraction_agent,raw_text
+The product provides for indoor surveillance onboard buses.,text_extraction_agent,raw_text
+The product provides this compact and discreet 2 MP onboard camera for indoor surveillance complies with transportation-industry.,text_extraction_agent,raw_text
+"The product provides regulations including fire-safety for buses. It can withstand vibrations and a wide range of temperatures. Additionally,.",text_extraction_agent,raw_text
+The product provides with AXIS TP3826-E housing this dome camera can be mounted on the outside of a bus. Thanks to Lightfinder and.,text_extraction_agent,raw_text
+"The product provides forensic WDR, it provides details even in challenging light conditions. With traffic light mode, it can distinguish the.",text_extraction_agent,raw_text
+The product provides coloroftrafficlightsindarkscenes.OptionalM12lensesareavailabletoadjustfieldofviewforcustomizedmonitoring.,text_extraction_agent,raw_text
+The product provides purposes.,text_extraction_agent,raw_text
+"The product provides > Compact,ruggeddesign.",text_extraction_agent,raw_text
+The product provides > Indoorcamera.,text_extraction_agent,raw_text
+The product provides > 88°Horizontalfieldofview.,text_extraction_agent,raw_text
+The product provides > LightfinderandForensicWDR.,text_extraction_agent,raw_text
+The product provides > TrafficLightmode.,text_extraction_agent,raw_text
+The product provides variants.,text_extraction_agent,raw_text
+The product provides video.,text_extraction_agent,raw_text
+The product provides aXISM3905-RRJ453.6mm.,text_extraction_agent,raw_text
+The product provides aXISM3905-RM123.6mm.,text_extraction_agent,raw_text
+The product provides aXISM3905-RRJ452.8mm Videocompression.,text_extraction_agent,raw_text
+The product provides aXISM3905-RM122.8mm H.264(MPEG-4Part10/AVC)MainandHighProfiles.,text_extraction_agent,raw_text
+The product provides h.265(MPEG-HPart2/HEVC)MainProfile.,text_extraction_agent,raw_text
+The product provides camera MotionJPEG.,text_extraction_agent,raw_text
+The product provides imagesensor Resolution.,text_extraction_agent,raw_text
+The product provides 1/2.9”ProgressivescanRGBCMOS 16:9:1920x1080to640X360.,text_extraction_agent,raw_text
+The product provides pixelsize2.8µm 16:10:1280x800to640x400.,text_extraction_agent,raw_text
+The product provides 4:3:1280x960to320x240.,text_extraction_agent,raw_text
+The product provides lens.,text_extraction_agent,raw_text
+"The product provides 3.6mm,F2.0: Frame rate.",text_extraction_agent,raw_text
+The product provides horizontalfieldofview:88° H.264andH.265:25/30fps(50/60Hz)inallresolutions.,text_extraction_agent,raw_text
+The product provides verticalfieldofview:47° MotionJPEG:15fps(50/60Hz)inallresolutions.,text_extraction_agent,raw_text
+The product provides minimumfocusdistance:0.3m(1ft).,text_extraction_agent,raw_text
+"The product provides m12mount,fixediris.",text_extraction_agent,raw_text
+The product provides videostreaming.,text_extraction_agent,raw_text
+"The product provides 2.8mm,F1.2:.",text_extraction_agent,raw_text
+The product provides upto4uniqueandconfigurablevideostreams1.,text_extraction_agent,raw_text
+The product provides horizontalfieldofview:107°.,text_extraction_agent,raw_text
+"The product provides multiple,individuallyconfigurablestreamsinH.264,.",text_extraction_agent,raw_text
+The product provides verticalfieldofview:56°.,text_extraction_agent,raw_text
+The product provides h.265andMotionJPEG.,text_extraction_agent,raw_text
+The product provides axisZipstreamtechnologyinH.264andH.265.,text_extraction_agent,raw_text
+The product provides controllableframerateandbandwidth.,text_extraction_agent,raw_text
+The product provides seeOptionalaccessoriesforexchangeablelenses.,text_extraction_agent,raw_text
+The product provides vBR/ABR/MBRH.264andH.265.,text_extraction_agent,raw_text
+The product provides videostreamingindicator.,text_extraction_agent,raw_text
+The product provides minimum illumination.,text_extraction_agent,raw_text
+"The product provides 3.6mm,F2.0:.",text_extraction_agent,raw_text
+The product provides color:0.04luxat30IREF2.0.,text_extraction_agent,raw_text
+The product provides forensicWDR:Upto120dBdependingonscene.,text_extraction_agent,raw_text
+The product provides color:0.13luxat50IREF2.0.,text_extraction_agent,raw_text
+The product provides color:0.02luxat30IREF1.2 Noisereduction.,text_extraction_agent,raw_text
+The product provides color:0.07luxat50IREF1.2 Spatialfilter(2Dnoisereduction).,text_extraction_agent,raw_text
+The product provides temporalfilter(3Dnoisereduction).,text_extraction_agent,raw_text
+The product provides shutterspeed.,text_extraction_agent,raw_text
+The product provides withWDR:1/19000sto1/5s Imagesettings.,text_extraction_agent,raw_text
+"The product provides noWDR:1/17000sto1/5s Compression,brightness,sharpness,contrast,white.",text_extraction_agent,raw_text
+"The product provides balance,ForensicWDR,exposurecontrol,exposure.",text_extraction_agent,raw_text
+"The product provides zones,finetuningofbehavioratlowlight,rotation:0°,.",text_extraction_agent,raw_text
+The product provides camera adjustment.,text_extraction_agent,raw_text
+"The product provides 90°,180°,270°includingCorridorFormat,dynamic.",text_extraction_agent,raw_text
+The product provides pan:±30°.,text_extraction_agent,raw_text
+"The product provides overlay,32individualpolygonalprivacymask,mirroring.",text_extraction_agent,raw_text
+The product provides tilt:15-90°.,text_extraction_agent,raw_text
+The product provides ofimages.,text_extraction_agent,raw_text
+The product provides rotation:±175°.,text_extraction_agent,raw_text
+"The product provides sceneprofiles:forensic,vivid,trafficoverview.",text_extraction_agent,raw_text
+The product provides system on chip (SoC).,text_extraction_agent,raw_text
+The product provides imageprocessing.,text_extraction_agent,raw_text
+"The product provides axisZipstream,ForensicWDR,Lightfinder.",text_extraction_agent,raw_text
+The product provides model.,text_extraction_agent,raw_text
+The product provides s6LM55.,text_extraction_agent,raw_text
+The product provides pan/Tilt/Zoom.,text_extraction_agent,raw_text
+"The product provides digitalPTZ,presetpositions,guardtour,controlqueue.",text_extraction_agent,raw_text
+The product provides memory.,text_extraction_agent,raw_text
+"The product provides 1024MBRAM,512MBFlash.",text_extraction_agent,raw_text
+"The product provides 1. Werecommendamaximumof3uniquevideostreamspercameraorchannel,foroptimizeduserexperience,networkbandwidth,andstorage.",text_extraction_agent,raw_text
+The product provides utilization.Auniquevideostreamcanbeservedtomanyvideoclientsinthenetworkusingmulticastorunicasttransportmethodviabuilt-in.,text_extraction_agent,raw_text
+The product provides streamreusefunctionality.,text_extraction_agent,raw_text
+The product provides eventactions.,text_extraction_agent,raw_text
+The product provides network.,text_extraction_agent,raw_text
+The product provides guardtours.,text_extraction_agent,raw_text
+"The product provides uploadimagesorvideoclips:FTP,HTTP,HTTPS,SFTP,.",text_extraction_agent,raw_text
+The product provides network protocols emailandnetworkshare.,text_extraction_agent,raw_text
+"The product provides iPv4,IPv6USGv6,HTTP,HTTPS2,HTTP/2,TLS2,QoSLayer Notification:HTTP,HTTPS,TCPandemail.",text_extraction_agent,raw_text
+"The product provides 3DiffServ,FTP,SFTP,CIFS/SMB,SMTP,mDNS(Bonjour), Overlaytext.",text_extraction_agent,raw_text
+"The product provides uPnP®,SNMPv1/v2c/v3(MIB-II),DNS/DNSv6,DDNS, Presetpositions.",text_extraction_agent,raw_text
+"The product provides nTP,PTP,RTSP,RTP,SRTP,TCP,UDP,IGMPv1/v2/v3, Recordvideo:SDcardandnetworkshare.",text_extraction_agent,raw_text
+"The product provides rTCP,ICMP,DHCPv4/v6,ARP,SOCKS,SSH,LLDP,CDP, SNMPtrapmessages.",text_extraction_agent,raw_text
+"The product provides mQTTv3.1.1,Syslog,Link-Localaddress(ZeroConf) WDRmode.",text_extraction_agent,raw_text
+The product provides mQTTpublish.,text_extraction_agent,raw_text
+The product provides system integration.,text_extraction_agent,raw_text
+The product provides built-in installationaids.,text_extraction_agent,raw_text
+The product provides pixelcounter.,text_extraction_agent,raw_text
+The product provides applicationProgramming Interface.,text_extraction_agent,raw_text
+"The product provides openAPIforsoftwareintegration,includingVAPIX® Analytics.",text_extraction_agent,raw_text
+The product provides andAXISCameraApplicationPlatform(ACAP);.,text_extraction_agent,raw_text
+The product provides specificationsataxis.com/developer-community.,text_extraction_agent,raw_text
+The product provides one-clickcloudconnection Applications.,text_extraction_agent,raw_text
+"The product provides oNVIF®ProfileG,ONVIF®ProfileM,ONVIF®ProfileS Included.",text_extraction_agent,raw_text
+"The product provides andONVIF®ProfileT,specificationatonvif.org AXISVideoMotionDetection,activetamperingalarm3.",text_extraction_agent,raw_text
+The product provides supported.,text_extraction_agent,raw_text
+"The product provides aXISFenceGuard,AXISLoiteringGuard,AXISMotion.",text_extraction_agent,raw_text
+The product provides videomanagementsystems.,text_extraction_agent,raw_text
+The product provides guard.,text_extraction_agent,raw_text
+"The product provides compatiblewithAXISCameraStationEdge,.",text_extraction_agent,raw_text
+The product provides supportforAXISCameraApplicationPlatformenabling.,text_extraction_agent,raw_text
+"The product provides aXISCameraStationPro,AXISCameraStation5,and.",text_extraction_agent,raw_text
+"The product provides installationofthird-partyapplications,seeaxis.com/.",text_extraction_agent,raw_text
+The product provides videomanagementsoftwarefromAxis’partners.,text_extraction_agent,raw_text
+The product provides acap.,text_extraction_agent,raw_text
+The product provides availableataxis.com/vms.,text_extraction_agent,raw_text
+The product provides approvals.,text_extraction_agent,raw_text
+The product provides onscreencontrols.,text_extraction_agent,raw_text
+The product provides widedynamicrange.,text_extraction_agent,raw_text
+The product provides product markings.,text_extraction_agent,raw_text
+The product provides privacymasks.,text_extraction_agent,raw_text
+"The product provides cE,ECE,KC,RCM,UL/cUL,UKCA,VCCI,WEEE.",text_extraction_agent,raw_text
+The product provides eventconditions.,text_extraction_agent,raw_text
+The product provides supply chain.,text_extraction_agent,raw_text
+"The product provides devicestatus:aboveoperatingtemperature,aboveor.",text_extraction_agent,raw_text
+The product provides tAAcompliant.,text_extraction_agent,raw_text
+"The product provides belowoperatingtemperature,belowoperating.",text_extraction_agent,raw_text
+The product provides nDAAcompliant.,text_extraction_agent,raw_text
+"The product provides temperature,IPaddressremoved,networklost,newIP.",text_extraction_agent,raw_text
+"The product provides address,storagefailure,systemready,withinoperating.",text_extraction_agent,raw_text
+The product provides temperature EMC.,text_extraction_agent,raw_text
+"The product provides edgestorage:recordingongoing,storagedisruption EN55032ClassA,EN55035,EN61000-6-1,.",text_extraction_agent,raw_text
+"The product provides i/O:manualtrigger,virtualinput EN61000-6-2,ECER10rev.06(Eapproval),EN50498,.",text_extraction_agent,raw_text
+The product provides mQTTsubscribe Australia/NewZealand:RCMAS/NZSCISPR32ClassA.,text_extraction_agent,raw_text
+The product provides scheduledandrecurring:scheduledevent Canada:ICES-3(A)/NMB-3(A).,text_extraction_agent,raw_text
+"The product provides video:averagebitratedegradation,livestreamopen, Japan:VCCIClassA,.",text_extraction_agent,raw_text
+"The product provides tampering Korea:KSC9835,KSC9832ClassA,.",text_extraction_agent,raw_text
+The product provides uSA:FCCPart15SubpartBClassA.,text_extraction_agent,raw_text
+The product provides safety.,text_extraction_agent,raw_text
+"The product provides iEC/EN/UL62368-1,CAN/CSAC22.2No.62368-1,.",text_extraction_agent,raw_text
+The product provides uNECER118.,text_extraction_agent,raw_text
+The product provides iS13252.,text_extraction_agent,raw_text
+"The product provides 2. ThisproductincludessoftwaredevelopedbytheOpenSSLProjectforuseintheOpenSSLToolkit.(openssl.org),andcryptographicsoftware.",text_extraction_agent,raw_text
+The product provides writtenbyEricYoung(eay@cryptsoft.com).,text_extraction_agent,raw_text
+The product provides 3. Fordetectionoftamperingattemptsinstaticandnon-crowdedscenes.,text_extraction_agent,raw_text
+The product provides environment Power.,text_extraction_agent,raw_text
+"The product provides iEC/EN60529IP66,IEC/EN60529IP67, PoweroverEthernet(PoE)IEEE802.3af/802.3atType1.",text_extraction_agent,raw_text
+"The product provides iEC/EN62262IK10, Class1.",text_extraction_agent,raw_text
+"The product provides iEC60721-3-5Class5M3(vibrationandshock), Typical2.2W,max3.8W.",text_extraction_agent,raw_text
+"The product provides iEC60068-2-1,IEC60068-2-2,IEC60068-2-27,.",text_extraction_agent,raw_text
+"The product provides iEC60068-2-64,IEC60068-2-78,IEC60068–2–14.",text_extraction_agent,raw_text
+The product provides connectors.,text_extraction_agent,raw_text
+"The product provides rJ45:male,10BASE-T/100BASE-TX.",text_extraction_agent,raw_text
+"The product provides network M12:female,rugged,D-codedwithrotatablecoupling.",text_extraction_agent,raw_text
+The product provides nISTSP500-267 nut.,text_extraction_agent,raw_text
+The product provides allconnectorssupportPoE.,text_extraction_agent,raw_text
+The product provides cybersecurity.,text_extraction_agent,raw_text
+"The product provides eTSIEN303645,BSIITSecurityLabel Storage.",text_extraction_agent,raw_text
+The product provides supportformicroSD/microSDHC/microSDXCcardwith.,text_extraction_agent,raw_text
+The product provides uHSSpeedClassU1.,text_extraction_agent,raw_text
+The product provides supportforrecordingtonetwork-attachedstorage.,text_extraction_agent,raw_text
+The product provides (NAS).,text_extraction_agent,raw_text
+The product provides forSDcardandNASrecommendationsseeaxis.com.,text_extraction_agent,raw_text
+The product provides edge security.,text_extraction_agent,raw_text
+"The product provides software:SignedOS,bruteforcedelayprotection,.",text_extraction_agent,raw_text
+The product provides digestauthenticationandOAuth2.0RFC6749Client Operating conditions.,text_extraction_agent,raw_text
+The product provides credentialFlow/OpenIDAuthorizationCodeFlowfor -30°Cto55°C(-22°Fto131°F).,text_extraction_agent,raw_text
+"The product provides centralizedADFSaccountmanagement,password Maximum(intermittent):70°C(158°F).",text_extraction_agent,raw_text
+"The product provides protection,AES-XTS-Plain64256bitSDcardencryption Humidity:10-100%RH(condensing).",text_extraction_agent,raw_text
+The product provides hardware:AxisEdgeVaultcybersecurityplatform.,text_extraction_agent,raw_text
+"The product provides secureelement(CCEAL6+),system-on-chipsecurity.",text_extraction_agent,raw_text
+"The product provides (TEE),AxisdeviceID,securekeystore,signedvideo, Storage conditions.",text_extraction_agent,raw_text
+"The product provides secureboot,encryptedfilesystem(AES-XTS-Plain64 -40°Cto65°C(-40°Fto149°F).",text_extraction_agent,raw_text
+The product provides 256bit).,text_extraction_agent,raw_text
+The product provides dimensions.,text_extraction_agent,raw_text
+"The product provides network security Height:50mm(1.97in),ø110mm(4.33in).",text_extraction_agent,raw_text
+"The product provides iEEE802.1x(EAP-TLS,PEAP-MSCHAPv2)4,.",text_extraction_agent,raw_text
+"The product provides iEEE802.1AE(MACsecPSK/EAP-TLS),IEEE802.1AR,.",text_extraction_agent,raw_text
+The product provides weight.,text_extraction_agent,raw_text
+"The product provides hTTPS/HSTS4,TLSv1.2/v1.34,NetworkTimeSecurity.",text_extraction_agent,raw_text
+The product provides 241g(0.53lb).,text_extraction_agent,raw_text
+"The product provides (NTS),X.509CertificatePKI,host-basedfirewall.",text_extraction_agent,raw_text
+The product provides boxcontent.,text_extraction_agent,raw_text
+The product provides documentation.,text_extraction_agent,raw_text
+"The product provides camera,Installationguide,Windows®decoder1-user.",text_extraction_agent,raw_text
+The product provides aXISHardeningGuide.,text_extraction_agent,raw_text
+"The product provides license,lenstool.",text_extraction_agent,raw_text
+The product provides aXISVulnerabilityManagementPolicy.,text_extraction_agent,raw_text
+The product provides aXISSecurityDevelopmentModel.,text_extraction_agent,raw_text
+The product provides aXISOSSoftwareBillofMaterial(SBOM) Optional accessories.,text_extraction_agent,raw_text
+"The product provides todownloaddocuments,gotoaxis.com/support/ Lenses.",text_extraction_agent,raw_text
+"The product provides cybersecurity/resources LensM122.1mm,F2.2:horizontalfieldofview145°.",text_extraction_agent,raw_text
+"The product provides toreadmoreaboutAxiscybersecuritysupport,goto LensM122.8mm,F1.2:horizontalfieldofview107°.",text_extraction_agent,raw_text
+"The product provides axis.com/cybersecurity LensM123.6mm,F2.0:horizontalfieldofview88°.",text_extraction_agent,raw_text
+"The product provides lensM126mm,F1.6:horizontalfieldofview51°.",text_extraction_agent,raw_text
+"The product provides general LensM128mm,F1.6:horizontalfieldofview39°.",text_extraction_agent,raw_text
+The product provides other.,text_extraction_agent,raw_text
+"The product provides aXIST94D01SMountBracket,.",text_extraction_agent,raw_text
+"The product provides casing AXIST94D02SCurvedMountBracket,.",text_extraction_agent,raw_text
+"The product provides iP66/67-andIK10-ratedaluminumandpolycarbonate NetworkcouplerIP66,Networkcablecouplerindoor,.",text_extraction_agent,raw_text
+"The product provides casing TM3101PendantWallMount,AXISTP3826-Ehousing,.",text_extraction_agent,raw_text
+"The product provides tP3827ClearDomeCover,TP3830TopBlackCover.",text_extraction_agent,raw_text
+"The product provides formoreaccessories,seeaxis.com/products/axis-.",text_extraction_agent,raw_text
+The product provides mounting.,text_extraction_agent,raw_text
+The product provides m3905-r#accessories.,text_extraction_agent,raw_text
+The product provides insidevehicles.,text_extraction_agent,raw_text
+"The product provides 4. ThisproductincludessoftwaredevelopedbytheOpenSSLProjectforuseintheOpenSSLToolkit.(openssl.org),andcryptographicsoftware.",text_extraction_agent,raw_text
+The product provides system tools.,text_extraction_agent,raw_text
+"The product provides aXISSiteDesigner,AXISDeviceManager,product.",text_extraction_agent,raw_text
+"The product provides selector,accessoryselector,lenscalculator.",text_extraction_agent,raw_text
+The product provides availableataxis.com.,text_extraction_agent,raw_text
+The product provides languages.,text_extraction_agent,raw_text
+"The product provides english,German,French,Spanish,Italian,Russian,.",text_extraction_agent,raw_text
+"The product provides simplifiedChinese,Japanese,Korean,Portuguese,.",text_extraction_agent,raw_text
+"The product provides polish,TraditionalChinese,Dutch,Czech,Swedish,.",text_extraction_agent,raw_text
+"The product provides finnish,Turkish,Thai,Vietnamese.",text_extraction_agent,raw_text
+The product provides warranty.,text_extraction_agent,raw_text
+"The product provides 5-yearwarranty,seeaxis.com/warranty.",text_extraction_agent,raw_text
+The product provides partnumbers.,text_extraction_agent,raw_text
+The product provides availableataxis.com/products/axis-m3905-r#part-.,text_extraction_agent,raw_text
+The product provides numbers.,text_extraction_agent,raw_text
+The product provides sustainability.,text_extraction_agent,raw_text
+The product provides substancecontrol.,text_extraction_agent,raw_text
+"The product provides pVCfree,BFR/CFRfree.",text_extraction_agent,raw_text
+The product provides roHSinaccordancewithEURoHSDirective2011/65/.,text_extraction_agent,raw_text
+The product provides eU/andEN63000:2018.,text_extraction_agent,raw_text
+The product provides rEACHinaccordancewith(EC)No1907/2006.ForSCIP.,text_extraction_agent,raw_text
+"The product provides uUID,seeaxis.com/partner.",text_extraction_agent,raw_text
+The product provides materials.,text_extraction_agent,raw_text
+The product provides recycledaluminum:95%.,text_extraction_agent,raw_text
+The product provides screenedforconflictmineralsinaccordancewithOECD.,text_extraction_agent,raw_text
+The product provides guidelines.,text_extraction_agent,raw_text
+"The product provides toreadmoreaboutsustainabilityatAxis,gotoaxis.",text_extraction_agent,raw_text
+The product provides com/about-axis/sustainability.,text_extraction_agent,raw_text
+The product provides environmentalresponsibility.,text_extraction_agent,raw_text
+The product provides axis.com/environmental-responsibility.,text_extraction_agent,raw_text
+The product provides axisCommunicationsisasignatoryoftheUNGlobal.,text_extraction_agent,raw_text
+"The product provides compact,readmoreatunglobalcompact.org.",text_extraction_agent,raw_text
+"The product provides detect,Observe,Recognize, Identify(DORI).",text_extraction_agent,raw_text
+The product provides axis calculates the DORI values using pixel densities for.,text_extraction_agent,raw_text
+The product provides different use cases as recommended by the EN-62676-4.,text_extraction_agent,raw_text
+The product provides standard. The calculations use the center of the image as.,text_extraction_agent,raw_text
+The product provides the reference point and consider lens distortion. The.,text_extraction_agent,raw_text
+The product provides possibility to recognize or identify a person or object.,text_extraction_agent,raw_text
+"The product provides depends on factors such as object motion, video.",text_extraction_agent,raw_text
+"The product provides compression, lighting conditions, and camera focus. Use.",text_extraction_agent,raw_text
+The product provides margins when planning. The pixel density varies across.,text_extraction_agent,raw_text
+"The product provides the image, and the calculated values can differ from the.",text_extraction_agent,raw_text
+The product provides distancesintherealworld.,text_extraction_agent,raw_text
+The product provides www.axis.com T10184436/EN/M22.2/202511.,text_extraction_agent,raw_text
+The product provides highlightedcapabilities.,text_extraction_agent,raw_text
+"The product provides axis EdgeVault color may be the critical factor to identify a person, an.",text_extraction_agent,raw_text
+"The product provides object,oravehicle.",text_extraction_agent,raw_text
+The product provides axis Edge Vault is the hardware-based cybersecurity.,text_extraction_agent,raw_text
+The product provides platform that safeguards the Axis device. It forms the.,text_extraction_agent,raw_text
+"The product provides formoreinformation,seeaxis.com/glossary.",text_extraction_agent,raw_text
+The product provides foundation that all secure operations depend on and.,text_extraction_agent,raw_text
+"The product provides offer features to protect the device’s identity, safeguard.",text_extraction_agent,raw_text
+The product provides its integrity and protect sensitive information from.,text_extraction_agent,raw_text
+"The product provides unauthorized access. For instance, secure boot ensures.",text_extraction_agent,raw_text
+"The product provides that a device can boot only with signed OS, which.",text_extraction_agent,raw_text
+The product provides prevents physical supply chain tampering. With signed.,text_extraction_agent,raw_text
+"The product provides oS, the device is also able to validate new device.",text_extraction_agent,raw_text
+The product provides software before accepting to install it. And the secure.,text_extraction_agent,raw_text
+The product provides keystore is the critical building-block for protecting.,text_extraction_agent,raw_text
+The product provides cryptographic information used for secure.,text_extraction_agent,raw_text
+"The product provides communication (IEEE 802.1X, HTTPS, Axis device ID,.",text_extraction_agent,raw_text
+The product provides access control keys etc.) against malicious extraction in.,text_extraction_agent,raw_text
+The product provides the event of a security breach. The secure keystore and.,text_extraction_agent,raw_text
+The product provides secure connections are provided through a Common.,text_extraction_agent,raw_text
+The product provides criteria or FIPS 140 certified hardware-based.,text_extraction_agent,raw_text
+The product provides cryptographiccomputingmodule.,text_extraction_agent,raw_text
+"The product provides furthermore, signed video ensures that video evidence.",text_extraction_agent,raw_text
+The product provides can be verified as untampered. Each camera uses its.,text_extraction_agent,raw_text
+"The product provides unique video signing key, which is securely stored in the.",text_extraction_agent,raw_text
+"The product provides secure keystore, to add a signature into the video stream.",text_extraction_agent,raw_text
+The product provides allowingvideotobetracedbacktotheAxiscamerafrom.,text_extraction_agent,raw_text
+The product provides whereitoriginated.,text_extraction_agent,raw_text
+"The product provides to read more about Axis Edge Vault, go to axis.com/.",text_extraction_agent,raw_text
+The product provides solutions/edge-vault.,text_extraction_agent,raw_text
+The product provides zipstream.,text_extraction_agent,raw_text
+The product provides the Axis Zipstream technology preserves all the.,text_extraction_agent,raw_text
+The product provides important forensic in the video stream while lowering.,text_extraction_agent,raw_text
+The product provides bandwidth and storage requirements by an average of.,text_extraction_agent,raw_text
+The product provides 50%. Zipstream also includes three intelligent.,text_extraction_agent,raw_text
+"The product provides algorithms, which ensure that relevant forensic.",text_extraction_agent,raw_text
+"The product provides information is identified, recorded, and sent in full.",text_extraction_agent,raw_text
+The product provides resolutionandframerate.,text_extraction_agent,raw_text
+The product provides forensicWDR.,text_extraction_agent,raw_text
+The product provides axis cameras with wide dynamic range (WDR).,text_extraction_agent,raw_text
+The product provides technology make the difference between seeing.,text_extraction_agent,raw_text
+The product provides important forensic details clearly and seeing nothing but.,text_extraction_agent,raw_text
+The product provides a blur in challenging light conditions. The difference.,text_extraction_agent,raw_text
+The product provides between the darkest and the brightest spots can spell.,text_extraction_agent,raw_text
+The product provides trouble for image usability and clarity. Forensic WDR.,text_extraction_agent,raw_text
+The product provides effectively reduces visible noise and artifacts to deliver.,text_extraction_agent,raw_text
+The product provides videotunedformaximalforensicusability.,text_extraction_agent,raw_text
+The product provides lightfinder.,text_extraction_agent,raw_text
+"The product provides the Axis Lightfinder technology delivers high-resolution,.",text_extraction_agent,raw_text
+The product provides full-color video with a minimum of motion blur even in.,text_extraction_agent,raw_text
+"The product provides near darkness. Because it strips away noise, Lightfinder.",text_extraction_agent,raw_text
+The product provides makes dark areas in a scene visible and captures details.,text_extraction_agent,raw_text
+The product provides in very low light. Cameras with Lightfinder discern color.,text_extraction_agent,raw_text
+"The product provides in low light better than the human eye. In surveillance,.",text_extraction_agent,raw_text
+"The product provides ©2022–2025AxisCommunicationsAB.AXISCOMMUNICATIONS,AXIS,ARTPECandVAPIXareregisteredtrademarksof.",text_extraction_agent,raw_text
+The product provides axisABinvariousjurisdictions.Allothertrademarksarethepropertyoftheirrespectiveowners.Wereservetherightto.,text_extraction_agent,raw_text
+The product provides introducemodificationswithoutnotice.,text_extraction_agent,raw_text

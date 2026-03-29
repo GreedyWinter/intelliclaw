@@ -1,0 +1,173 @@
+feature,source_strategy,source_kind
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides cD22 Indoor Dome Camera.,text_extraction_agent,raw_text
+The product provides essential 3MP Coverage for.,text_extraction_agent,raw_text
+The product provides monitoring Indoor Environments.,text_extraction_agent,raw_text
+The product provides overview.,text_extraction_agent,raw_text
+The product provides the CD22 dome camera provides essential 3MP coverage in a variety of indoor spaces. With its 1 / 2.8” progressive CMOS.,text_extraction_agent,raw_text
+"The product provides image sensor and 10 meters / 33 feet of IR range, the CD22 offers reliable visibility for organizations seeking quick and.",text_extraction_agent,raw_text
+The product provides scalable deployments. The CD22 includes an onboard CV25S Ambarella processor to detect and alert on the presence of.,text_extraction_agent,raw_text
+The product provides people and vehicles. The CD22 is optimized for covering spaces like storage closets and store aisles where supplemental.,text_extraction_agent,raw_text
+The product provides visibility is necessary.,text_extraction_agent,raw_text
+"The product provides the CD22’s sleek design and IK08 impact rating enable organizations to deploy a durable, tamper-resistant camera while.",text_extraction_agent,raw_text
+"The product provides also keeping aesthetics top-of-mind. Installation is simple and intuitive, and setup is easy to track with an LED status.",text_extraction_agent,raw_text
+The product provides indicator. The included mount plate additionally allows the camera to be mounted to a wall or ceiling without any.,text_extraction_agent,raw_text
+The product provides additional hardware.,text_extraction_agent,raw_text
+The product provides key features.,text_extraction_agent,raw_text
+The product provides clear image quality Hybrid cloud architecture.,text_extraction_agent,raw_text
+The product provides • 1 / 2.8” progressive CMOS image sensor • Onboard storage and processing for reduced.,text_extraction_agent,raw_text
+The product provides • 3MP resolution bandwidth consumption and coverage at scale.,text_extraction_agent,raw_text
+The product provides • 10 meters / 33 feet of IR range for nighttime viewing • 30 - 90 days (256GB - 768GB) of onboard storage.,text_extraction_agent,raw_text
+The product provides • Redundant cloud backup and unlimited cloud-based.,text_extraction_agent,raw_text
+The product provides archiving of footage.,text_extraction_agent,raw_text
+The product provides essential detection Easy installation.,text_extraction_agent,raw_text
+The product provides • Onboard CV25S Ambarella processor enables people • Mounting plate and screw pack included.,text_extraction_agent,raw_text
+The product provides and vehicle detection • LED light status indicator.,text_extraction_agent,raw_text
+The product provides wwwwww..vveerrkkaaddaa..ccoomm 10122254 ssaalleess@@vveerrkkaaddaa..ccoomm 11.,text_extraction_agent,raw_text
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides cD22.,text_extraction_agent,raw_text
+The product provides tech Specs.,text_extraction_agent,raw_text
+The product provides camera features.,text_extraction_agent,raw_text
+"The product provides image Sensor 1 / 2.8"" Progressive CMOS Shutter Speed 1 / 30 sec. to 1 / 10,000 sec.",text_extraction_agent,raw_text
+The product provides sensor Resolution1 3MP (2048 x 1536) Day/Night IR-cut fi lter for day and night function.,text_extraction_agent,raw_text
+The product provides lens Type Fixed IR Cut Filter Yes.,text_extraction_agent,raw_text
+The product provides focal Length 2.8mm IR Range 10m / 33ft.,text_extraction_agent,raw_text
+The product provides 0.009 lux @ F1.9 (Color).,text_extraction_agent,raw_text
+The product provides aperture F1.6 Minimum Illumination.,text_extraction_agent,raw_text
+The product provides 0 lux with IR Illuminators on.,text_extraction_agent,raw_text
+The product provides capacity: From 256GB to 768GB.,text_extraction_agent,raw_text
+The product provides iris Fixed Onboard Storage.,text_extraction_agent,raw_text
+"The product provides card: MicroSD, SDXC.",text_extraction_agent,raw_text
+The product provides horizontal: 97° (78°).,text_extraction_agent,raw_text
+The product provides field of View (after LDC2) Vertical: 71° (63°) CPU Ambarella CV25S88.,text_extraction_agent,raw_text
+The product provides diagonal: 128° (91°).,text_extraction_agent,raw_text
+The product provides tilt: 60°.,text_extraction_agent,raw_text
+The product provides sensor Movement Pan: 355°.,text_extraction_agent,raw_text
+The product provides rotation: 180°.,text_extraction_agent,raw_text
+The product provides standard video settings.,text_extraction_agent,raw_text
+"The product provides compression H.265, H.264 Historical Video Settings Adaptive quality1.",text_extraction_agent,raw_text
+"The product provides high quality (HQ): Up to 3,000 Kbps (default).",text_extraction_agent,raw_text
+The product provides frame Rate3 24fps Live Streaming Settings.,text_extraction_agent,raw_text
+The product provides standard quality (SQ): Up to 600 Kbps.,text_extraction_agent,raw_text
+The product provides standard audio settings.,text_extraction_agent,raw_text
+The product provides audio Not Supported.,text_extraction_agent,raw_text
+The product provides power and network.,text_extraction_agent,raw_text
+The product provides with IR: IEEE 802.3af Type 1 PoE.,text_extraction_agent,raw_text
+The product provides rJ-45 cable connector for network/PoE.,text_extraction_agent,raw_text
+The product provides power Input4 Without IR: IEEE 802.3af Type 1 PoE Connectivity.,text_extraction_agent,raw_text
+The product provides connection; 10 / 100 Mbps.,text_extraction_agent,raw_text
+The product provides extended temperature range: N/A.,text_extraction_agent,raw_text
+The product provides rTSP 1.0.,text_extraction_agent,raw_text
+"The product provides with IR: 37-57V, 0.23-0.15A, 8.6W.",text_extraction_agent,raw_text
+The product provides rFC 2326.,text_extraction_agent,raw_text
+"The product provides power Consumption4 Without IR: 37-57V, 0.11-0.07A, 4.3W RTSP.",text_extraction_agent,raw_text
+The product provides max concurrent streams: 2.,text_extraction_agent,raw_text
+The product provides extended temperature range: N/A.,text_extraction_agent,raw_text
+The product provides audio support: No.,text_extraction_agent,raw_text
+"The product provides 1. All our cameras record in ""adaptive quality,"" capturing both standard (SQ) and high quality (HQ) streams. SQ video is stored up to the amount of retention specifi ed by.",text_extraction_agent,raw_text
+"The product provides the customer. The amount of HQ video stored on the camera will depend on the amount of motion detected by the camera over time. To learn more, visit our website:.",text_extraction_agent,raw_text
+The product provides https://docs.verkada.com/docs/adaptive-quality-recording-whitepaper.pdf.,text_extraction_agent,raw_text
+"The product provides 2. Lens Distortion Correction (LDC) crops the sensor fi eld of view to deliver a rectifi ed, undistorted output image.",text_extraction_agent,raw_text
+The product provides 3. Frame rate can be adjusted by support.,text_extraction_agent,raw_text
+The product provides 4. Extended temperature range includes operating temperatures below -10°C / 14°F and assumes IR will be enabled.,text_extraction_agent,raw_text
+The product provides www.verkada.com sales@verkada.com 2.,text_extraction_agent,raw_text
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides cD22.,text_extraction_agent,raw_text
+The product provides tech Specs.,text_extraction_agent,raw_text
+The product provides general.,text_extraction_agent,raw_text
+The product provides operating Temperature -10°C to 50°C / 14°F to 122°F LED Indicator System power and status indicator.,text_extraction_agent,raw_text
+The product provides humidity 0 to 90% Warranty 5 Years.,text_extraction_agent,raw_text
+"The product provides fCC, ICES, CE, UKCA, RCM, CB,.",text_extraction_agent,raw_text
+"The product provides vCCI, KCC, BIS, NOM, UL/cUL/IEC Setup guide, T10 security torx screwdriver,.",text_extraction_agent,raw_text
+The product provides certifi cations Included Accessories.,text_extraction_agent,raw_text
+"The product provides 62368-1, IK08 impact rating, FY2019 screw pack, mounting template.",text_extraction_agent,raw_text
+The product provides nDAA compliant.,text_extraction_agent,raw_text
+The product provides mechanical.,text_extraction_agent,raw_text
+The product provides camera: 608g / 21.45oz.,text_extraction_agent,raw_text
+"The product provides weight Body Aluminum, plastic dome trim.",text_extraction_agent,raw_text
+The product provides mountplate: 140g / 4.94oz.,text_extraction_agent,raw_text
+"The product provides ø: 146.0mm / 5.75in, H: 104.3mm / 4.11in.",text_extraction_agent,raw_text
+The product provides with mount plate.,text_extraction_agent,raw_text
+The product provides dimensions.,text_extraction_agent,raw_text
+"The product provides ø: 146.0mm / 5.75in, H: 99.8mm / 3.93in.",text_extraction_agent,raw_text
+The product provides without mount plate.,text_extraction_agent,raw_text
+The product provides dimensions.,text_extraction_agent,raw_text
+The product provides software capabilities.,text_extraction_agent,raw_text
+"The product provides camera status, motion detection,.",text_extraction_agent,raw_text
+"The product provides cloud backup, confi gurable retention days,.",text_extraction_agent,raw_text
+"The product provides people detection, vehicle detection,.",text_extraction_agent,raw_text
+"The product provides alerts Streaming and Storage selectable storage location, low bandwidth.",text_extraction_agent,raw_text
+"The product provides crowd detection, line-crossing.",text_extraction_agent,raw_text
+"The product provides mode, timelapse, RTSP.",text_extraction_agent,raw_text
+"The product provides detection, loitering detection.",text_extraction_agent,raw_text
+"The product provides live links, live face blur, privacy regions,.",text_extraction_agent,raw_text
+"The product provides people Analytics Motion search, trajectory analysis Sharing and Privacy.",text_extraction_agent,raw_text
+The product provides audit log.,text_extraction_agent,raw_text
+"The product provides vehicle Analytics Motion search, trajectory analysis.",text_extraction_agent,raw_text
+The product provides www.verkada.com sales@verkada.com 3.,text_extraction_agent,raw_text
+The product provides 104.3mm.,text_extraction_agent,raw_text
+The product provides 4.11in.,text_extraction_agent,raw_text
+The product provides 146.0mm / 5.75in.,text_extraction_agent,raw_text
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides ordering Information.,text_extraction_agent,raw_text
+The product provides cD22 pricing.,text_extraction_agent,raw_text
+The product provides maximum People/.,text_extraction_agent,raw_text
+The product provides onboard Cost.,text_extraction_agent,raw_text
+The product provides model Number MP1 WDR Lens IR Range Storage SQ Onboard Vehicle (MSRP) USD.,text_extraction_agent,raw_text
+The product provides retention1 Analytics.,text_extraction_agent,raw_text
+The product provides cD22-256-HW 3MP Fixed 10m / 33ft 256GB 30 Days – $599.,text_extraction_agent,raw_text
+The product provides cD22-512-HW 3MP Fixed 10m / 33ft 512GB 60 Days – $999.,text_extraction_agent,raw_text
+"The product provides cD22-768-HW 3MP Fixed 10m / 33ft 768GB 90 Days – $1,399.",text_extraction_agent,raw_text
+"The product provides 1. All our cameras record in ""adaptive quality,"" capturing both standard and high quality streams. Standard quality (SQ) video is stored up to the amount of retention specified by.",text_extraction_agent,raw_text
+"The product provides the customer. The amount of high quality video stored on the camera will depend on the amount of motion detected by the camera over time. To learn more, visit our website:.",text_extraction_agent,raw_text
+The product provides https://docs.verkada.com/docs/adaptive-quality-recording-whitepaper.pdf.,text_extraction_agent,raw_text
+The product provides www.verkada.com sales@verkada.com 4.,text_extraction_agent,raw_text
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides ordering Information.,text_extraction_agent,raw_text
+The product provides video Security Cloud License pricing (New/Capacity Increase).,text_extraction_agent,raw_text
+The product provides model Number Description Cost (MSRP) USD.,text_extraction_agent,raw_text
+"The product provides lIC-CAM-1Y-CAP 1-Year Camera License, Capacity Increase $219.",text_extraction_agent,raw_text
+"The product provides lIC-CAM-3Y-CAP 3-Year Camera License, Capacity Increase $599.",text_extraction_agent,raw_text
+"The product provides lIC-CAM-5Y-CAP 5-Year Camera License, Capacity Increase $999.",text_extraction_agent,raw_text
+"The product provides lIC-CAM-10Y-CAP 10-Year Camera License, Capacity Increase $1,999.",text_extraction_agent,raw_text
+The product provides video Security Cloud License pricing (Renewal).,text_extraction_agent,raw_text
+The product provides model Number Description Cost (MSRP) USD.,text_extraction_agent,raw_text
+"The product provides lIC-CAM-1Y-RNW 1-Year Camera License, Renewal $219.",text_extraction_agent,raw_text
+"The product provides lIC-CAM-3Y-RNW 3-Year Camera License, Renewal $599.",text_extraction_agent,raw_text
+"The product provides lIC-CAM-5Y-RNW 5-Year Camera License, Renewal $999.",text_extraction_agent,raw_text
+"The product provides lIC-CAM-10Y-RNW 10-Year Camera License, Renewal $1,999.",text_extraction_agent,raw_text
+The product provides www.verkada.com sales@verkada.com 5.,text_extraction_agent,raw_text
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides ordering Information.,text_extraction_agent,raw_text
+The product provides accessories pricing.,text_extraction_agent,raw_text
+The product provides model Number Description Cost (MSRP) USD.,text_extraction_agent,raw_text
+The product provides aCC-CAM-SHIELD-1 Camera Weather Shield $79.,text_extraction_agent,raw_text
+The product provides aCC-MNT-ANGLE-1 Angle Mount $149.,text_extraction_agent,raw_text
+The product provides aCC-MNT-ARM-1 Arm Mount $99.,text_extraction_agent,raw_text
+The product provides aCC-MNT-CJBOX-1 Circle Junction Box Mount $109.,text_extraction_agent,raw_text
+The product provides aCC-MNT-CLIP-1 Tile Clip Mount $99.,text_extraction_agent,raw_text
+The product provides aCC-MNT-CORNER-1 Corner Mount $199.,text_extraction_agent,raw_text
+The product provides aCC-MNT-LBRAC-1 L-Bracket Mount $129.,text_extraction_agent,raw_text
+The product provides aCC-MNT-PEND-1 Pendant Cap Mount $69.,text_extraction_agent,raw_text
+The product provides aCC-MNT-POLE-1 Pole Mount $209.,text_extraction_agent,raw_text
+The product provides aCC-MNT-REC-2 Recess Ceiling Mount $149.,text_extraction_agent,raw_text
+"The product provides iNJ-POE-PLUS PoE Plus (802.3at Type 2) Injector, GigE $129.",text_extraction_agent,raw_text
+The product provides www.verkada.com sales@verkada.com 6.,text_extraction_agent,raw_text
+The product provides dome Series.,text_extraction_agent,raw_text
+The product provides ordering Information.,text_extraction_agent,raw_text
+The product provides viewing Station pricing.,text_extraction_agent,raw_text
+The product provides model Number Description Cost (MSRP) USD.,text_extraction_agent,raw_text
+The product provides vX52-HW VX52 Viewing Station $499.,text_extraction_agent,raw_text
+The product provides viewing Station License pricing (New/Capacity Increase).,text_extraction_agent,raw_text
+The product provides model Number Description Cost (MSRP) USD.,text_extraction_agent,raw_text
+"The product provides lIC-VX-1Y-CAP 1-Year Viewing Station License, Capacity Increase $499.",text_extraction_agent,raw_text
+"The product provides lIC-VX-3Y-CAP 3-Year Viewing Station License, Capacity Increase $1,299.",text_extraction_agent,raw_text
+"The product provides lIC-VX-5Y-CAP 5-Year Viewing Station License, Capacity Increase $1,999.",text_extraction_agent,raw_text
+"The product provides lIC-VX-10Y-CAP 10-Year Viewing Station License, Capacity Increase $3,999.",text_extraction_agent,raw_text
+The product provides viewing Station License pricing (Renewal).,text_extraction_agent,raw_text
+The product provides model Number Description Cost (MSRP) USD.,text_extraction_agent,raw_text
+"The product provides lIC-VX-1Y-RNW 1-Year Viewing Station License, Renewal $499.",text_extraction_agent,raw_text
+"The product provides lIC-VX-3Y-RNW 3-Year Viewing Station License, Renewal $1,299.",text_extraction_agent,raw_text
+"The product provides lIC-VX-5Y-RNW 5-Year Viewing Station License, Renewal $1,999.",text_extraction_agent,raw_text
+"The product provides lIC-VX-10Y-RNW 10-Year Viewing Station License, Renewal $3,999.",text_extraction_agent,raw_text
+The product provides www.verkada.com sales@verkada.com 7.,text_extraction_agent,raw_text

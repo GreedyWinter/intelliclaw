@@ -24,9 +24,15 @@ def init_db():
                     project_id INTEGER NOT NULL REFERENCES projects(id) ON DELETE CASCADE,
                     status TEXT NOT NULL DEFAULT 'pending',
                     pipeline_version TEXT NOT NULL DEFAULT 'v1',
+                    stage TEXT NOT NULL DEFAULT 'extraction',
+                    human_review_status TEXT NOT NULL DEFAULT 'not_requested',
+                    current_iteration INTEGER NOT NULL DEFAULT 1,
                     summary TEXT,
                     result_path TEXT,
                     error_message TEXT,
+                    review_artifacts JSONB NOT NULL DEFAULT '[]'::jsonb,
+                    agent_feedback JSONB NOT NULL DEFAULT '{}'::jsonb,
+                    human_feedback JSONB NOT NULL DEFAULT '{}'::jsonb,
                     step_results JSONB NOT NULL DEFAULT '[]'::jsonb,
                     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
                     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
@@ -47,6 +53,30 @@ def init_db():
             cur.execute("""
                 ALTER TABLE documents
                 ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'uploaded';
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS stage TEXT NOT NULL DEFAULT 'extraction';
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS human_review_status TEXT NOT NULL DEFAULT 'not_requested';
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS current_iteration INTEGER NOT NULL DEFAULT 1;
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS review_artifacts JSONB NOT NULL DEFAULT '[]'::jsonb;
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS agent_feedback JSONB NOT NULL DEFAULT '{}'::jsonb;
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS human_feedback JSONB NOT NULL DEFAULT '{}'::jsonb;
             """)
         conn.commit()
 

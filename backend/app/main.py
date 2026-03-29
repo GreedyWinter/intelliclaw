@@ -14,9 +14,17 @@ from backend.app.repositories import (
     fetch_project_analysis_runs,
     fetch_project_documents,
 )
-from backend.app.schemas import AnalysisRunCreate, ProjectCreate
-from backend.app.services.analysis_service import run_project_analysis
-from backend.app.storage import build_upload_path, ensure_workspace
+from backend.app.schemas import AnalysisRunCreate, HumanReviewSubmission, ProjectCreate
+from backend.app.services.analysis_service import start_project_analysis, submit_human_review
+from backend.app.storage import (
+    build_upload_path,
+    ensure_run_dir,
+    ensure_workspace,
+    get_run_summary_path,
+    get_run_trace_path,
+    read_run_summary,
+    read_run_trace,
+)
 
 env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(dotenv_path=env_path)
@@ -156,7 +164,7 @@ def get_project_summary():
 def get_project(project_id: int):
     project = fetch_project(project_id)
     project["documents"] = fetch_project_documents(project_id)
-    project["analysis_runs"] = fetch_project_analysis_runs(project_id)
+    project["analysis_runs"] = [_with_run_observability(run) for run in fetch_project_analysis_runs(project_id)]
     return project
 
 
@@ -189,18 +197,37 @@ async def upload_project_document(project_id: int, file: UploadFile = File(...))
 @app.get("/projects/{project_id}/analysis-runs")
 def get_project_runs(project_id: int):
     fetch_project(project_id)
-    return fetch_project_analysis_runs(project_id)
+    return [_with_run_observability(run) for run in fetch_project_analysis_runs(project_id)]
 
 
 @app.post("/projects/{project_id}/analysis-runs", status_code=201)
 def create_project_run(project_id: int, payload: AnalysisRunCreate):
     fetch_project(project_id)
-    return run_project_analysis(project_id, payload.prompt)
+    return start_project_analysis(project_id, payload.prompt)
 
 
 @app.get("/analysis-runs/{run_id}")
 def get_analysis_run(run_id: int):
-    return fetch_analysis_run(run_id)
+    return _with_run_observability(fetch_analysis_run(run_id))
+
+
+@app.get("/analysis-runs/{run_id}/trace")
+def get_analysis_run_trace(run_id: int):
+    run = fetch_analysis_run(run_id)
+    run_dir = ensure_run_dir(run["project_id"], run_id)
+    return {
+        "run_id": run_id,
+        "project_id": run["project_id"],
+        "trace_path": str(get_run_trace_path(run_dir)),
+        "summary_path": str(get_run_summary_path(run_dir)),
+        "trace_entries": read_run_trace(run_dir),
+        "summary": read_run_summary(run_dir),
+    }
+
+
+@app.post("/analysis-runs/{run_id}/human-review")
+def review_analysis_run(run_id: int, payload: HumanReviewSubmission):
+    return submit_human_review(run_id, payload.approved, payload.feedback)
 
 
 @app.get("/documents")
@@ -232,3 +259,15 @@ def get_documents():
         }
         for row in rows
     ]
+
+
+def _with_run_observability(run: dict) -> dict:
+    run_dir = ensure_run_dir(run["project_id"], run["id"])
+    summary_payload = read_run_summary(run_dir)
+    trace_entries = read_run_trace(run_dir, tail=40)
+    run["trace_path"] = str(get_run_trace_path(run_dir))
+    run["summary_path"] = str(get_run_summary_path(run_dir))
+    run["failure_details"] = summary_payload.get("failure_details", {})
+    run["trace_preview"] = trace_entries
+    run["latest_trace_message"] = trace_entries[-1]["message"] if trace_entries else None
+    return run

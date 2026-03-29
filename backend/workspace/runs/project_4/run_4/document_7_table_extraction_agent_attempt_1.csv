@@ -1,0 +1,11 @@
+page,feature,source_kind
+6,3.6mmlens | DORIdefinition | Distance,table
+6,Detect | 25px/m(8px/ft) | 50.6m(166.0ft),table
+6,Observe | 63px/m(19px/ft) | 20.1m(65.9ft),table
+6,Recognize | 125px/m(38px/ft) | 10.1m(33.1ft),table
+6,Identify | 250px/m(76px/ft) | 5.1m(16.7ft),table
+6,2.8mmlens | DORIdefinition | Distance,table
+6,Detect | 25px/m(8px/ft) | 21.1m(69.2ft),table
+6,Observe | 63px/m(19px/ft) | 7.4m(24.3ft),table
+6,Recognize | 125px/m(38px/ft) | 4.2m(13.8ft),table
+6,Identify | 250px/m(76px/ft) | 2.1m(6.9ft),table

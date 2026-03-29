@@ -1,0 +1,173 @@
+page,feature,source_kind
+1,Dome Series,text
+1,CD22 Indoor Dome Camera,text
+1,Essential 3MP Coverage for,text
+1,Monitoring Indoor Environments,text
+1,Overview,text
+1,The CD22 dome camera provides essential 3MP coverage in a variety of indoor spaces. With its 1 / 2.8” progressive CMOS,text
+1,"image sensor and 10 meters / 33 feet of IR range, the CD22 offers reliable visibility for organizations seeking quick and",text
+1,scalable deployments. The CD22 includes an onboard CV25S Ambarella processor to detect and alert on the presence of,text
+1,people and vehicles. The CD22 is optimized for covering spaces like storage closets and store aisles where supplemental,text
+1,visibility is necessary.,text
+1,"The CD22’s sleek design and IK08 impact rating enable organizations to deploy a durable, tamper-resistant camera while",text
+1,"also keeping aesthetics top-of-mind. Installation is simple and intuitive, and setup is easy to track with an LED status",text
+1,indicator. The included mount plate additionally allows the camera to be mounted to a wall or ceiling without any,text
+1,additional hardware.,text
+1,Key features,text
+1,Clear image quality Hybrid cloud architecture,text
+1,• 1 / 2.8” progressive CMOS image sensor • Onboard storage and processing for reduced,text
+1,• 3MP resolution bandwidth consumption and coverage at scale,text
+1,• 10 meters / 33 feet of IR range for nighttime viewing • 30 - 90 days (256GB - 768GB) of onboard storage,text
+1,• Redundant cloud backup and unlimited cloud-based,text
+1,archiving of footage,text
+1,Essential detection Easy installation,text
+1,• Onboard CV25S Ambarella processor enables people • Mounting plate and screw pack included,text
+1,and vehicle detection • LED light status indicator,text
+1,wwwwww..vveerrkkaaddaa..ccoomm 10122254 ssaalleess@@vveerrkkaaddaa..ccoomm 11,text
+2,Dome Series,text
+2,CD22,text
+2,Tech Specs,text
+2,Camera features,text
+2,"Image Sensor 1 / 2.8"" Progressive CMOS Shutter Speed 1 / 30 sec. to 1 / 10,000 sec.",text
+2,Sensor Resolution1 3MP (2048 x 1536) Day/Night IR-cut fi lter for day and night function,text
+2,Lens Type Fixed IR Cut Filter Yes,text
+2,Focal Length 2.8mm IR Range 10m / 33ft,text
+2,0.009 lux @ F1.9 (Color),text
+2,Aperture F1.6 Minimum Illumination,text
+2,0 lux with IR Illuminators on,text
+2,Capacity: From 256GB to 768GB,text
+2,Iris Fixed Onboard Storage,text
+2,"Card: MicroSD, SDXC",text
+2,Horizontal: 97° (78°),text
+2,Field of View (after LDC2) Vertical: 71° (63°) CPU Ambarella CV25S88,text
+2,Diagonal: 128° (91°),text
+2,Tilt: 60°,text
+2,Sensor Movement Pan: 355°,text
+2,Rotation: 180°,text
+2,Standard video settings,text
+2,"Compression H.265, H.264 Historical Video Settings Adaptive quality1",text
+2,"High quality (HQ): Up to 3,000 Kbps (default)",text
+2,Frame Rate3 24fps Live Streaming Settings,text
+2,Standard quality (SQ): Up to 600 Kbps,text
+2,Standard audio settings,text
+2,Audio Not Supported,text
+2,Power and network,text
+2,With IR: IEEE 802.3af Type 1 PoE,text
+2,RJ-45 cable connector for network/PoE,text
+2,Power Input4 Without IR: IEEE 802.3af Type 1 PoE Connectivity,text
+2,connection; 10 / 100 Mbps,text
+2,Extended temperature range: N/A,text
+2,RTSP 1.0,text
+2,"With IR: 37-57V, 0.23-0.15A, 8.6W",text
+2,RFC 2326,text
+2,"Power Consumption4 Without IR: 37-57V, 0.11-0.07A, 4.3W RTSP",text
+2,Max concurrent streams: 2,text
+2,Extended temperature range: N/A,text
+2,Audio support: No,text
+2,"1. All our cameras record in ""adaptive quality,"" capturing both standard (SQ) and high quality (HQ) streams. SQ video is stored up to the amount of retention specifi ed by",text
+2,"the customer. The amount of HQ video stored on the camera will depend on the amount of motion detected by the camera over time. To learn more, visit our website:",text
+2,https://docs.verkada.com/docs/adaptive-quality-recording-whitepaper.pdf,text
+2,"2. Lens Distortion Correction (LDC) crops the sensor fi eld of view to deliver a rectifi ed, undistorted output image.",text
+2,3. Frame rate can be adjusted by support.,text
+2,4. Extended temperature range includes operating temperatures below -10°C / 14°F and assumes IR will be enabled.,text
+2,www.verkada.com sales@verkada.com 2,text
+3,Dome Series,text
+3,CD22,text
+3,Tech Specs,text
+3,General,text
+3,Operating Temperature -10°C to 50°C / 14°F to 122°F LED Indicator System power and status indicator,text
+3,Humidity 0 to 90% Warranty 5 Years,text
+3,"FCC, ICES, CE, UKCA, RCM, CB,",text
+3,"VCCI, KCC, BIS, NOM, UL/cUL/IEC Setup guide, T10 security torx screwdriver,",text
+3,Certifi cations Included Accessories,text
+3,"62368-1, IK08 impact rating, FY2019 screw pack, mounting template",text
+3,NDAA compliant,text
+3,Mechanical,text
+3,Camera: 608g / 21.45oz,text
+3,"Weight Body Aluminum, plastic dome trim",text
+3,Mountplate: 140g / 4.94oz,text
+3,"Ø: 146.0mm / 5.75in, H: 104.3mm / 4.11in",text
+3,with mount plate,text
+3,Dimensions,text
+3,"Ø: 146.0mm / 5.75in, H: 99.8mm / 3.93in",text
+3,without mount plate,text
+3,Dimensions,text
+3,Software capabilities,text
+3,"Camera status, motion detection,",text
+3,"Cloud backup, confi gurable retention days,",text
+3,"people detection, vehicle detection,",text
+3,"Alerts Streaming and Storage selectable storage location, low bandwidth",text
+3,"crowd detection, line-crossing",text
+3,"mode, timelapse, RTSP",text
+3,"detection, loitering detection",text
+3,"Live links, live face blur, privacy regions,",text
+3,"People Analytics Motion search, trajectory analysis Sharing and Privacy",text
+3,audit log,text
+3,"Vehicle Analytics Motion search, trajectory analysis",text
+3,www.verkada.com sales@verkada.com 3,text
+3,104.3mm,text
+3,4.11in,text
+3,146.0mm / 5.75in,text
+4,Dome Series,text
+4,Ordering Information,text
+4,CD22 pricing,text
+4,Maximum People/,text
+4,Onboard Cost,text
+4,Model Number MP1 WDR Lens IR Range Storage SQ Onboard Vehicle (MSRP) USD,text
+4,Retention1 Analytics,text
+4,CD22-256-HW 3MP Fixed 10m / 33ft 256GB 30 Days – $599,text
+4,CD22-512-HW 3MP Fixed 10m / 33ft 512GB 60 Days – $999,text
+4,"CD22-768-HW 3MP Fixed 10m / 33ft 768GB 90 Days – $1,399",text
+4,"1. All our cameras record in ""adaptive quality,"" capturing both standard and high quality streams. Standard quality (SQ) video is stored up to the amount of retention specified by",text
+4,"the customer. The amount of high quality video stored on the camera will depend on the amount of motion detected by the camera over time. To learn more, visit our website:",text
+4,https://docs.verkada.com/docs/adaptive-quality-recording-whitepaper.pdf,text
+4,www.verkada.com sales@verkada.com 4,text
+5,Dome Series,text
+5,Ordering Information,text
+5,Video Security Cloud License pricing (New/Capacity Increase),text
+5,Model Number Description Cost (MSRP) USD,text
+5,"LIC-CAM-1Y-CAP 1-Year Camera License, Capacity Increase $219",text
+5,"LIC-CAM-3Y-CAP 3-Year Camera License, Capacity Increase $599",text
+5,"LIC-CAM-5Y-CAP 5-Year Camera License, Capacity Increase $999",text
+5,"LIC-CAM-10Y-CAP 10-Year Camera License, Capacity Increase $1,999",text
+5,Video Security Cloud License pricing (Renewal),text
+5,Model Number Description Cost (MSRP) USD,text
+5,"LIC-CAM-1Y-RNW 1-Year Camera License, Renewal $219",text
+5,"LIC-CAM-3Y-RNW 3-Year Camera License, Renewal $599",text
+5,"LIC-CAM-5Y-RNW 5-Year Camera License, Renewal $999",text
+5,"LIC-CAM-10Y-RNW 10-Year Camera License, Renewal $1,999",text
+5,www.verkada.com sales@verkada.com 5,text
+6,Dome Series,text
+6,Ordering Information,text
+6,Accessories pricing,text
+6,Model Number Description Cost (MSRP) USD,text
+6,ACC-CAM-SHIELD-1 Camera Weather Shield $79,text
+6,ACC-MNT-ANGLE-1 Angle Mount $149,text
+6,ACC-MNT-ARM-1 Arm Mount $99,text
+6,ACC-MNT-CJBOX-1 Circle Junction Box Mount $109,text
+6,ACC-MNT-CLIP-1 Tile Clip Mount $99,text
+6,ACC-MNT-CORNER-1 Corner Mount $199,text
+6,ACC-MNT-LBRAC-1 L-Bracket Mount $129,text
+6,ACC-MNT-PEND-1 Pendant Cap Mount $69,text
+6,ACC-MNT-POLE-1 Pole Mount $209,text
+6,ACC-MNT-REC-2 Recess Ceiling Mount $149,text
+6,"INJ-POE-PLUS PoE Plus (802.3at Type 2) Injector, GigE $129",text
+6,www.verkada.com sales@verkada.com 6,text
+7,Dome Series,text
+7,Ordering Information,text
+7,Viewing Station pricing,text
+7,Model Number Description Cost (MSRP) USD,text
+7,VX52-HW VX52 Viewing Station $499,text
+7,Viewing Station License pricing (New/Capacity Increase),text
+7,Model Number Description Cost (MSRP) USD,text
+7,"LIC-VX-1Y-CAP 1-Year Viewing Station License, Capacity Increase $499",text
+7,"LIC-VX-3Y-CAP 3-Year Viewing Station License, Capacity Increase $1,299",text
+7,"LIC-VX-5Y-CAP 5-Year Viewing Station License, Capacity Increase $1,999",text
+7,"LIC-VX-10Y-CAP 10-Year Viewing Station License, Capacity Increase $3,999",text
+7,Viewing Station License pricing (Renewal),text
+7,Model Number Description Cost (MSRP) USD,text
+7,"LIC-VX-1Y-RNW 1-Year Viewing Station License, Renewal $499",text
+7,"LIC-VX-3Y-RNW 3-Year Viewing Station License, Renewal $1,299",text
+7,"LIC-VX-5Y-RNW 5-Year Viewing Station License, Renewal $1,999",text
+7,"LIC-VX-10Y-RNW 10-Year Viewing Station License, Renewal $3,999",text
+7,www.verkada.com sales@verkada.com 7,text

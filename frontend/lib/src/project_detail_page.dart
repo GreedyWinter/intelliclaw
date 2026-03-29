@@ -20,15 +20,23 @@ class ProjectDetailPage extends StatefulWidget {
 
 class _ProjectDetailPageState extends State<ProjectDetailPage> {
   ProjectDetail? _projectDetail;
+  final TextEditingController _reviewFeedbackController = TextEditingController();
   bool _isLoading = true;
   bool _isUploading = false;
   bool _isRunningAnalysis = false;
+  bool _isSubmittingReview = false;
   String _errorMessage = '';
 
   @override
   void initState() {
     super.initState();
     _loadProject();
+  }
+
+  @override
+  void dispose() {
+    _reviewFeedbackController.dispose();
+    super.dispose();
   }
 
   Future<void> _loadProject() async {
@@ -131,9 +139,49 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
     }
   }
 
+  Future<void> _submitHumanReview({
+    required int runId,
+    required bool approved,
+  }) async {
+    setState(() {
+      _isSubmittingReview = true;
+      _errorMessage = '';
+    });
+
+    try {
+      await widget.api.submitHumanReview(
+        runId: runId,
+        approved: approved,
+        feedback: _reviewFeedbackController.text.trim(),
+      );
+      if (approved) {
+        _reviewFeedbackController.clear();
+      }
+      await _loadProject();
+    } catch (error) {
+      if (!mounted) {
+        return;
+      }
+      setState(() {
+        _errorMessage = error.toString();
+      });
+    } finally {
+      if (mounted) {
+        setState(() {
+          _isSubmittingReview = false;
+        });
+      }
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final detail = _projectDetail;
+    final reviewRuns = detail?.analysisRuns
+            .where((run) => run.humanReviewStatus == 'awaiting_review')
+            .toList() ??
+        const [];
+    final activeReviewRun = reviewRuns.isNotEmpty ? reviewRuns.first : null;
 
     return Scaffold(
       appBar: AppBar(
@@ -150,18 +198,9 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                       spacing: 16,
                       runSpacing: 16,
                       children: [
-                        _MetricCard(
-                          label: 'Project',
-                          value: detail.project.name,
-                        ),
-                        _MetricCard(
-                          label: 'Documents',
-                          value: '${detail.documents.length}',
-                        ),
-                        _MetricCard(
-                          label: 'Analysis runs',
-                          value: '${detail.analysisRuns.length}',
-                        ),
+                        _MetricCard(label: 'Project', value: detail.project.name),
+                        _MetricCard(label: 'Documents', value: '${detail.documents.length}'),
+                        _MetricCard(label: 'Analysis runs', value: '${detail.analysisRuns.length}'),
                       ],
                     ),
                     const SizedBox(height: 24),
@@ -189,9 +228,7 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                                   child: CircularProgressIndicator(strokeWidth: 2),
                                 )
                               : const Icon(Icons.play_arrow),
-                          label: Text(
-                            _isRunningAnalysis ? 'Running analysis...' : 'Run analysis',
-                          ),
+                          label: Text(_isRunningAnalysis ? 'Running analysis...' : 'Run analysis'),
                         ),
                         OutlinedButton.icon(
                           onPressed: _loadProject,
@@ -208,6 +245,100 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                       ),
                     ],
                     const SizedBox(height: 24),
+                    if (activeReviewRun != null) ...[
+                      _SectionCard(
+                        title: 'Human review required',
+                        subtitle:
+                            'Inspect the extraction preview, then approve it or request another pass with feedback.',
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Run #${activeReviewRun.id} | iteration ${activeReviewRun.currentIteration}',
+                              style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                    fontWeight: FontWeight.w700,
+                                  ),
+                            ),
+                            const SizedBox(height: 16),
+                            ...activeReviewRun.reviewArtifacts.map(
+                              (artifact) => Container(
+                                margin: const EdgeInsets.only(bottom: 16),
+                                padding: const EdgeInsets.all(16),
+                                decoration: BoxDecoration(
+                                  color: const Color(0xFFF8FAFE),
+                                  borderRadius: BorderRadius.circular(18),
+                                  border: Border.all(color: const Color(0xFFE2E8F2)),
+                                ),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      artifact.filename,
+                                      style: Theme.of(context).textTheme.titleMedium?.copyWith(
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    if (artifact.evaluatorFeedback.isNotEmpty)
+                                      Text('Evaluator feedback: ${artifact.evaluatorFeedback.join(" ")}'),
+                                    if (artifact.humanFeedback.isNotEmpty) ...[
+                                      const SizedBox(height: 8),
+                                      Text('Previous human feedback: ${artifact.humanFeedback.join(" ")}'),
+                                    ],
+                                    const SizedBox(height: 12),
+                                    ...artifact.previewRows.take(5).map(
+                                      (row) => Padding(
+                                        padding: const EdgeInsets.only(bottom: 8),
+                                        child: Text('- ${row['feature'] ?? row.toString()}'),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            TextField(
+                              controller: _reviewFeedbackController,
+                              maxLines: 4,
+                              decoration: const InputDecoration(
+                                labelText: 'Human review feedback',
+                                hintText: 'If you reject this extraction, describe what to improve.',
+                                border: OutlineInputBorder(),
+                              ),
+                            ),
+                            const SizedBox(height: 16),
+                            Wrap(
+                              spacing: 12,
+                              runSpacing: 12,
+                              children: [
+                                FilledButton.icon(
+                                  onPressed: _isSubmittingReview
+                                      ? null
+                                      : () => _submitHumanReview(
+                                            runId: activeReviewRun.id,
+                                            approved: true,
+                                          ),
+                                  icon: const Icon(Icons.check_circle_outline),
+                                  label: Text(
+                                    _isSubmittingReview ? 'Submitting...' : 'Approve extraction',
+                                  ),
+                                ),
+                                FilledButton.tonalIcon(
+                                  onPressed: _isSubmittingReview
+                                      ? null
+                                      : () => _submitHumanReview(
+                                            runId: activeReviewRun.id,
+                                            approved: false,
+                                          ),
+                                  icon: const Icon(Icons.restart_alt),
+                                  label: const Text('Request another pass'),
+                                ),
+                              ],
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 24),
+                    ],
                     _SectionCard(
                       title: 'Documents',
                       subtitle: 'Uploaded competitor PDFs attached to this project.',
@@ -231,7 +362,7 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                     const SizedBox(height: 24),
                     _SectionCard(
                       title: 'Analysis runs',
-                      subtitle: 'Root orchestration plus step-by-step sub-agent results.',
+                      subtitle: 'Root orchestration plus step-by-step sub-agent results and trace logs.',
                       child: detail.analysisRuns.isEmpty
                           ? const Text('No analysis runs yet.')
                           : Column(
@@ -263,13 +394,38 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                                           ),
                                           const SizedBox(height: 8),
                                           if (run.summary != null) Text(run.summary!),
-                                          if (run.errorMessage != null)
+                                          const SizedBox(height: 8),
+                                          Text(
+                                            'Stage: ${run.stage} | Human review: ${run.humanReviewStatus} | Iteration: ${run.currentIteration}',
+                                          ),
+                                          if (run.latestTraceMessage != null) ...[
+                                            const SizedBox(height: 8),
                                             Text(
-                                              run.errorMessage!,
-                                              style: TextStyle(
-                                                color: Theme.of(context).colorScheme.error,
+                                              'Latest trace: ${run.latestTraceMessage!}',
+                                              style: Theme.of(context).textTheme.bodyMedium?.copyWith(
+                                                    fontStyle: FontStyle.italic,
+                                                  ),
+                                            ),
+                                          ],
+                                          if (run.errorMessage != null)
+                                            Padding(
+                                              padding: const EdgeInsets.only(top: 8),
+                                              child: Text(
+                                                run.errorMessage!,
+                                                style: TextStyle(
+                                                  color: Theme.of(context).colorScheme.error,
+                                                  fontWeight: FontWeight.w600,
+                                                ),
                                               ),
                                             ),
+                                          if (run.failureDetails.isNotEmpty) ...[
+                                            const SizedBox(height: 12),
+                                            _FailureDetailsPanel(run: run),
+                                          ],
+                                          if (run.tracePreview.isNotEmpty) ...[
+                                            const SizedBox(height: 12),
+                                            _TracePanel(run: run),
+                                          ],
                                           const SizedBox(height: 12),
                                           Wrap(
                                             spacing: 8,
@@ -277,7 +433,9 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                                             children: run.stepResults
                                                 .map(
                                                   (step) => Chip(
-                                                    label: Text('${step.name}: ${step.status}'),
+                                                    label: Text(
+                                                      '${step.name}: ${step.status}${step.attempt != null ? ' (attempt ${step.attempt})' : ''}',
+                                                    ),
                                                   ),
                                                 )
                                                 .toList(),
@@ -291,6 +449,127 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                     ),
                   ],
                 ),
+    );
+  }
+}
+
+class _FailureDetailsPanel extends StatelessWidget {
+  const _FailureDetailsPanel({required this.run});
+
+  final AnalysisRun run;
+
+  @override
+  Widget build(BuildContext context) {
+    final latestDecision = Map<String, dynamic>.from(
+      run.failureDetails['latest_decision'] as Map<String, dynamic>? ?? const {},
+    );
+    final feedback = ((latestDecision['feedback'] as List<dynamic>?) ??
+            (run.failureDetails['feedback_history'] as List<dynamic>?) ??
+            const [])
+        .map((item) => item.toString())
+        .toList();
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: const Color(0xFFFFF5F5),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFF0C9C9)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Why this run stopped',
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  fontWeight: FontWeight.w700,
+                ),
+          ),
+          const SizedBox(height: 8),
+          Text(run.summary ?? 'The evaluator blocked this run before human review.'),
+          if (run.failureDetails['filename'] != null) ...[
+            const SizedBox(height: 8),
+            Text('Blocked document: ${run.failureDetails['filename']}'),
+          ],
+          if (latestDecision['chosen_strategy'] != null) ...[
+            const SizedBox(height: 8),
+            Text('Chosen candidate: ${latestDecision['chosen_strategy']}'),
+          ],
+          if (latestDecision['score'] != null) ...[
+            const SizedBox(height: 4),
+            Text('Evaluator score: ${latestDecision['score']}'),
+          ],
+          if (feedback.isNotEmpty) ...[
+            const SizedBox(height: 10),
+            Text(
+              'Evaluator feedback history',
+              style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                    fontWeight: FontWeight.w700,
+                  ),
+            ),
+            const SizedBox(height: 8),
+            ...feedback.map(
+              (item) => Padding(
+                padding: const EdgeInsets.only(bottom: 6),
+                child: Text('- $item'),
+              ),
+            ),
+          ],
+          if (run.tracePath != null) ...[
+            const SizedBox(height: 10),
+            Text(
+              'Trace log: ${run.tracePath}',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
+        ],
+      ),
+    );
+  }
+}
+
+class _TracePanel extends StatelessWidget {
+  const _TracePanel({required this.run});
+
+  final AnalysisRun run;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF6F8FC),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFE2E8F2)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Agent trace preview',
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  fontWeight: FontWeight.w700,
+                ),
+          ),
+          const SizedBox(height: 8),
+          ...run.tracePreview.take(8).map(
+                (entry) => Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Text(
+                    '${entry.source ?? 'unknown'} -> ${entry.target ?? 'system'}: ${entry.message}',
+                    style: Theme.of(context).textTheme.bodySmall,
+                  ),
+                ),
+              ),
+          if (run.summaryPath != null)
+            Text(
+              'Summary file: ${run.summaryPath}',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+        ],
+      ),
     );
   }
 }
@@ -327,10 +606,9 @@ class _MetricCard extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             value,
-            style: Theme.of(context)
-                .textTheme
-                .titleLarge
-                ?.copyWith(fontWeight: FontWeight.w700),
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                  fontWeight: FontWeight.w700,
+                ),
           ),
         ],
       ),
@@ -394,6 +672,7 @@ class _StatusChip extends StatelessWidget {
       'completed' => const Color(0xFF1F8F5F),
       'failed' => const Color(0xFFC15555),
       'running' => const Color(0xFF0B5FFF),
+      'awaiting_human_review' => const Color(0xFF946200),
       _ => const Color(0xFF6C7A90),
     };
 

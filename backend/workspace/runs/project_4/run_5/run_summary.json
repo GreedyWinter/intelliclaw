@@ -1,0 +1,821 @@
+{
+  "project_id": 4,
+  "run_id": 5,
+  "status": "awaiting_human_review",
+  "stage": "human_review",
+  "human_review_status": "awaiting_review",
+  "summary": "Evaluator-approved extraction is ready for human review. Review the preview rows and either approve them or request another pass with feedback.",
+  "error_message": null,
+  "result_path": null,
+  "current_iteration": 1,
+  "failure_details": {},
+  "agent_feedback_history": {
+    "7": [
+      "Use verbs and fuller sentence phrasing that humans would naturally write."
+    ],
+    "6": [
+      "Use verbs and fuller sentence phrasing that humans would naturally write."
+    ],
+    "5": []
+  },
+  "human_feedback_history": {},
+  "step_results": [
+    {
+      "name": "document_listing_agent",
+      "status": "completed",
+      "document_id": null,
+      "attempt": null,
+      "details": {
+        "document_count": 3
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_table_extraction_agent_attempt_1.csv",
+        "row_count": 10
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_text_extraction_agent_attempt_1.csv",
+        "row_count": 319
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 6.0,
+          "unique_ratio": 1.0,
+          "score": 0.75
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.705329153605016,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.8928944618599791
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "canonical_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_1.csv",
+        "row_count": 312,
+        "source_count": 2,
+        "source_candidates": [
+          "sentence_rewrite_agent:table_extraction_agent",
+          "sentence_rewrite_agent:text_extraction_agent"
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "metrics": {
+          "row_count": 312.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.733974358974359,
+          "unique_ratio": 1.0,
+          "score": 0.8955662393162392
+        },
+        "feedback": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_1.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "row_count": 312,
+        "source_count": 2,
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_1.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "retry_requested",
+      "document_id": 7,
+      "attempt": 1,
+      "details": {
+        "accepted": false,
+        "retry_requested": true,
+        "chosen_strategy": "canonical_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_1.csv",
+        "score": 0.8955662393162392,
+        "feedback": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ]
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_table_extraction_agent_attempt_2.csv",
+        "row_count": 10
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_text_extraction_agent_attempt_2.csv",
+        "row_count": 319
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_sentence_rewrite_agent_table_extraction_agent_attempt_2.csv",
+        "metrics": {
+          "row_count": 10.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.0,
+          "unique_ratio": 1.0,
+          "score": 0.8
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_sentence_rewrite_agent_text_extraction_agent_attempt_2.csv",
+        "metrics": {
+          "row_count": 319.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.66771159874608,
+          "unique_ratio": 0.9780564263322884,
+          "score": 0.9422675026123302
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "canonical_extraction_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_2.csv",
+        "row_count": 312,
+        "source_count": 2,
+        "source_candidates": [
+          "sentence_rewrite_agent:table_extraction_agent",
+          "sentence_rewrite_agent:text_extraction_agent"
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "metrics": {
+          "row_count": 312.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.695512820512821,
+          "unique_ratio": 1.0,
+          "score": 0.9449252136752136
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_2.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "row_count": 312,
+        "source_count": 2,
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_2.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "completed",
+      "document_id": 7,
+      "attempt": 2,
+      "details": {
+        "accepted": true,
+        "retry_requested": false,
+        "chosen_strategy": "canonical_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_2.csv",
+        "score": 0.9449252136752136,
+        "feedback": []
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_table_extraction_agent_attempt_1.csv",
+        "row_count": 36
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_text_extraction_agent_attempt_1.csv",
+        "row_count": 296
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_sentence_rewrite_agent_table_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 36.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.722222222222222,
+          "unique_ratio": 0.7222222222222222,
+          "score": 0.8675925925925925
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 296.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.081081081081081,
+          "unique_ratio": 0.9324324324324325,
+          "score": 0.877927927927928
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "canonical_extraction_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_1.csv",
+        "row_count": 299,
+        "source_count": 2,
+        "source_candidates": [
+          "sentence_rewrite_agent:table_extraction_agent",
+          "sentence_rewrite_agent:text_extraction_agent"
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "metrics": {
+          "row_count": 299.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 5.2207357859531776,
+          "unique_ratio": 1.0,
+          "score": 0.8870122630992195
+        },
+        "feedback": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_1.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "row_count": 299,
+        "source_count": 2,
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_1.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "retry_requested",
+      "document_id": 6,
+      "attempt": 1,
+      "details": {
+        "accepted": false,
+        "retry_requested": true,
+        "chosen_strategy": "canonical_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_1.csv",
+        "score": 0.8870122630992195,
+        "feedback": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ]
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_table_extraction_agent_attempt_2.csv",
+        "row_count": 36
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_text_extraction_agent_attempt_2.csv",
+        "row_count": 296
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_sentence_rewrite_agent_table_extraction_agent_attempt_2.csv",
+        "metrics": {
+          "row_count": 36.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.722222222222221,
+          "unique_ratio": 0.7222222222222222,
+          "score": 0.9175925925925925
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_sentence_rewrite_agent_text_extraction_agent_attempt_2.csv",
+        "metrics": {
+          "row_count": 296.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.070945945945946,
+          "unique_ratio": 0.9324324324324325,
+          "score": 0.927759009009009
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [
+          "Use verbs and fuller sentence phrasing that humans would naturally write."
+        ],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "canonical_extraction_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_2.csv",
+        "row_count": 299,
+        "source_count": 2,
+        "source_candidates": [
+          "sentence_rewrite_agent:table_extraction_agent",
+          "sentence_rewrite_agent:text_extraction_agent"
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "metrics": {
+          "row_count": 299.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 8.210702341137123,
+          "unique_ratio": 1.0,
+          "score": 0.936845039018952
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_2.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "row_count": 299,
+        "source_count": 2,
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_2.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "completed",
+      "document_id": 6,
+      "attempt": 2,
+      "details": {
+        "accepted": true,
+        "retry_requested": false,
+        "chosen_strategy": "canonical_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_2.csv",
+        "score": 0.936845039018952,
+        "feedback": []
+      }
+    },
+    {
+      "name": "table_extraction_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_table_extraction_agent_attempt_1.csv",
+        "row_count": 1
+      }
+    },
+    {
+      "name": "text_extraction_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_text_extraction_agent_attempt_1.csv",
+        "row_count": 172
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_sentence_rewrite_agent_table_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 1.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 4.0,
+          "unique_ratio": 1.0,
+          "score": 0.6266666666666667
+        },
+        "source_strategy": "table_extraction_agent",
+        "feedback_used": [],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "sentence_rewrite_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_sentence_rewrite_agent_text_extraction_agent_attempt_1.csv",
+        "metrics": {
+          "row_count": 172.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.44767441860465,
+          "unique_ratio": 0.8895348837209303,
+          "score": 0.9464147286821705
+        },
+        "source_strategy": "text_extraction_agent",
+        "feedback_used": [],
+        "provider": "heuristic"
+      }
+    },
+    {
+      "name": "canonical_extraction_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_canonical_extraction_attempt_1.csv",
+        "row_count": 154,
+        "source_count": 2,
+        "source_candidates": [
+          "sentence_rewrite_agent:table_extraction_agent",
+          "sentence_rewrite_agent:text_extraction_agent"
+        ]
+      }
+    },
+    {
+      "name": "grammar_evaluator_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "metrics": {
+          "row_count": 154.0,
+          "human_sentence_ratio": 1.0,
+          "average_words": 9.837662337662337,
+          "unique_ratio": 1.0,
+          "score": 0.9639610389610389
+        },
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_canonical_extraction_attempt_1.csv"
+      }
+    },
+    {
+      "name": "coverage_evaluator_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "row_count": 154,
+        "source_count": 2,
+        "feedback": [],
+        "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_canonical_extraction_attempt_1.csv"
+      }
+    },
+    {
+      "name": "extraction_evaluator_agent",
+      "status": "completed",
+      "document_id": 5,
+      "attempt": 1,
+      "details": {
+        "accepted": true,
+        "retry_requested": false,
+        "chosen_strategy": "canonical_extraction_agent",
+        "chosen_csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_canonical_extraction_attempt_1.csv",
+        "score": 0.9639610389610389,
+        "feedback": []
+      }
+    },
+    {
+      "name": "human_review_preparation_agent",
+      "status": "completed",
+      "document_id": null,
+      "attempt": null,
+      "details": {
+        "review_artifacts": [
+          {
+            "document_id": 7,
+            "filename": "datasheet-axis-m3905-r-dome-camera-en-US-506723.pdf",
+            "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_7_canonical_extraction_attempt_2.csv",
+            "preview_rows": [
+              {
+                "feature": "The product provides the product provides 3.6mmlens DORIdefinition Distance.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Detect 25px/m(8px/ft) 50.6m(166.0ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Observe 63px/m(19px/ft) 20.1m(65.9ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Recognize 125px/m(38px/ft) 10.1m(33.1ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Identify 250px/m(76px/ft) 5.1m(16.7ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides 2.8mmlens DORIdefinition Distance.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Detect 25px/m(8px/ft) 21.1m(69.2ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Observe 63px/m(19px/ft) 7.4m(24.3ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Recognize 125px/m(38px/ft) 4.2m(13.8ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Identify 250px/m(76px/ft) 2.1m(6.9ft).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              }
+            ],
+            "evaluator_feedback": [
+              "Use verbs and fuller sentence phrasing that humans would naturally write."
+            ],
+            "human_feedback": []
+          },
+          {
+            "document_id": 6,
+            "filename": "h6-xp-dome-camera-datasheet.pdf",
+            "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_6_canonical_extraction_attempt_2.csv",
+            "preview_rows": [
+              {
+                "feature": "The product provides the product provides 4MP 8MP.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides 4.0MP 8.0MP(4KULTRAHD).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Primary.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Secondary.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides Tertiary.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides WDROff.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides WDROn (IEC62676).",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides WDROn.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides 4.4-9.3MM 10.9-29MM.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides the product provides 4MP.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              }
+            ],
+            "evaluator_feedback": [
+              "Use verbs and fuller sentence phrasing that humans would naturally write."
+            ],
+            "human_feedback": []
+          },
+          {
+            "document_id": 5,
+            "filename": "video-security-cd22-datasheet.pdf",
+            "csv_path": "C:\\Users\\izzad\\Documents\\Personal\\Projects\\agent_dev\\intelliclaw\\backend\\workspace\\runs\\project_4\\run_5\\document_5_canonical_extraction_attempt_1.csv",
+            "preview_rows": [
+              {
+                "feature": "The product provides nan.",
+                "source_strategy": "table_extraction_agent",
+                "source_kind": "raw_table"
+              },
+              {
+                "feature": "The product provides dome Series.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides cD22 Indoor Dome Camera.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides essential 3MP Coverage for.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides monitoring Indoor Environments.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides overview.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides the CD22 dome camera provides essential 3MP coverage in a variety of indoor spaces. With its 1 / 2.8\u201d progressive CMOS.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides image sensor and 10 meters / 33 feet of IR range, the CD22 offers reliable visibility for organizations seeking quick and.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides scalable deployments. The CD22 includes an onboard CV25S Ambarella processor to detect and alert on the presence of.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              },
+              {
+                "feature": "The product provides people and vehicles. The CD22 is optimized for covering spaces like storage closets and store aisles where supplemental.",
+                "source_strategy": "text_extraction_agent",
+                "source_kind": "raw_text"
+              }
+            ],
+            "evaluator_feedback": [],
+            "human_feedback": []
+          }
+        ]
+      }
+    }
+  ],
+  "trace_event_count": 111
+}

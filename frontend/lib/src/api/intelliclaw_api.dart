@@ -103,6 +103,25 @@ class IntelliclawApi {
     );
   }
 
+  Future<AnalysisRun> submitHumanReview({
+    required int runId,
+    required bool approved,
+    String feedback = '',
+  }) async {
+    final response = await _client.post(
+      _uri('/analysis-runs/$runId/human-review'),
+      headers: {'Content-Type': 'application/json'},
+      body: jsonEncode({
+        'approved': approved,
+        'feedback': feedback,
+      }),
+    );
+    _ensureSuccess(response);
+    return AnalysisRun.fromJson(
+      jsonDecode(response.body) as Map<String, dynamic>,
+    );
+  }
+
   void _ensureSuccess(http.Response response) {
     if (response.statusCode >= 200 && response.statusCode < 300) {
       return;
