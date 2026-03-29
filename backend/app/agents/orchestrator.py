@@ -3,13 +3,14 @@ from fastapi import HTTPException
 from backend.app.agents.base import AnalysisContext
 from backend.app.agents.sub_agents import (
     ComparisonAgent,
-    CanonicalExtractionAgent,
     CoverageEvaluatorAgent,
     DocumentListingAgent,
     ExtractionEvaluatorAgent,
+    GapSummaryAgent,
     GrammarEvaluatorAgent,
     HumanReviewPreparationAgent,
     NormalizationAgent,
+    ReconstructionAgent,
     ReportingAgent,
     SentenceRewriteAgent,
     TableExtractionAgent,
@@ -22,13 +23,14 @@ class ProductGapOrchestrator:
         self.document_listing_agent = DocumentListingAgent()
         self.raw_extractor_agents = [TableExtractionAgent(), TextExtractionAgent()]
         self.sentence_structurer_agents = [SentenceRewriteAgent()]
-        self.canonical_extraction_agent = CanonicalExtractionAgent()
+        self.reconstruction_agent = ReconstructionAgent()
         self.specialist_evaluators = [GrammarEvaluatorAgent(), CoverageEvaluatorAgent()]
         self.extraction_evaluator_agent = ExtractionEvaluatorAgent()
         self.human_review_preparation_agent = HumanReviewPreparationAgent()
         self.post_review_agents = [
             NormalizationAgent(),
             ComparisonAgent(),
+            GapSummaryAgent(),
             ReportingAgent(),
         ]
 
@@ -107,14 +109,14 @@ class ProductGapOrchestrator:
 
                 context.log_event(
                     source="product_gap_root_orchestrator",
-                    target=self.canonical_extraction_agent.name,
+                    target=self.reconstruction_agent.name,
                     event_type="dispatch",
-                    message="Building one canonical extraction CSV for evaluator review.",
+                    message="Reconstructing one canonical extraction CSV for evaluator review.",
                     document_id=document["id"],
                     attempt=attempt,
                 )
                 context.step_results.append(
-                    self.canonical_extraction_agent.run(
+                    self.reconstruction_agent.run(
                         context,
                         document=document,
                         attempt=attempt,
@@ -249,7 +251,7 @@ class ProductGapOrchestrator:
                 self.document_listing_agent.name,
                 *[agent.name for agent in self.raw_extractor_agents],
                 *[agent.name for agent in self.sentence_structurer_agents],
-                self.canonical_extraction_agent.name,
+                self.reconstruction_agent.name,
                 *[agent.name for agent in self.specialist_evaluators],
                 self.extraction_evaluator_agent.name,
                 self.human_review_preparation_agent.name,
@@ -257,17 +259,20 @@ class ProductGapOrchestrator:
             ],
             "raw_extractors": [agent.name for agent in self.raw_extractor_agents],
             "sentence_structurers": [agent.name for agent in self.sentence_structurer_agents],
-            "canonical_extraction_agent": self.canonical_extraction_agent.name,
+            "reconstruction_agent": self.reconstruction_agent.name,
             "specialist_evaluators": [agent.name for agent in self.specialist_evaluators],
             "aggregate_evaluator": self.extraction_evaluator_agent.name,
             "gemini_backed_agents": [
                 "sentence_rewrite_agent",
+                "reconstruction_agent",
+                "grammar_evaluator_agent",
                 "extraction_evaluator_agent",
+                "gap_summary_agent",
             ],
             "human_review_agent": self.human_review_preparation_agent.name,
             "intent": (
-                "Break PDF extraction into raw extraction, sentence structuring, a single "
-                "canonical per-document CSV, specialist evaluation, aggregate evaluation, "
+                "Break PDF extraction into raw extraction, sentence structuring, reconstruction "
+                "into a single canonical per-document CSV, specialist evaluation, aggregate evaluation, "
                 "human review, and only then continue to gap analysis."
             ),
         }

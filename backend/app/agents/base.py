@@ -67,6 +67,7 @@ class AnalysisContext:
     human_feedback_history: dict[str, list[str]] = field(default_factory=dict)
     normalized_csvs: list[Path] = field(default_factory=list)
     gap_matrix_path: Path | None = None
+    gap_summary_path: Path | None = None
     summary: str | None = None
     step_results: list[AgentStepResult] = field(default_factory=list)
     agent_trace: list[dict[str, Any]] = field(default_factory=list)

@@ -148,6 +148,125 @@ def _build_extraction_evaluation_prompt(
     )
 
 
+def _build_reconstruction_prompt(
+    *,
+    filename: str,
+    prompt: str,
+    feedback: list[str],
+    fragments: list[dict[str, str]],
+) -> str:
+    feedback_text = "\n".join(f"- {item}" for item in feedback) if feedback else "- None"
+    fragment_lines = "\n".join(
+        f"{index + 1}. [{fragment['source_strategy']}] {fragment['feature']}"
+        for index, fragment in enumerate(fragments)
+    )
+    return (
+        f"Document: {filename}\n"
+        f"Project goal: {prompt}\n"
+        "Task: reconstruct fragmented product-sheet extraction lines into a de-duplicated list of "
+        "clear product capabilities suitable for competitive gap analysis.\n"
+        "Requirements:\n"
+        "- Merge fragments that describe the same capability.\n"
+        "- Remove headers, footers, page artifacts, and boilerplate.\n"
+        "- Preserve factual meaning.\n"
+        "- Write one concise sentence per capability.\n"
+        "- Include a short capability_label with the core feature phrased as a comparison-ready label.\n"
+        "- Avoid inventing capabilities not supported by the fragments.\n"
+        f"Feedback to address:\n{feedback_text}\n"
+        "Fragments:\n"
+        f"{fragment_lines}\n"
+        "Return strict JSON with this exact shape:\n"
+        '{"capabilities":[{"capability_label":"...","feature":"...","source_strategies":["text_extraction_agent"]}]}'
+    )
+
+
+def _build_grammar_evaluation_prompt(
+    *,
+    filename: str,
+    preview_rows: list[str],
+) -> str:
+    preview_text = "\n".join(f"- {row}" for row in preview_rows) if preview_rows else "- None"
+    return (
+        f"Document: {filename}\n"
+        "Task: review the extracted capability sentences for grammar and readability.\n"
+        "Check for incomplete phrases, unnatural wording, punctuation problems, and fragments that do not read like a human analyst sentence.\n"
+        "Preview rows:\n"
+        f"{preview_text}\n"
+        "Return strict JSON with this exact shape:\n"
+        '{"approved":true,"feedback":["..."],"summary":"..."}'
+    )
+
+
+def _build_gap_summary_prompt(
+    *,
+    filenames: list[str],
+    shared_features: list[str],
+    partial_features: list[str],
+    unique_features: dict[str, list[str]],
+) -> str:
+    shared_text = "\n".join(f"- {item}" for item in shared_features[:25]) if shared_features else "- None"
+    partial_text = "\n".join(f"- {item}" for item in partial_features[:25]) if partial_features else "- None"
+    unique_lines: list[str] = []
+    for filename, features in unique_features.items():
+        unique_lines.append(f"{filename}:")
+        unique_lines.extend(f"- {item}" for item in features[:15])
+    unique_text = "\n".join(unique_lines) if unique_lines else "None"
+    return (
+        f"Documents compared: {', '.join(filenames)}\n"
+        "Task: summarize the competitive feature gap analysis across the provided product specification PDFs.\n"
+        "Focus on the common baseline features, the meaningful differentiators, and the actual feature gaps.\n"
+        "Features present in all documents:\n"
+        f"{shared_text}\n"
+        "Features present in some but not all documents:\n"
+        f"{partial_text}\n"
+        "Unique features by document:\n"
+        f"{unique_text}\n"
+        "Return strict JSON with this exact shape:\n"
+        '{"executive_summary":"...","shared_capabilities":["..."],"key_gaps":["..."],"document_highlights":{"file.pdf":["..."]}}'
+    )
+
+
+_STOPWORDS = {
+    "the",
+    "product",
+    "provides",
+    "supports",
+    "includes",
+    "offers",
+    "allows",
+    "with",
+    "for",
+    "and",
+    "that",
+    "this",
+    "from",
+    "into",
+    "using",
+    "system",
+    "camera",
+}
+
+
+def _build_feature_key(text: str) -> str:
+    cleaned = (
+        text.lower()
+        .replace("the product", " ")
+        .replace("provides", " ")
+        .replace("supports", " ")
+        .replace("includes", " ")
+        .replace("offers", " ")
+        .replace("allows", " ")
+    )
+    tokens = [
+        "".join(char for char in token if char.isalnum())
+        for token in cleaned.split()
+    ]
+    informative = [token for token in tokens if len(token) > 2 and token not in _STOPWORDS]
+    if not informative:
+        informative = [token for token in tokens if token]
+    return "_".join(dict.fromkeys(informative[:6]))
+
+
 class DocumentListingAgent(BaseSubAgent):
     name = "document_listing_agent"
     role = "discovery"
@@ -426,9 +545,9 @@ class SentenceRewriteAgent(BaseSubAgent):
         )
 
 
-class CanonicalExtractionAgent(BaseSubAgent):
-    name = "canonical_extraction_agent"
-    role = "package_builder"
+class ReconstructionAgent(BaseSubAgent):
+    name = "reconstruction_agent"
+    role = "reconstructor"
 
     def run(
         self,
@@ -443,7 +562,6 @@ class CanonicalExtractionAgent(BaseSubAgent):
             if _candidate_for_attempt(candidate, attempt)
         ]
         merged_rows: list[dict[str, Any]] = []
-
         for candidate in sentence_candidates:
             dataframe = pd.read_csv(candidate.csv_path).fillna("")
             source_label = candidate.strategy.split(":", maxsplit=1)[-1]
@@ -455,11 +573,89 @@ class CanonicalExtractionAgent(BaseSubAgent):
                     {
                         "feature": feature,
                         "source_strategy": source_label,
-                        "source_kind": row.get("source_kind", candidate.source_kind),
+                        "source_kind": str(row.get("source_kind", candidate.source_kind)),
                     }
                 )
 
-        canonical_df = pd.DataFrame(merged_rows)
+        reconstructed_rows: list[dict[str, Any]] = []
+        feedback = [
+            *context.agent_feedback_history.get(_document_key(document["id"]), []),
+            *context.human_feedback_history.get(_document_key(document["id"]), []),
+        ]
+
+        if _GEMINI_SERVICE.enabled and merged_rows:
+            try:
+                capability_rows: list[dict[str, Any]] = []
+                for chunk in _chunked(merged_rows, 60):
+                    result = _GEMINI_SERVICE.generate_json(
+                        system_instruction=(
+                            "You reconstruct fragmented product specification evidence into concise "
+                            "competitive-analysis capability statements. Return strict JSON only."
+                        ),
+                        prompt=_build_reconstruction_prompt(
+                            filename=document["filename"],
+                            prompt=context.prompt,
+                            feedback=feedback,
+                            fragments=chunk,
+                        ),
+                    )
+                    for item in result.payload.get("capabilities", []):
+                        feature = str(item.get("feature", "")).strip()
+                        if not feature:
+                            continue
+                        source_strategies = item.get("source_strategies", [])
+                        capability_rows.append(
+                            {
+                                "capability_label": str(item.get("capability_label", "")).strip() or feature,
+                                "feature": feature,
+                                "source_strategy": ", ".join(str(source) for source in source_strategies if str(source).strip())
+                                or "reconstructed",
+                                "source_kind": "reconstructed",
+                            }
+                        )
+                if capability_rows:
+                    reconstructed_rows = capability_rows
+                    context.log_event(
+                        source=self.name,
+                        target="gemini",
+                        event_type="llm_generation",
+                        message=(
+                            f"Gemini reconstructed {len(reconstructed_rows)} capability rows for "
+                            f"{document['filename']}."
+                        ),
+                        document_id=document["id"],
+                        attempt=attempt,
+                        payload={"provider": "gemini", "model": _GEMINI_SERVICE.model},
+                    )
+            except GeminiServiceError as exc:
+                context.log_event(
+                    source=self.name,
+                    target=None,
+                    event_type="llm_fallback",
+                    message="Gemini reconstruction failed, falling back to heuristic consolidation.",
+                    document_id=document["id"],
+                    attempt=attempt,
+                    payload={"error": str(exc)},
+                )
+
+        if not reconstructed_rows:
+            seen_features: set[str] = set()
+            for row in merged_rows:
+                feature = row["feature"]
+                key = _build_feature_key(feature)
+                if not key or key in seen_features:
+                    continue
+                seen_features.add(key)
+                reconstructed_rows.append(
+                    {
+                        "capability_label": feature,
+                        "feature": feature,
+                        "source_strategy": row["source_strategy"],
+                        "source_kind": row["source_kind"],
+                    }
+                )
+
+        canonical_df = pd.DataFrame(reconstructed_rows)
         if not canonical_df.empty:
             canonical_df = canonical_df.drop_duplicates(subset=["feature"]).reset_index(drop=True)
 
@@ -486,7 +682,7 @@ class CanonicalExtractionAgent(BaseSubAgent):
             event_type="candidate_created",
             message=(
                 f"Built canonical extraction CSV for {document['filename']} with "
-                f"{candidate.row_count} consolidated rows."
+                f"{candidate.row_count} reconstructed capability rows."
             ),
             document_id=document["id"],
             attempt=attempt,
@@ -525,10 +721,57 @@ class GrammarEvaluatorAgent(BaseSubAgent):
         dataframe = pd.read_csv(candidate.csv_path)
         metrics = _build_sentence_metrics(dataframe)
         feedback: list[str] = []
-        if metrics["human_sentence_ratio"] < 0.8:
-            feedback.append("Use grammatically complete sentences with capitalization and punctuation.")
-        if metrics["average_words"] < 6:
-            feedback.append("Use verbs and fuller sentence phrasing that humans would naturally write.")
+        summary = ""
+
+        if _GEMINI_SERVICE.enabled:
+            try:
+                preview_rows = dataframe.head(15).get("feature", pd.Series(dtype="string")).fillna("").astype(str).tolist()
+                result = _GEMINI_SERVICE.generate_json(
+                    system_instruction=(
+                        "You evaluate extracted capability sentences for grammar and readability. "
+                        "Return strict JSON only."
+                    ),
+                    prompt=_build_grammar_evaluation_prompt(
+                        filename=document["filename"],
+                        preview_rows=preview_rows,
+                    ),
+                )
+                summary = str(result.payload.get("summary", "")).strip()
+                feedback = [
+                    str(item).strip()
+                    for item in result.payload.get("feedback", [])
+                    if str(item).strip()
+                ]
+                context.log_event(
+                    source=self.name,
+                    target="extraction_evaluator_agent",
+                    event_type="llm_evaluation",
+                    message="Gemini completed grammar evaluation.",
+                    document_id=document["id"],
+                    attempt=attempt,
+                    payload={
+                        "provider": "gemini",
+                        "model": _GEMINI_SERVICE.model,
+                        "feedback": feedback,
+                        "summary": summary,
+                    },
+                )
+            except GeminiServiceError as exc:
+                context.log_event(
+                    source=self.name,
+                    target=None,
+                    event_type="llm_fallback",
+                    message="Gemini grammar evaluation failed, falling back to heuristic checks.",
+                    document_id=document["id"],
+                    attempt=attempt,
+                    payload={"error": str(exc)},
+                )
+
+        if not feedback and not summary:
+            if metrics["human_sentence_ratio"] < 0.8:
+                feedback.append("Use grammatically complete sentences with capitalization and punctuation.")
+            if metrics["average_words"] < 6:
+                feedback.append("Use verbs and fuller sentence phrasing that humans would naturally write.")
         candidate.metrics.update(metrics)
         candidate.feedback.extend(feedback)
         context.log_event(
@@ -542,14 +785,24 @@ class GrammarEvaluatorAgent(BaseSubAgent):
             ),
             document_id=document["id"],
             attempt=attempt,
-            payload={"metrics": metrics, "feedback": feedback, "csv_path": str(candidate.csv_path)},
+            payload={
+                "metrics": metrics,
+                "feedback": feedback,
+                "summary": summary,
+                "csv_path": str(candidate.csv_path),
+            },
         )
         return AgentStepResult(
             name=self.name,
             status="completed",
             document_id=document["id"],
             attempt=attempt,
-            details={"metrics": metrics, "feedback": feedback, "csv_path": str(candidate.csv_path)},
+            details={
+                "metrics": metrics,
+                "feedback": feedback,
+                "summary": summary,
+                "csv_path": str(candidate.csv_path),
+            },
         )
 
 
@@ -833,7 +1086,11 @@ class NormalizationAgent(BaseSubAgent):
                 .str.lower()
                 .str.replace(r"\s+", " ", regex=True)
             )
+            if "capability_label" not in dataframe.columns:
+                dataframe["capability_label"] = dataframe["feature"].fillna("").astype(str)
+            dataframe["feature_key"] = dataframe["capability_label"].fillna("").astype(str).map(_build_feature_key)
             dataframe = dataframe[dataframe["normalized_feature"] != ""]
+            dataframe = dataframe[dataframe["feature_key"] != ""]
             output_path = context.workspace_dir / f"document_{artifact.document_id}_normalized.csv"
             dataframe.to_csv(output_path, index=False)
             context.normalized_csvs.append(output_path)
@@ -866,23 +1123,47 @@ class ComparisonAgent(BaseSubAgent):
             dataframe = pd.read_csv(csv_path)
             source_name = Path(artifact.filename).stem.replace(" ", "_")
             source_columns.append(source_name)
-            reduced = dataframe[["normalized_feature"]].drop_duplicates().copy()
+            reduced = dataframe[["feature_key", "normalized_feature", "capability_label"]].drop_duplicates(
+                subset=["feature_key"]
+            ).copy()
             reduced[source_name] = "present"
-            merged = reduced if merged is None else merged.merge(reduced, on="normalized_feature", how="outer")
+            merged = (
+                reduced
+                if merged is None
+                else merged.merge(
+                    reduced,
+                    on="feature_key",
+                    how="outer",
+                    suffixes=("", f"_{source_name}"),
+                )
+            )
 
         if merged is None:
-            merged = pd.DataFrame(columns=["normalized_feature"])
+            merged = pd.DataFrame(columns=["feature_key", "normalized_feature", "capability_label"])
+
+        text_columns = [
+            column
+            for column in merged.columns
+            if column.startswith("normalized_feature") or column.startswith("capability_label")
+        ]
+        if text_columns:
+            merged["representative_feature"] = ""
+            for column in text_columns:
+                merged["representative_feature"] = merged["representative_feature"].where(
+                    merged["representative_feature"].astype(str).str.strip() != "",
+                    merged[column].fillna("").astype(str),
+                )
 
         for column in source_columns:
             if column in merged.columns:
                 merged[column] = merged[column].fillna("missing")
 
         output_path = context.workspace_dir / "gap_matrix.csv"
-        merged.sort_values("normalized_feature").to_csv(output_path, index=False)
+        merged.sort_values("feature_key").to_csv(output_path, index=False)
         context.gap_matrix_path = output_path
         context.log_event(
             source=self.name,
-            target="reporting_agent",
+            target="gap_summary_agent",
             event_type="comparison_complete",
             message="Gap matrix was generated from the human-approved normalized extractions.",
             payload={
@@ -897,6 +1178,151 @@ class ComparisonAgent(BaseSubAgent):
             details={
                 "gap_matrix_path": str(output_path),
                 "feature_count": int(len(merged.index)),
+                "source_columns": source_columns,
+            },
+        )
+
+
+class GapSummaryAgent(BaseSubAgent):
+    name = "gap_summary_agent"
+    role = "summarizer"
+
+    def run(self, context: AnalysisContext, **kwargs: Any) -> AgentStepResult:
+        if context.gap_matrix_path is None:
+            return AgentStepResult(
+                name=self.name,
+                status="failed",
+                details={"reason": "gap_matrix_missing"},
+            )
+
+        dataframe = pd.read_csv(context.gap_matrix_path).fillna("")
+        source_columns = [
+            Path(artifact.filename).stem.replace(" ", "_")
+            for artifact in context.review_artifacts
+        ]
+        shared_features = []
+        partial_features = []
+        unique_features: dict[str, list[str]] = {artifact.filename: [] for artifact in context.review_artifacts}
+
+        for _, row in dataframe.iterrows():
+            representative = str(row.get("representative_feature", "")).strip() or str(
+                row.get("normalized_feature", "")
+            ).strip()
+            if not representative:
+                continue
+            present_in = [column for column in source_columns if str(row.get(column, "missing")) == "present"]
+            if len(present_in) == len(source_columns) and present_in:
+                shared_features.append(representative)
+            elif len(present_in) == 1:
+                filename = next(
+                    (
+                        artifact.filename
+                        for artifact in context.review_artifacts
+                        if Path(artifact.filename).stem.replace(" ", "_") == present_in[0]
+                    ),
+                    present_in[0],
+                )
+                unique_features.setdefault(filename, []).append(representative)
+            elif present_in:
+                partial_features.append(representative)
+
+        executive_summary = (
+            f"Compared {len(source_columns)} documents across {len(dataframe.index)} normalized capability groups. "
+            f"Found {len(shared_features)} shared capabilities, {len(partial_features)} partial overlaps, and "
+            f"{sum(len(values) for values in unique_features.values())} document-specific differentiators."
+        )
+        document_highlights = {
+            filename: features[:10]
+            for filename, features in unique_features.items()
+            if features
+        }
+        key_gaps = partial_features[:10]
+
+        if _GEMINI_SERVICE.enabled:
+            try:
+                result = _GEMINI_SERVICE.generate_json(
+                    system_instruction=(
+                        "You summarize competitive product gap analysis results from a structured "
+                        "comparison matrix. Return strict JSON only."
+                    ),
+                    prompt=_build_gap_summary_prompt(
+                        filenames=[artifact.filename for artifact in context.review_artifacts],
+                        shared_features=shared_features,
+                        partial_features=partial_features,
+                        unique_features=unique_features,
+                    ),
+                )
+                executive_summary = str(result.payload.get("executive_summary", executive_summary)).strip()
+                key_gaps = [
+                    str(item).strip()
+                    for item in result.payload.get("key_gaps", key_gaps)
+                    if str(item).strip()
+                ]
+                shared_features = [
+                    str(item).strip()
+                    for item in result.payload.get("shared_capabilities", shared_features)
+                    if str(item).strip()
+                ]
+                document_highlights = {
+                    str(filename): [str(item).strip() for item in items if str(item).strip()]
+                    for filename, items in (result.payload.get("document_highlights", document_highlights) or {}).items()
+                }
+                context.log_event(
+                    source=self.name,
+                    target="reporting_agent",
+                    event_type="llm_generation",
+                    message="Gemini generated the competitive gap summary.",
+                    payload={"provider": "gemini", "model": _GEMINI_SERVICE.model},
+                )
+            except GeminiServiceError as exc:
+                context.log_event(
+                    source=self.name,
+                    target=None,
+                    event_type="llm_fallback",
+                    message="Gemini gap summary failed, falling back to heuristic summary.",
+                    payload={"error": str(exc)},
+                )
+
+        summary_path = context.workspace_dir / "gap_summary.md"
+        shared_lines = [f"- {item}" for item in shared_features[:15]] or ["- None identified."]
+        gap_lines = [f"- {item}" for item in key_gaps[:15]] or ["- None identified."]
+        summary_lines = [
+            "# Product Gap Analysis Summary",
+            "",
+            executive_summary,
+            "",
+            "## Shared Capabilities",
+            *shared_lines,
+            "",
+            "## Key Gaps",
+            *gap_lines,
+            "",
+            "## Document Highlights",
+        ]
+        if document_highlights:
+            for filename, features in document_highlights.items():
+                summary_lines.append(f"### {filename}")
+                summary_lines.extend(f"- {item}" for item in (features[:10] or ["No unique highlights identified."]))
+                summary_lines.append("")
+        else:
+            summary_lines.append("- No document-specific highlights identified.")
+            summary_lines.append("")
+        summary_path.write_text("\n".join(summary_lines), encoding="utf-8")
+        context.gap_summary_path = summary_path
+        context.log_event(
+            source=self.name,
+            target="reporting_agent",
+            event_type="summary_ready",
+            message="Gap analysis summary was written to disk.",
+            payload={"gap_summary_path": str(summary_path)},
+        )
+        return AgentStepResult(
+            name=self.name,
+            status="completed",
+            details={
+                "gap_summary_path": str(summary_path),
+                "shared_capability_count": len(shared_features),
+                "key_gap_count": len(key_gaps),
             },
         )
 
@@ -909,7 +1335,8 @@ class ReportingAgent(BaseSubAgent):
         summary = (
             f"Human-approved extraction completed for {len(context.review_artifacts)} documents. "
             f"Normalized {len(context.normalized_csvs)} extraction files and wrote the gap matrix "
-            f"to {context.gap_matrix_path}."
+            f"to {context.gap_matrix_path}. "
+            f"Gap summary written to {context.gap_summary_path}."
         )
         context.summary = summary
         context.log_event(
@@ -917,10 +1344,18 @@ class ReportingAgent(BaseSubAgent):
             target="product_gap_root_orchestrator",
             event_type="report_ready",
             message="Reporting completed for the current analysis run.",
-            payload={"summary": summary, "gap_matrix_path": str(context.gap_matrix_path)},
+            payload={
+                "summary": summary,
+                "gap_matrix_path": str(context.gap_matrix_path),
+                "gap_summary_path": str(context.gap_summary_path) if context.gap_summary_path else None,
+            },
         )
         return AgentStepResult(
             name=self.name,
             status="completed",
-            details={"summary": summary, "gap_matrix_path": str(context.gap_matrix_path)},
+            details={
+                "summary": summary,
+                "gap_matrix_path": str(context.gap_matrix_path),
+                "gap_summary_path": str(context.gap_summary_path) if context.gap_summary_path else None,
+            },
         )
