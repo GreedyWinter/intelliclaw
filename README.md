@@ -1,24 +1,113 @@
 # Intelliclaw
 
-Intelliclaw is being migrated from a Kaggle notebook prototype into a Flutter + FastAPI application.
+Intelliclaw is a Kaggle-to-product migration: a Flutter web frontend plus a FastAPI backend for comparing multiple product specification PDFs and surfacing meaningful feature gaps.
 
-## Current shape
+## What It Does
+
+The current iteration lets you:
+
+- create research projects
+- upload competitor or reference PDFs
+- run a multi-agent extraction workflow
+- review reconstructed extraction results before approval
+- generate a normalized gap matrix across approved documents
+- generate a human-readable gap summary highlighting shared capabilities and competitive gaps
+
+## Current Architecture
+
+### Frontend
+
+- `frontend/`: Flutter web app for project management, uploads, run status, human review, trace visibility, and gap-summary viewing
+
+### Backend
 
 - `backend/`: FastAPI service backed by PostgreSQL
-- `frontend/`: Flutter app, currently aimed at web-first local development
-- `intelliclaw.ipynb`: Kaggle prototype for document comparison and gap analysis using Gemini ADK
+- `backend/workspace/uploads/`: uploaded project PDFs
+- `backend/workspace/runs/`: run folders containing intermediate artifacts, logs, canonical CSVs, gap matrix, and gap summary
 
-## First iteration goal
+### Prototype Source
 
-The first web iteration is intentionally small:
+- `intelliclaw.ipynb`: original Kaggle notebook prototype that inspired the orchestration design
 
-- create and view projects
-- confirm backend connectivity from the browser
-- upload project documents
-- trigger a first-pass analysis run
-- prepare the orchestration layer that future Gemini/ADK execution will attach to
+## Agent Pipeline
 
-## Run locally
+The backend now uses a root orchestrator with explicit sub-agents:
+
+1. `document_listing_agent`
+2. `table_extraction_agent`
+3. `text_extraction_agent`
+4. `sentence_rewrite_agent`
+5. `reconstruction_agent`
+6. `grammar_evaluator_agent`
+7. `coverage_evaluator_agent`
+8. `extraction_evaluator_agent`
+9. `human_review_preparation_agent`
+10. `normalization_agent`
+11. `comparison_agent`
+12. `gap_summary_agent`
+13. `reporting_agent`
+
+## Gemini Usage
+
+The following agents can use Gemini when `GOOGLE_API_KEY` is configured:
+
+- `sentence_rewrite_agent`
+- `reconstruction_agent`
+- `grammar_evaluator_agent`
+- `extraction_evaluator_agent`
+- `gap_summary_agent`
+
+The following agents are still deterministic and local:
+
+- `table_extraction_agent`
+- `text_extraction_agent`
+- `normalization_agent`
+- `comparison_agent`
+- `reporting_agent`
+
+## Run Flow
+
+The current flow is:
+
+1. upload PDFs into a project
+2. extract raw text and table evidence from each PDF
+3. rewrite extracted fragments into readable sentences
+4. reconstruct one canonical extraction CSV per PDF
+5. evaluate the extraction with specialist and aggregate evaluators
+6. pause for human review
+7. normalize approved capabilities into comparison keys
+8. build `gap_matrix.csv`
+9. build `gap_summary.md`
+
+## Observability
+
+Each run folder contains artifacts such as:
+
+- `agent_trace.jsonl`
+- `run_summary.json`
+- raw extraction CSVs
+- sentence-stage CSVs
+- canonical extraction CSVs
+- `gap_matrix.csv`
+- `gap_summary.md`
+
+The API also exposes trace and summary information through:
+
+- `GET /agents`
+- `GET /projects/{project_id}`
+- `GET /projects/{project_id}/analysis-runs`
+- `GET /analysis-runs/{run_id}`
+- `GET /analysis-runs/{run_id}/trace`
+
+## Secrets
+
+Secrets are not stored in tracked source files.
+
+- Gemini is loaded from `backend/.env`
+- the repository ignores `backend/.env`
+- this keeps `GOOGLE_API_KEY` hidden when pushing to a public GitHub repo
+
+## Run Locally
 
 Backend:
 
@@ -30,36 +119,22 @@ backend\.venv\Scripts\python.exe -m backend.app.init_db
 Frontend web:
 
 ```powershell
+flutter pub get
 flutter run -d chrome --dart-define=API_BASE_URL=http://127.0.0.1:8000
 ```
 
-## What comes next
+## Current Output Expectation
 
-The Kaggle notebook already sketches the real product workflow:
+For a successful run, you should expect:
 
-1. upload competitor PDFs into a project
-2. extract tables from PDFs
-3. unify and normalize features
-4. generate a gap matrix
-5. surface the result in the web app
+- one approved canonical extraction CSV per PDF
+- one normalized CSV per approved PDF
+- one `gap_matrix.csv` for the full comparison
+- one `gap_summary.md` describing shared capabilities, key gaps, and differentiators
 
-That notebook logic should move into backend services and job endpoints rather than staying inside notebook cells.
+## Next Likely Improvements
 
-## Orchestration design
-
-The backend now includes a root orchestrator with explicit sub-agents:
-
-1. `document_listing_agent`
-2. `pdf_extraction_agent`
-3. `normalization_agent`
-4. `comparison_agent`
-5. `reporting_agent`
-
-This mirrors the Kaggle notebook structure while staying runnable without an ADK dependency.
-The API surface for this is:
-
-- `GET /agents`
-- `POST /projects/{project_id}/documents`
-- `POST /projects/{project_id}/analysis-runs`
-- `GET /projects/{project_id}/analysis-runs`
-- `GET /analysis-runs/{run_id}`
+- render the gap summary and matrix more richly in the Flutter UI
+- add better semantic grouping so equivalent features align more reliably across vendors
+- add specialized extractors for brochures, datasheets, and image-heavy PDFs
+- add authentication before broader sharing

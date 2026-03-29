@@ -426,6 +426,11 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                                             const SizedBox(height: 12),
                                             _TracePanel(run: run),
                                           ],
+                                          if (run.gapSummaryContent != null &&
+                                              run.gapSummaryContent!.trim().isNotEmpty) ...[
+                                            const SizedBox(height: 12),
+                                            _GapSummaryPanel(run: run),
+                                          ],
                                           const SizedBox(height: 12),
                                           Wrap(
                                             spacing: 8,
@@ -568,6 +573,56 @@ class _TracePanel extends StatelessWidget {
               'Summary file: ${run.summaryPath}',
               style: Theme.of(context).textTheme.bodySmall,
             ),
+        ],
+      ),
+    );
+  }
+}
+
+class _GapSummaryPanel extends StatelessWidget {
+  const _GapSummaryPanel({required this.run});
+
+  final AnalysisRun run;
+
+  @override
+  Widget build(BuildContext context) {
+    final lines = (run.gapSummaryContent ?? '')
+        .split('\n')
+        .map((line) => line.trimRight())
+        .where((line) => line.isNotEmpty)
+        .toList();
+
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        color: const Color(0xFFF4FAF6),
+        borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: const Color(0xFFD6E9DA)),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Gap summary',
+            style: Theme.of(context).textTheme.titleSmall?.copyWith(
+                  fontWeight: FontWeight.w700,
+                ),
+          ),
+          const SizedBox(height: 8),
+          ...lines.take(18).map(
+                (line) => Padding(
+                  padding: const EdgeInsets.only(bottom: 6),
+                  child: Text(line),
+                ),
+              ),
+          if (run.gapSummaryPath != null) ...[
+            const SizedBox(height: 8),
+            Text(
+              'Summary file: ${run.gapSummaryPath}',
+              style: Theme.of(context).textTheme.bodySmall,
+            ),
+          ],
         ],
       ),
     );

@@ -1,17 +1,41 @@
-# frontend
+# Intelliclaw Frontend
 
-A new Flutter project.
+This Flutter app is the web-first interface for Intelliclaw.
 
-## Getting Started
+## Current Responsibilities
 
-This project is a starting point for a Flutter application.
+The frontend currently supports:
 
-A few resources to get you started if this is your first Flutter project:
+- project creation
+- project inventory viewing
+- PDF upload
+- analysis-run execution
+- human-in-the-loop review of reconstructed extraction CSVs
+- failed-run diagnostics and trace previews
+- display of generated gap summaries for completed runs
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## Run Locally
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```powershell
+flutter pub get
+flutter run -d chrome --dart-define=API_BASE_URL=http://127.0.0.1:8000
+```
+
+## Backend Requirement
+
+The FastAPI backend must already be running on the URL passed through `API_BASE_URL`.
+
+Default:
+
+```text
+http://127.0.0.1:8000
+```
+
+## Main Screen Flow
+
+1. create or open a project
+2. upload one or more PDFs
+3. start an analysis run
+4. inspect human-review artifacts if the run pauses for review
+5. approve or request another extraction pass
+6. inspect the final gap summary and run traces

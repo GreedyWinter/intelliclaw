@@ -90,6 +90,8 @@ class AnalysisRun {
     required this.failureDetails,
     required this.tracePreview,
     required this.latestTraceMessage,
+    required this.gapSummaryPath,
+    required this.gapSummaryContent,
     required this.reviewArtifacts,
     required this.stepResults,
     required this.createdAt,
@@ -111,6 +113,8 @@ class AnalysisRun {
   final Map<String, dynamic> failureDetails;
   final List<TraceEntry> tracePreview;
   final String? latestTraceMessage;
+  final String? gapSummaryPath;
+  final String? gapSummaryContent;
   final List<ReviewArtifact> reviewArtifacts;
   final List<AnalysisStep> stepResults;
   final String createdAt;
@@ -141,6 +145,8 @@ class AnalysisRun {
           .map((item) => TraceEntry.fromJson(item as Map<String, dynamic>))
           .toList(),
       latestTraceMessage: json['latest_trace_message'] as String?,
+      gapSummaryPath: json['gap_summary_path'] as String?,
+      gapSummaryContent: json['gap_summary_content'] as String?,
       reviewArtifacts: (json['review_artifacts'] as List<dynamic>? ?? const [])
           .map((item) => ReviewArtifact.fromJson(item as Map<String, dynamic>))
           .toList(),

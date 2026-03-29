@@ -265,9 +265,14 @@ def _with_run_observability(run: dict) -> dict:
     run_dir = ensure_run_dir(run["project_id"], run["id"])
     summary_payload = read_run_summary(run_dir)
     trace_entries = read_run_trace(run_dir, tail=40)
+    gap_summary_path = run_dir / "gap_summary.md"
     run["trace_path"] = str(get_run_trace_path(run_dir))
     run["summary_path"] = str(get_run_summary_path(run_dir))
     run["failure_details"] = summary_payload.get("failure_details", {})
     run["trace_preview"] = trace_entries
     run["latest_trace_message"] = trace_entries[-1]["message"] if trace_entries else None
+    run["gap_summary_path"] = str(gap_summary_path) if gap_summary_path.exists() else None
+    run["gap_summary_content"] = (
+        gap_summary_path.read_text(encoding="utf-8") if gap_summary_path.exists() else None
+    )
     return run
