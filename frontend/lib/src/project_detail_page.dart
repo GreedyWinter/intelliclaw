@@ -244,6 +244,7 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                           SizedBox(
                             width: 320,
                             child: DropdownButtonFormField<int>(
+                              isExpanded: true,
                               value: _selectedBaselineDocumentId,
                               decoration: const InputDecoration(
                                 labelText: 'Baseline PDF',
@@ -254,6 +255,18 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                                     (document) => DropdownMenuItem<int>(
                                       value: document.id,
                                       child: Text(document.filename, overflow: TextOverflow.ellipsis),
+                                    ),
+                                  )
+                                  .toList(),
+                              selectedItemBuilder: (context) => detail.documents
+                                  .map(
+                                    (document) => Align(
+                                      alignment: Alignment.centerLeft,
+                                      child: Text(
+                                        document.filename,
+                                        maxLines: 1,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
                                     ),
                                   )
                                   .toList(),
