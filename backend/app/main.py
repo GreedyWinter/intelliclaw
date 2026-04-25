@@ -203,7 +203,11 @@ def get_project_runs(project_id: int):
 @app.post("/projects/{project_id}/analysis-runs", status_code=201)
 def create_project_run(project_id: int, payload: AnalysisRunCreate):
     fetch_project(project_id)
-    return start_project_analysis(project_id, payload.prompt)
+    return start_project_analysis(
+        project_id,
+        payload.prompt,
+        baseline_document_id=payload.baseline_document_id,
+    )
 
 
 @app.get("/analysis-runs/{run_id}")

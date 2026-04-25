@@ -1,0 +1,59 @@
+page,feature,source_kind
+1,4MP | 8MP,table
+2,4.0MP | 8.0MP(4KULTRAHD),table
+2,Primary,table
+2,Secondary,table
+2,Tertiary,table
+2,WDROff,table
+2,"WDROn
+(IEC62676)",table
+2,WDROn,table
+2,4.4-9.3MM | 10.9-29MM,table
+2,4MP,table
+2,8MP,table
+2,4MP,table
+2,8MP,table
+2,"4MP&8
+MP",table
+4,SURFACEMOUNT | IN-CEILINGMOUNT | PENDANTMOUNT,table
+4,"Indoor
+Dome",table
+4,"Outdoor
+Dome",table
+4,"Indoor
+Dome",table
+4,"Outdoor
+Dome",table
+4,PoE,table
+4,PoE+,table
+4,PoE,table
+4,PoE+,table
+4,INDOORDOME | OUTDOORDOME,table
+4,PoE,table
+4,"With
+External
+Poweror
+PoE+",table
+4,PoE,table
+4,"With
+External
+Poweror
+PoE+",table
+5,INDOORDOME | OUTDOORDOME,table
+7,[X.XX] | INCHES,table
+7,X.X | MM,table
+12,"MP | WDR | LIGHTCATCHER
+TECHNOLOGY | LENS | IR | ANALYTICS | HDSM
+SMARTCODEC | MICROPHONE",table
+12,"4.4-9.3
+4.0 ✓ ✓ ✓ ✓ ✓ ✓
+mm",table
+12,"10.9-29
+4.0 ✓ ✓ ✓ ✓ ✓ ✓
+mm",table
+12,"4.4-9.3
+8.0 ✓ ✓ ✓ ✓ ✓ ✓
+mm",table
+12,"10.9-29
+8.0 ✓ ✓ ✓ ✓ ✓ ✓
+mm",table

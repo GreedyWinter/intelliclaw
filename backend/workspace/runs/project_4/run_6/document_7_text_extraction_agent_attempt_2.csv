@@ -1,0 +1,320 @@
+page,feature,source_kind
+1,Datasheet,text
+1,AXISM3905-RDomeCamera,text
+1,AXIS M3905-R Dome Camera,text
+1,For indoor surveillance onboard buses,text
+1,This compact and discreet 2 MP onboard camera for indoor surveillance complies with transportation-industry,text
+1,"regulations including fire-safety for buses. It can withstand vibrations and a wide range of temperatures. Additionally,",text
+1,with AXIS TP3826-E housing this dome camera can be mounted on the outside of a bus. Thanks to Lightfinder and,text
+1,"Forensic WDR, it provides details even in challenging light conditions. With traffic light mode, it can distinguish the",text
+1,coloroftrafficlightsindarkscenes.OptionalM12lensesareavailabletoadjustfieldofviewforcustomizedmonitoring,text
+1,purposes.,text
+1,"> Compact,ruggeddesign",text
+1,> Indoorcamera,text
+1,> 88°Horizontalfieldofview,text
+1,> LightfinderandForensicWDR,text
+1,> TrafficLightmode,text
+2,AXIS M3905-R Dome Camera,text
+2,Variants,text
+2,Video,text
+2,AXISM3905-RRJ453.6mm,text
+2,AXISM3905-RM123.6mm,text
+2,AXISM3905-RRJ452.8mm Videocompression,text
+2,AXISM3905-RM122.8mm H.264(MPEG-4Part10/AVC)MainandHighProfiles,text
+2,H.265(MPEG-HPart2/HEVC)MainProfile,text
+2,Camera MotionJPEG,text
+2,Imagesensor Resolution,text
+2,1/2.9”ProgressivescanRGBCMOS 16:9:1920x1080to640X360,text
+2,Pixelsize2.8µm 16:10:1280x800to640x400,text
+2,4:3:1280x960to320x240,text
+2,Lens,text
+2,"3.6mm,F2.0: Frame rate",text
+2,Horizontalfieldofview:88° H.264andH.265:25/30fps(50/60Hz)inallresolutions,text
+2,Verticalfieldofview:47° MotionJPEG:15fps(50/60Hz)inallresolutions,text
+2,Minimumfocusdistance:0.3m(1ft),text
+2,"M12mount,fixediris",text
+2,Videostreaming,text
+2,"2.8mm,F1.2:",text
+2,Upto4uniqueandconfigurablevideostreams1,text
+2,Horizontalfieldofview:107°,text
+2,"Multiple,individuallyconfigurablestreamsinH.264,",text
+2,Verticalfieldofview:56°,text
+2,H.265andMotionJPEG,text
+2,Minimumfocusdistance:0.3m(1ft),text
+2,AxisZipstreamtechnologyinH.264andH.265,text
+2,"M12mount,fixediris",text
+2,Controllableframerateandbandwidth,text
+2,SeeOptionalaccessoriesforexchangeablelenses,text
+2,VBR/ABR/MBRH.264andH.265,text
+2,Videostreamingindicator,text
+2,Minimum illumination,text
+2,"3.6mm,F2.0:",text
+2,Color:0.04luxat30IREF2.0,text
+2,ForensicWDR:Upto120dBdependingonscene,text
+2,Color:0.13luxat50IREF2.0,text
+2,"2.8mm,F1.2:",text
+2,Color:0.02luxat30IREF1.2 Noisereduction,text
+2,Color:0.07luxat50IREF1.2 Spatialfilter(2Dnoisereduction),text
+2,Temporalfilter(3Dnoisereduction),text
+2,Shutterspeed,text
+2,WithWDR:1/19000sto1/5s Imagesettings,text
+2,"NoWDR:1/17000sto1/5s Compression,brightness,sharpness,contrast,white",text
+2,"balance,ForensicWDR,exposurecontrol,exposure",text
+2,"zones,finetuningofbehavioratlowlight,rotation:0°,",text
+2,Camera adjustment,text
+2,"90°,180°,270°includingCorridorFormat,dynamic",text
+2,Pan:±30°,text
+2,"overlay,32individualpolygonalprivacymask,mirroring",text
+2,Tilt:15-90°,text
+2,ofimages,text
+2,Rotation:±175°,text
+2,"Sceneprofiles:forensic,vivid,trafficoverview",text
+2,System on chip (SoC),text
+2,Imageprocessing,text
+2,"AxisZipstream,ForensicWDR,Lightfinder",text
+2,Model,text
+2,S6LM55,text
+2,Pan/Tilt/Zoom,text
+2,"DigitalPTZ,presetpositions,guardtour,controlqueue",text
+2,Memory,text
+2,"1024MBRAM,512MBFlash",text
+2,"1. Werecommendamaximumof3uniquevideostreamspercameraorchannel,foroptimizeduserexperience,networkbandwidth,andstorage",text
+2,utilization.Auniquevideostreamcanbeservedtomanyvideoclientsinthenetworkusingmulticastorunicasttransportmethodviabuilt-in,text
+2,streamreusefunctionality.,text
+3,Eventactions,text
+3,Network,text
+3,Guardtours,text
+3,"Uploadimagesorvideoclips:FTP,HTTP,HTTPS,SFTP,",text
+3,Network protocols emailandnetworkshare,text
+3,"IPv4,IPv6USGv6,HTTP,HTTPS2,HTTP/2,TLS2,QoSLayer Notification:HTTP,HTTPS,TCPandemail",text
+3,"3DiffServ,FTP,SFTP,CIFS/SMB,SMTP,mDNS(Bonjour), Overlaytext",text
+3,"UPnP®,SNMPv1/v2c/v3(MIB-II),DNS/DNSv6,DDNS, Presetpositions",text
+3,"NTP,PTP,RTSP,RTP,SRTP,TCP,UDP,IGMPv1/v2/v3, Recordvideo:SDcardandnetworkshare",text
+3,"RTCP,ICMP,DHCPv4/v6,ARP,SOCKS,SSH,LLDP,CDP, SNMPtrapmessages",text
+3,"MQTTv3.1.1,Syslog,Link-Localaddress(ZeroConf) WDRmode",text
+3,MQTTpublish,text
+3,System integration,text
+3,Built-in installationaids,text
+3,Pixelcounter,text
+3,ApplicationProgramming Interface,text
+3,"OpenAPIforsoftwareintegration,includingVAPIX® Analytics",text
+3,andAXISCameraApplicationPlatform(ACAP);,text
+3,specificationsataxis.com/developer-community.,text
+3,One-clickcloudconnection Applications,text
+3,"ONVIF®ProfileG,ONVIF®ProfileM,ONVIF®ProfileS Included",text
+3,"andONVIF®ProfileT,specificationatonvif.org AXISVideoMotionDetection,activetamperingalarm3",text
+3,Supported,text
+3,"AXISFenceGuard,AXISLoiteringGuard,AXISMotion",text
+3,Videomanagementsystems,text
+3,Guard,text
+3,"CompatiblewithAXISCameraStationEdge,",text
+3,SupportforAXISCameraApplicationPlatformenabling,text
+3,"AXISCameraStationPro,AXISCameraStation5,and",text
+3,"installationofthird-partyapplications,seeaxis.com/",text
+3,videomanagementsoftwarefromAxis’partners,text
+3,acap,text
+3,availableataxis.com/vms.,text
+3,Approvals,text
+3,Onscreencontrols,text
+3,Videostreamingindicator,text
+3,Widedynamicrange,text
+3,Product markings,text
+3,Privacymasks,text
+3,"CE,ECE,KC,RCM,UL/cUL,UKCA,VCCI,WEEE",text
+3,Eventconditions,text
+3,Supply chain,text
+3,"Devicestatus:aboveoperatingtemperature,aboveor",text
+3,TAAcompliant,text
+3,"belowoperatingtemperature,belowoperating",text
+3,NDAAcompliant,text
+3,"temperature,IPaddressremoved,networklost,newIP",text
+3,"address,storagefailure,systemready,withinoperating",text
+3,temperature EMC,text
+3,"Edgestorage:recordingongoing,storagedisruption EN55032ClassA,EN55035,EN61000-6-1,",text
+3,"I/O:manualtrigger,virtualinput EN61000-6-2,ECER10rev.06(Eapproval),EN50498,",text
+3,MQTTsubscribe Australia/NewZealand:RCMAS/NZSCISPR32ClassA,text
+3,Scheduledandrecurring:scheduledevent Canada:ICES-3(A)/NMB-3(A),text
+3,"Video:averagebitratedegradation,livestreamopen, Japan:VCCIClassA,",text
+3,"tampering Korea:KSC9835,KSC9832ClassA,",text
+3,USA:FCCPart15SubpartBClassA,text
+3,Safety,text
+3,"IEC/EN/UL62368-1,CAN/CSAC22.2No.62368-1,",text
+3,UNECER118,text
+3,IS13252,text
+3,"2. ThisproductincludessoftwaredevelopedbytheOpenSSLProjectforuseintheOpenSSLToolkit.(openssl.org),andcryptographicsoftware",text
+3,writtenbyEricYoung(eay@cryptsoft.com).,text
+3,3. Fordetectionoftamperingattemptsinstaticandnon-crowdedscenes.,text
+4,Environment Power,text
+4,"IEC/EN60529IP66,IEC/EN60529IP67, PoweroverEthernet(PoE)IEEE802.3af/802.3atType1",text
+4,"IEC/EN62262IK10, Class1",text
+4,"IEC60721-3-5Class5M3(vibrationandshock), Typical2.2W,max3.8W",text
+4,"IEC60068-2-1,IEC60068-2-2,IEC60068-2-27,",text
+4,"IEC60068-2-64,IEC60068-2-78,IEC60068–2–14",text
+4,Connectors,text
+4,"RJ45:male,10BASE-T/100BASE-TX",text
+4,"Network M12:female,rugged,D-codedwithrotatablecoupling",text
+4,NISTSP500-267 nut,text
+4,AllconnectorssupportPoE,text
+4,Cybersecurity,text
+4,"ETSIEN303645,BSIITSecurityLabel Storage",text
+4,SupportformicroSD/microSDHC/microSDXCcardwith,text
+4,UHSSpeedClassU1,text
+4,Cybersecurity,text
+4,Supportforrecordingtonetwork-attachedstorage,text
+4,(NAS),text
+4,ForSDcardandNASrecommendationsseeaxis.com,text
+4,Edge security,text
+4,"Software:SignedOS,bruteforcedelayprotection,",text
+4,digestauthenticationandOAuth2.0RFC6749Client Operating conditions,text
+4,CredentialFlow/OpenIDAuthorizationCodeFlowfor -30°Cto55°C(-22°Fto131°F),text
+4,"centralizedADFSaccountmanagement,password Maximum(intermittent):70°C(158°F)",text
+4,"protection,AES-XTS-Plain64256bitSDcardencryption Humidity:10-100%RH(condensing)",text
+4,Hardware:AxisEdgeVaultcybersecurityplatform,text
+4,"Secureelement(CCEAL6+),system-on-chipsecurity",text
+4,"(TEE),AxisdeviceID,securekeystore,signedvideo, Storage conditions",text
+4,"secureboot,encryptedfilesystem(AES-XTS-Plain64 -40°Cto65°C(-40°Fto149°F)",text
+4,256bit),text
+4,Dimensions,text
+4,"Network security Height:50mm(1.97in),ø110mm(4.33in)",text
+4,"IEEE802.1x(EAP-TLS,PEAP-MSCHAPv2)4,",text
+4,"IEEE802.1AE(MACsecPSK/EAP-TLS),IEEE802.1AR,",text
+4,Weight,text
+4,"HTTPS/HSTS4,TLSv1.2/v1.34,NetworkTimeSecurity",text
+4,241g(0.53lb),text
+4,"(NTS),X.509CertificatePKI,host-basedfirewall",text
+4,Boxcontent,text
+4,Documentation,text
+4,"Camera,Installationguide,Windows®decoder1-user",text
+4,AXISHardeningGuide,text
+4,"license,lenstool",text
+4,AXISVulnerabilityManagementPolicy,text
+4,AXISSecurityDevelopmentModel,text
+4,AXISOSSoftwareBillofMaterial(SBOM) Optional accessories,text
+4,"Todownloaddocuments,gotoaxis.com/support/ Lenses",text
+4,"cybersecurity/resources LensM122.1mm,F2.2:horizontalfieldofview145°",text
+4,"ToreadmoreaboutAxiscybersecuritysupport,goto LensM122.8mm,F1.2:horizontalfieldofview107°",text
+4,"axis.com/cybersecurity LensM123.6mm,F2.0:horizontalfieldofview88°",text
+4,"LensM126mm,F1.6:horizontalfieldofview51°",text
+4,"General LensM128mm,F1.6:horizontalfieldofview39°",text
+4,Other,text
+4,"AXIST94D01SMountBracket,",text
+4,"Casing AXIST94D02SCurvedMountBracket,",text
+4,"IP66/67-andIK10-ratedaluminumandpolycarbonate NetworkcouplerIP66,Networkcablecouplerindoor,",text
+4,"casing TM3101PendantWallMount,AXISTP3826-Ehousing,",text
+4,"TP3827ClearDomeCover,TP3830TopBlackCover",text
+4,"Formoreaccessories,seeaxis.com/products/axis-",text
+4,Mounting,text
+4,m3905-r#accessories,text
+4,Insidevehicles,text
+4,"4. ThisproductincludessoftwaredevelopedbytheOpenSSLProjectforuseintheOpenSSLToolkit.(openssl.org),andcryptographicsoftware",text
+4,writtenbyEricYoung(eay@cryptsoft.com).,text
+5,System tools,text
+5,"AXISSiteDesigner,AXISDeviceManager,product",text
+5,"selector,accessoryselector,lenscalculator",text
+5,Availableataxis.com,text
+5,Languages,text
+5,"English,German,French,Spanish,Italian,Russian,",text
+5,"SimplifiedChinese,Japanese,Korean,Portuguese,",text
+5,"Polish,TraditionalChinese,Dutch,Czech,Swedish,",text
+5,"Finnish,Turkish,Thai,Vietnamese",text
+5,Warranty,text
+5,"5-yearwarranty,seeaxis.com/warranty",text
+5,Partnumbers,text
+5,Availableataxis.com/products/axis-m3905-r#part-,text
+5,numbers,text
+5,Sustainability,text
+5,Substancecontrol,text
+5,"PVCfree,BFR/CFRfree",text
+5,RoHSinaccordancewithEURoHSDirective2011/65/,text
+5,EU/andEN63000:2018,text
+5,REACHinaccordancewith(EC)No1907/2006.ForSCIP,text
+5,"UUID,seeaxis.com/partner.",text
+5,Materials,text
+5,Recycledaluminum:95%,text
+5,ScreenedforconflictmineralsinaccordancewithOECD,text
+5,guidelines,text
+5,"ToreadmoreaboutsustainabilityatAxis,gotoaxis.",text
+5,com/about-axis/sustainability,text
+5,Environmentalresponsibility,text
+5,axis.com/environmental-responsibility,text
+5,AxisCommunicationsisasignatoryoftheUNGlobal,text
+5,"Compact,readmoreatunglobalcompact.org",text
+6,"Detect,Observe,Recognize, Identify(DORI)",text
+6,3.6mmlens DORIdefinition Distance,text
+6,Detect 25px/m(8px/ft) 50.6m(166.0ft),text
+6,Observe 63px/m(19px/ft) 20.1m(65.9ft),text
+6,Recognize 125px/m(38px/ft) 10.1m(33.1ft),text
+6,Identify 250px/m(76px/ft) 5.1m(16.7ft),text
+6,2.8mmlens DORIdefinition Distance,text
+6,Detect 25px/m(8px/ft) 21.1m(69.2ft),text
+6,Observe 63px/m(19px/ft) 7.4m(24.3ft),text
+6,Recognize 125px/m(38px/ft) 4.2m(13.8ft),text
+6,Identify 250px/m(76px/ft) 2.1m(6.9ft),text
+6,Axis calculates the DORI values using pixel densities for,text
+6,different use cases as recommended by the EN-62676-4,text
+6,standard. The calculations use the center of the image as,text
+6,the reference point and consider lens distortion. The,text
+6,possibility to recognize or identify a person or object,text
+6,"depends on factors such as object motion, video",text
+6,"compression, lighting conditions, and camera focus. Use",text
+6,margins when planning. The pixel density varies across,text
+6,"the image, and the calculated values can differ from the",text
+6,distancesintherealworld.,text
+10,www.axis.com T10184436/EN/M22.2/202511,text
+10,Highlightedcapabilities,text
+10,"Axis EdgeVault color may be the critical factor to identify a person, an",text
+10,"object,oravehicle.",text
+10,Axis Edge Vault is the hardware-based cybersecurity,text
+10,platform that safeguards the Axis device. It forms the,text
+10,"Formoreinformation,seeaxis.com/glossary",text
+10,foundation that all secure operations depend on and,text
+10,"offer features to protect the device’s identity, safeguard",text
+10,its integrity and protect sensitive information from,text
+10,"unauthorized access. For instance, secure boot ensures",text
+10,"that a device can boot only with signed OS, which",text
+10,prevents physical supply chain tampering. With signed,text
+10,"OS, the device is also able to validate new device",text
+10,software before accepting to install it. And the secure,text
+10,keystore is the critical building-block for protecting,text
+10,cryptographic information used for secure,text
+10,"communication (IEEE 802.1X, HTTPS, Axis device ID,",text
+10,access control keys etc.) against malicious extraction in,text
+10,the event of a security breach. The secure keystore and,text
+10,secure connections are provided through a Common,text
+10,Criteria or FIPS 140 certified hardware-based,text
+10,cryptographiccomputingmodule.,text
+10,"Furthermore, signed video ensures that video evidence",text
+10,can be verified as untampered. Each camera uses its,text
+10,"unique video signing key, which is securely stored in the",text
+10,"secure keystore, to add a signature into the video stream",text
+10,allowingvideotobetracedbacktotheAxiscamerafrom,text
+10,whereitoriginated.,text
+10,"To read more about Axis Edge Vault, go to axis.com/",text
+10,solutions/edge-vault.,text
+10,Zipstream,text
+10,The Axis Zipstream technology preserves all the,text
+10,important forensic in the video stream while lowering,text
+10,bandwidth and storage requirements by an average of,text
+10,50%. Zipstream also includes three intelligent,text
+10,"algorithms, which ensure that relevant forensic",text
+10,"information is identified, recorded, and sent in full",text
+10,resolutionandframerate.,text
+10,ForensicWDR,text
+10,Axis cameras with wide dynamic range (WDR),text
+10,technology make the difference between seeing,text
+10,important forensic details clearly and seeing nothing but,text
+10,a blur in challenging light conditions. The difference,text
+10,between the darkest and the brightest spots can spell,text
+10,trouble for image usability and clarity. Forensic WDR,text
+10,effectively reduces visible noise and artifacts to deliver,text
+10,videotunedformaximalforensicusability.,text
+10,Lightfinder,text
+10,"The Axis Lightfinder technology delivers high-resolution,",text
+10,full-color video with a minimum of motion blur even in,text
+10,"near darkness. Because it strips away noise, Lightfinder",text
+10,makes dark areas in a scene visible and captures details,text
+10,in very low light. Cameras with Lightfinder discern color,text
+10,"in low light better than the human eye. In surveillance,",text
+10,"©2022–2025AxisCommunicationsAB.AXISCOMMUNICATIONS,AXIS,ARTPECandVAPIXareregisteredtrademarksof",text
+10,AxisABinvariousjurisdictions.Allothertrademarksarethepropertyoftheirrespectiveowners.Wereservetherightto,text
+10,introducemodificationswithoutnotice.,text

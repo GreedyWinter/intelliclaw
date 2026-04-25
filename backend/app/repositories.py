@@ -97,25 +97,31 @@ def create_document(
     }
 
 
-def create_analysis_run(project_id: int, pipeline_version: str = "v2") -> dict[str, Any]:
+def create_analysis_run(
+    project_id: int,
+    *,
+    baseline_document_id: int | None = None,
+    pipeline_version: str = "v2",
+) -> dict[str, Any]:
     with get_connection() as conn:
         with conn.cursor() as cur:
             cur.execute(
                 """
                 INSERT INTO analysis_runs (
                     project_id,
+                    baseline_document_id,
                     status,
                     pipeline_version,
                     stage,
                     human_review_status,
                     current_iteration
                 )
-                VALUES (%s, 'pending', %s, 'extraction', 'not_requested', 1)
-                RETURNING id, project_id, status, pipeline_version, stage, human_review_status,
+                VALUES (%s, %s, 'pending', %s, 'extraction', 'not_requested', 1)
+                RETURNING id, project_id, baseline_document_id, status, pipeline_version, stage, human_review_status,
                           current_iteration, summary, result_path, error_message, review_artifacts,
                           agent_feedback, human_feedback, step_results, created_at, updated_at;
                 """,
-                (project_id, pipeline_version),
+                (project_id, baseline_document_id, pipeline_version),
             )
             row = cur.fetchone()
         conn.commit()
@@ -130,6 +136,7 @@ def update_analysis_run(
     stage: str | None = None,
     human_review_status: str | None = None,
     current_iteration: int | None = None,
+    baseline_document_id: int | None = None,
     summary: str | None = None,
     result_path: str | None = None,
     error_message: str | None = None,
@@ -148,6 +155,7 @@ def update_analysis_run(
                     stage = COALESCE(%s, stage),
                     human_review_status = COALESCE(%s, human_review_status),
                     current_iteration = COALESCE(%s, current_iteration),
+                    baseline_document_id = COALESCE(%s, baseline_document_id),
                     summary = %s,
                     result_path = %s,
                     error_message = %s,
@@ -157,7 +165,7 @@ def update_analysis_run(
                     step_results = %s::jsonb,
                     updated_at = CURRENT_TIMESTAMP
                 WHERE id = %s
-                RETURNING id, project_id, status, pipeline_version, stage, human_review_status,
+                RETURNING id, project_id, baseline_document_id, status, pipeline_version, stage, human_review_status,
                           current_iteration, summary, result_path, error_message, review_artifacts,
                           agent_feedback, human_feedback, step_results, created_at, updated_at;
                 """,
@@ -166,6 +174,7 @@ def update_analysis_run(
                     stage,
                     human_review_status,
                     current_iteration,
+                    baseline_document_id,
                     summary,
                     result_path,
                     error_message,
@@ -190,7 +199,7 @@ def fetch_analysis_run(run_id: int) -> dict[str, Any]:
         with conn.cursor() as cur:
             cur.execute(
                 """
-                SELECT id, project_id, status, pipeline_version, stage, human_review_status,
+                SELECT id, project_id, baseline_document_id, status, pipeline_version, stage, human_review_status,
                        current_iteration, summary, result_path, error_message, review_artifacts,
                        agent_feedback, human_feedback, step_results, created_at, updated_at
                 FROM analysis_runs
@@ -211,7 +220,7 @@ def fetch_project_analysis_runs(project_id: int) -> list[dict[str, Any]]:
         with conn.cursor() as cur:
             cur.execute(
                 """
-                SELECT id, project_id, status, pipeline_version, stage, human_review_status,
+                SELECT id, project_id, baseline_document_id, status, pipeline_version, stage, human_review_status,
                        current_iteration, summary, result_path, error_message, review_artifacts,
                        agent_feedback, human_feedback, step_results, created_at, updated_at
                 FROM analysis_runs
@@ -237,18 +246,19 @@ def _analysis_run_row_to_dict(row: tuple[Any, ...]) -> dict[str, Any]:
     return {
         "id": row[0],
         "project_id": row[1],
-        "status": row[2],
-        "pipeline_version": row[3],
-        "stage": row[4],
-        "human_review_status": row[5],
-        "current_iteration": row[6],
-        "summary": row[7],
-        "result_path": row[8],
-        "error_message": row[9],
-        "review_artifacts": _loads_if_needed(row[10], []),
-        "agent_feedback": _loads_if_needed(row[11], {}),
-        "human_feedback": _loads_if_needed(row[12], {}),
-        "step_results": _loads_if_needed(row[13], []),
-        "created_at": str(row[14]),
-        "updated_at": str(row[15]),
+        "baseline_document_id": row[2],
+        "status": row[3],
+        "pipeline_version": row[4],
+        "stage": row[5],
+        "human_review_status": row[6],
+        "current_iteration": row[7],
+        "summary": row[8],
+        "result_path": row[9],
+        "error_message": row[10],
+        "review_artifacts": _loads_if_needed(row[11], []),
+        "agent_feedback": _loads_if_needed(row[12], {}),
+        "human_feedback": _loads_if_needed(row[13], {}),
+        "step_results": _loads_if_needed(row[14], []),
+        "created_at": str(row[15]),
+        "updated_at": str(row[16]),
     }

@@ -15,7 +15,11 @@ from backend.app.repositories import (
 from backend.app.storage import write_run_summary, ensure_run_dir
 
 
-def start_project_analysis(project_id: int, prompt: str) -> dict[str, Any]:
+def start_project_analysis(
+    project_id: int,
+    prompt: str,
+    baseline_document_id: int | None = None,
+) -> dict[str, Any]:
     fetch_project(project_id)
     documents = fetch_project_documents(project_id)
     if not documents:
@@ -24,12 +28,23 @@ def start_project_analysis(project_id: int, prompt: str) -> dict[str, Any]:
             detail="Upload at least one document before starting an analysis run.",
         )
 
-    analysis_run = create_analysis_run(project_id)
+    if baseline_document_id is None:
+        baseline_document_id = min(documents, key=lambda item: item["id"])["id"]
+    elif baseline_document_id not in {document["id"] for document in documents}:
+        raise HTTPException(
+            status_code=400,
+            detail="Selected baseline document does not belong to this project.",
+        )
+    analysis_run = create_analysis_run(
+        project_id,
+        baseline_document_id=baseline_document_id,
+    )
     return _run_extraction_and_prepare_review(
         run_id=analysis_run["id"],
         project_id=project_id,
         prompt=prompt,
         documents=documents,
+        baseline_document_id=baseline_document_id,
         current_iteration=1,
         agent_feedback={},
         human_feedback={},
@@ -67,6 +82,7 @@ def submit_human_review(run_id: int, approved: bool, feedback: str) -> dict[str,
         project_id=run["project_id"],
         prompt=run["summary"] or "Human review requested another extraction pass.",
         documents=documents,
+        baseline_document_id=run["baseline_document_id"],
         current_iteration=run["current_iteration"] + 1,
         agent_feedback=dict(run["agent_feedback"]),
         human_feedback=human_feedback,
@@ -79,6 +95,7 @@ def _run_extraction_and_prepare_review(
     project_id: int,
     prompt: str,
     documents: list[dict[str, Any]],
+    baseline_document_id: int | None,
     current_iteration: int,
     agent_feedback: dict[str, list[str]],
     human_feedback: dict[str, list[str]],
@@ -90,6 +107,7 @@ def _run_extraction_and_prepare_review(
         prompt=prompt,
         workspace_dir=run_dir,
         documents=documents,
+        baseline_document_id=baseline_document_id,
         current_iteration=current_iteration,
         agent_feedback_history=agent_feedback,
         human_feedback_history=human_feedback,
@@ -105,6 +123,7 @@ def _run_extraction_and_prepare_review(
             "run_id": run_id,
             "current_iteration": current_iteration,
             "document_count": len(documents),
+            "baseline_document_id": baseline_document_id,
         },
     )
 
@@ -114,6 +133,7 @@ def _run_extraction_and_prepare_review(
         stage="extraction",
         human_review_status="not_requested",
         current_iteration=current_iteration,
+        baseline_document_id=baseline_document_id,
     )
 
     try:
@@ -220,6 +240,7 @@ def _resume_gap_analysis_after_approval(run: dict[str, Any]) -> dict[str, Any]:
         prompt=run["summary"] or "",
         workspace_dir=run_dir,
         documents=documents,
+        baseline_document_id=run["baseline_document_id"],
         current_iteration=run["current_iteration"],
         agent_feedback_history=dict(run["agent_feedback"]),
         human_feedback_history=dict(run["human_feedback"]),
@@ -408,6 +429,7 @@ def _write_run_summary(
         {
             "project_id": context.project_id,
             "run_id": context.run_id,
+            "baseline_document_id": context.baseline_document_id,
             "status": status,
             "stage": stage,
             "human_review_status": human_review_status,

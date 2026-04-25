@@ -77,6 +77,7 @@ class AnalysisRun {
   const AnalysisRun({
     required this.id,
     required this.projectId,
+    required this.baselineDocumentId,
     required this.status,
     required this.pipelineVersion,
     required this.stage,
@@ -100,6 +101,7 @@ class AnalysisRun {
 
   final int id;
   final int projectId;
+  final int? baselineDocumentId;
   final String status;
   final String pipelineVersion;
   final String stage;
@@ -128,6 +130,7 @@ class AnalysisRun {
     return AnalysisRun(
       id: json['id'] as int,
       projectId: json['project_id'] as int,
+      baselineDocumentId: json['baseline_document_id'] as int?,
       status: json['status'] as String? ?? 'pending',
       pipelineVersion: json['pipeline_version'] as String? ?? 'v1',
       stage: json['stage'] as String? ?? 'extraction',

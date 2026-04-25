@@ -21,6 +21,7 @@ class ProjectDetailPage extends StatefulWidget {
 class _ProjectDetailPageState extends State<ProjectDetailPage> {
   ProjectDetail? _projectDetail;
   final TextEditingController _reviewFeedbackController = TextEditingController();
+  int? _selectedBaselineDocumentId;
   bool _isLoading = true;
   bool _isUploading = false;
   bool _isRunningAnalysis = false;
@@ -53,6 +54,9 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
 
       setState(() {
         _projectDetail = detail;
+        _selectedBaselineDocumentId ??= detail.documents.isNotEmpty
+            ? detail.documents.last.id
+            : null;
         _isLoading = false;
       });
     } catch (error) {
@@ -120,7 +124,10 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
     });
 
     try {
-      await widget.api.createAnalysisRun(projectId: widget.projectId);
+      await widget.api.createAnalysisRun(
+        projectId: widget.projectId,
+        baselineDocumentId: _selectedBaselineDocumentId,
+      );
       await _loadProject();
     } catch (error) {
       if (!mounted) {
@@ -177,6 +184,9 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
   @override
   Widget build(BuildContext context) {
     final detail = _projectDetail;
+    final documentById = {
+      for (final document in detail?.documents ?? const <ProjectDocument>[]) document.id: document,
+    };
     final reviewRuns = detail?.analysisRuns
             .where((run) => run.humanReviewStatus == 'awaiting_review')
             .toList() ??
@@ -230,6 +240,32 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                               : const Icon(Icons.play_arrow),
                           label: Text(_isRunningAnalysis ? 'Running analysis...' : 'Run analysis'),
                         ),
+                        if (detail.documents.isNotEmpty)
+                          SizedBox(
+                            width: 320,
+                            child: DropdownButtonFormField<int>(
+                              value: _selectedBaselineDocumentId,
+                              decoration: const InputDecoration(
+                                labelText: 'Baseline PDF',
+                                border: OutlineInputBorder(),
+                              ),
+                              items: detail.documents
+                                  .map(
+                                    (document) => DropdownMenuItem<int>(
+                                      value: document.id,
+                                      child: Text(document.filename, overflow: TextOverflow.ellipsis),
+                                    ),
+                                  )
+                                  .toList(),
+                              onChanged: _isRunningAnalysis
+                                  ? null
+                                  : (value) {
+                                      setState(() {
+                                        _selectedBaselineDocumentId = value;
+                                      });
+                                    },
+                            ),
+                          ),
                         OutlinedButton.icon(
                           onPressed: _loadProject,
                           icon: const Icon(Icons.refresh),
@@ -398,6 +434,12 @@ class _ProjectDetailPageState extends State<ProjectDetailPage> {
                                           Text(
                                             'Stage: ${run.stage} | Human review: ${run.humanReviewStatus} | Iteration: ${run.currentIteration}',
                                           ),
+                                          if (run.baselineDocumentId != null) ...[
+                                            const SizedBox(height: 8),
+                                            Text(
+                                              'Baseline: ${documentById[run.baselineDocumentId]?.filename ?? 'Document ${run.baselineDocumentId}'}',
+                                            ),
+                                          ],
                                           if (run.latestTraceMessage != null) ...[
                                             const SizedBox(height: 8),
                                             Text(

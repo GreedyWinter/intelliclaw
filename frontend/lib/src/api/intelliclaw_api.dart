@@ -87,12 +87,14 @@ class IntelliclawApi {
 
   Future<AnalysisRun> createAnalysisRun({
     required int projectId,
+    int? baselineDocumentId,
     String? prompt,
   }) async {
     final response = await _client.post(
       _uri('/projects/$projectId/analysis-runs'),
       headers: {'Content-Type': 'application/json'},
       body: jsonEncode({
+        'baseline_document_id': baselineDocumentId,
         'prompt': prompt ??
             'Analyze uploaded competitor PDFs for feature gaps and produce a comparison summary plus output artifacts.',
       }),

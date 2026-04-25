@@ -55,6 +55,7 @@ class AnalysisContext:
     prompt: str
     workspace_dir: Path
     documents: list[dict[str, Any]]
+    baseline_document_id: int | None = None
     current_iteration: int = 1
     listed_documents: list[dict[str, Any]] = field(default_factory=list)
     raw_candidates: dict[int, list[ExtractionCandidate]] = field(default_factory=dict)

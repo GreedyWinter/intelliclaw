@@ -22,6 +22,7 @@ def init_db():
                 CREATE TABLE IF NOT EXISTS analysis_runs (
                     id SERIAL PRIMARY KEY,
                     project_id INTEGER NOT NULL REFERENCES projects(id) ON DELETE CASCADE,
+                    baseline_document_id INTEGER,
                     status TEXT NOT NULL DEFAULT 'pending',
                     pipeline_version TEXT NOT NULL DEFAULT 'v1',
                     stage TEXT NOT NULL DEFAULT 'extraction',
@@ -53,6 +54,10 @@ def init_db():
             cur.execute("""
                 ALTER TABLE documents
                 ADD COLUMN IF NOT EXISTS status TEXT NOT NULL DEFAULT 'uploaded';
+            """)
+            cur.execute("""
+                ALTER TABLE analysis_runs
+                ADD COLUMN IF NOT EXISTS baseline_document_id INTEGER;
             """)
             cur.execute("""
                 ALTER TABLE analysis_runs

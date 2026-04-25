@@ -199,6 +199,7 @@ def _build_grammar_evaluation_prompt(
 
 def _build_gap_summary_prompt(
     *,
+    baseline_filename: str,
     filenames: list[str],
     shared_features: list[str],
     partial_features: list[str],
@@ -212,9 +213,10 @@ def _build_gap_summary_prompt(
         unique_lines.extend(f"- {item}" for item in features[:15])
     unique_text = "\n".join(unique_lines) if unique_lines else "None"
     return (
+        f"Baseline document: {baseline_filename}\n"
         f"Documents compared: {', '.join(filenames)}\n"
         "Task: summarize the competitive feature gap analysis across the provided product specification PDFs.\n"
-        "Focus on the common baseline features, the meaningful differentiators, and the actual feature gaps.\n"
+        "Focus on the common baseline features, the meaningful differentiators, and the actual feature gaps relative to the baseline document.\n"
         "Features present in all documents:\n"
         f"{shared_text}\n"
         "Features present in some but not all documents:\n"
@@ -1118,10 +1120,13 @@ class ComparisonAgent(BaseSubAgent):
     def run(self, context: AnalysisContext, **kwargs: Any) -> AgentStepResult:
         merged: pd.DataFrame | None = None
         source_columns: list[str] = []
+        baseline_column: str | None = None
 
         for artifact, csv_path in zip(context.review_artifacts, context.normalized_csvs, strict=False):
             dataframe = pd.read_csv(csv_path)
             source_name = Path(artifact.filename).stem.replace(" ", "_")
+            if artifact.document_id == context.baseline_document_id:
+                baseline_column = source_name
             source_columns.append(source_name)
             reduced = dataframe[["feature_key", "normalized_feature", "capability_label"]].drop_duplicates(
                 subset=["feature_key"]
@@ -1158,6 +1163,30 @@ class ComparisonAgent(BaseSubAgent):
             if column in merged.columns:
                 merged[column] = merged[column].fillna("missing")
 
+        if baseline_column and baseline_column in merged.columns:
+            other_columns = [column for column in source_columns if column != baseline_column]
+            gap_types: list[str] = []
+            presence_counts: list[int] = []
+            for _, row in merged.iterrows():
+                baseline_present = str(row.get(baseline_column, "missing")) == "present"
+                others_present = [
+                    column for column in other_columns if str(row.get(column, "missing")) == "present"
+                ]
+                presence_counts.append((1 if baseline_present else 0) + len(others_present))
+                if baseline_present and len(others_present) == len(other_columns):
+                    gap_types.append("common_capability")
+                elif baseline_present and others_present:
+                    gap_types.append("partial_overlap")
+                elif baseline_present:
+                    gap_types.append("baseline_differentiator")
+                elif others_present:
+                    gap_types.append("baseline_gap")
+                else:
+                    gap_types.append("unclassified")
+
+            merged["gap_type"] = gap_types
+            merged["presence_count"] = presence_counts
+
         output_path = context.workspace_dir / "gap_matrix.csv"
         merged.sort_values("feature_key").to_csv(output_path, index=False)
         context.gap_matrix_path = output_path
@@ -1179,6 +1208,7 @@ class ComparisonAgent(BaseSubAgent):
                 "gap_matrix_path": str(output_path),
                 "feature_count": int(len(merged.index)),
                 "source_columns": source_columns,
+                "baseline_column": baseline_column,
             },
         )
 
@@ -1200,8 +1230,17 @@ class GapSummaryAgent(BaseSubAgent):
             Path(artifact.filename).stem.replace(" ", "_")
             for artifact in context.review_artifacts
         ]
+        baseline_filename = next(
+            (
+                artifact.filename
+                for artifact in context.review_artifacts
+                if artifact.document_id == context.baseline_document_id
+            ),
+            context.review_artifacts[0].filename if context.review_artifacts else "baseline document",
+        )
         shared_features = []
-        partial_features = []
+        baseline_gaps = []
+        baseline_differentiators = []
         unique_features: dict[str, list[str]] = {artifact.filename: [] for artifact in context.review_artifacts}
 
         for _, row in dataframe.iterrows():
@@ -1210,9 +1249,14 @@ class GapSummaryAgent(BaseSubAgent):
             ).strip()
             if not representative:
                 continue
+            gap_type = str(row.get("gap_type", "")).strip()
             present_in = [column for column in source_columns if str(row.get(column, "missing")) == "present"]
-            if len(present_in) == len(source_columns) and present_in:
+            if gap_type == "common_capability":
                 shared_features.append(representative)
+            elif gap_type == "baseline_gap":
+                baseline_gaps.append(representative)
+            elif gap_type == "baseline_differentiator":
+                baseline_differentiators.append(representative)
             elif len(present_in) == 1:
                 filename = next(
                     (
@@ -1223,20 +1267,18 @@ class GapSummaryAgent(BaseSubAgent):
                     present_in[0],
                 )
                 unique_features.setdefault(filename, []).append(representative)
-            elif present_in:
-                partial_features.append(representative)
 
         executive_summary = (
-            f"Compared {len(source_columns)} documents across {len(dataframe.index)} normalized capability groups. "
-            f"Found {len(shared_features)} shared capabilities, {len(partial_features)} partial overlaps, and "
-            f"{sum(len(values) for values in unique_features.values())} document-specific differentiators."
+            f"Compared {len(source_columns)} documents using {baseline_filename} as the baseline across "
+            f"{len(dataframe.index)} normalized capability groups. Found {len(shared_features)} common capabilities, "
+            f"{len(baseline_gaps)} baseline gaps, and {len(baseline_differentiators)} baseline differentiators."
         )
         document_highlights = {
             filename: features[:10]
             for filename, features in unique_features.items()
             if features
         }
-        key_gaps = partial_features[:10]
+        key_gaps = baseline_gaps[:10]
 
         if _GEMINI_SERVICE.enabled:
             try:
@@ -1246,9 +1288,10 @@ class GapSummaryAgent(BaseSubAgent):
                         "comparison matrix. Return strict JSON only."
                     ),
                     prompt=_build_gap_summary_prompt(
+                        baseline_filename=baseline_filename,
                         filenames=[artifact.filename for artifact in context.review_artifacts],
                         shared_features=shared_features,
-                        partial_features=partial_features,
+                        partial_features=baseline_gaps + baseline_differentiators,
                         unique_features=unique_features,
                     ),
                 )
@@ -1323,6 +1366,7 @@ class GapSummaryAgent(BaseSubAgent):
                 "gap_summary_path": str(summary_path),
                 "shared_capability_count": len(shared_features),
                 "key_gap_count": len(key_gaps),
+                "baseline_filename": baseline_filename,
             },
         )
 

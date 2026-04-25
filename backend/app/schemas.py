@@ -6,6 +6,7 @@ class ProjectCreate(BaseModel):
 
 
 class AnalysisRunCreate(BaseModel):
+    baseline_document_id: int | None = None
     prompt: str = Field(
         default=(
             "Analyze uploaded competitor PDFs for feature gaps and produce a "

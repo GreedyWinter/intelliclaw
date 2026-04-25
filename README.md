@@ -8,10 +8,11 @@ The current iteration lets you:
 
 - create research projects
 - upload competitor or reference PDFs
+- choose a baseline PDF for comparison
 - run a multi-agent extraction workflow
 - review reconstructed extraction results before approval
 - generate a normalized gap matrix across approved documents
-- generate a human-readable gap summary highlighting shared capabilities and competitive gaps
+- generate a human-readable gap summary highlighting shared capabilities, baseline differentiators, and baseline gaps
 
 ## Current Architecture
 
@@ -70,14 +71,15 @@ The following agents are still deterministic and local:
 The current flow is:
 
 1. upload PDFs into a project
-2. extract raw text and table evidence from each PDF
-3. rewrite extracted fragments into readable sentences
-4. reconstruct one canonical extraction CSV per PDF
-5. evaluate the extraction with specialist and aggregate evaluators
-6. pause for human review
-7. normalize approved capabilities into comparison keys
-8. build `gap_matrix.csv`
-9. build `gap_summary.md`
+2. choose one PDF as the baseline for comparison
+3. extract raw text and table evidence from each PDF
+4. rewrite extracted fragments into readable sentences
+5. reconstruct one canonical extraction CSV per PDF
+6. evaluate the extraction with specialist and aggregate evaluators
+7. pause for human review
+8. normalize approved capabilities into comparison keys
+9. build `gap_matrix.csv`
+10. build `gap_summary.md`
 
 ## Observability
 
@@ -129,8 +131,8 @@ For a successful run, you should expect:
 
 - one approved canonical extraction CSV per PDF
 - one normalized CSV per approved PDF
-- one `gap_matrix.csv` for the full comparison
-- one `gap_summary.md` describing shared capabilities, key gaps, and differentiators
+- one `gap_matrix.csv` for the baseline-driven comparison
+- one `gap_summary.md` describing common capabilities, baseline gaps, and baseline differentiators
 
 ## Next Likely Improvements
 

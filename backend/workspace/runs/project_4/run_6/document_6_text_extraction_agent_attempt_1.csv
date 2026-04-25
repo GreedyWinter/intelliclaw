@@ -1,0 +1,297 @@
+page,feature,source_kind
+1,Datasheet 4MP 8MP,text
+1,H6XP Dome Camera,text
+1,Flexibility And Compliance At Your Fingertips,text
+1,"CombinemultipleusecasesintoonewiththeAvigilonH6XPDomeCamera,empoweringyoutodomorewith",text
+1,"less.ItincludesanIoThubthatprovidescompatibilitywithZ-Wavedevices,suchasbuttonsandsensors,",text
+1,makingthecameramorepowerfulandreducingownershipcosts.,text
+1,Z-Wavecompatible AI-poweredvideoanalytics,text
+1,ConnectwithZ-Wavecompatibledevicestoenhancecontrol Beproactivewithadvancedanalyticsthatdetectunusual,text
+1,andintegratewithexistingsystems.Expandthecamera's crowdsorpeoplecrawlingnearyourperimeter.Classifymore,text
+1,"intelligencetocovermultipleusecases,allwhilereducing objectswitheventsupport,includingvansandvarioustrucks.",text
+1,costs.,text
+1,Audioanalytics&recording Dynamicprivacymasking,text
+1,"Stayalertwithreal-timenotificationsforgunshots1,breaking Preservepeople’sprivacybytrackingandblurringpeopleand",text
+1,"glass,screamingandmore.Quicklyreviewvideofromthe vehiclesappearingoncamera,withtheflexibilityfor",text
+1,triggeringcameraandchoosetorecordaudioasneeded. authorizedpersonneltoliftitduringinvestigations.,text
+1,Low-lightclarity,text
+1,Secure&Compliant,text
+1,CaptureclearimagesevenintotaldarknesswithourIR,text
+1,Trustthatyourdataiswell-protectedwithadvanced,text
+1,"cameras.Bothcameraformsofferlow-lightvisibility,",text
+1,cybersecurityfeaturessuchasanonboardFIPS140-2level3,text
+1,minimizingmaintenancewhileensuringconsistent,text
+1,compliantTPMandSecureBoot.,text
+1,performanceinallconditions.,text
+1,1Separatelicenserequired.,text
+1,"Formoreinformation,visithttps://www.avigilon.com/security-cameras/h6a-domeor",text
+1,https://www.avigilon.com/security-cameras/h6x-dome.,text
+2,Specifications,text
+2,IMAGEPERFORMANCE 4.0MP 8.0MP(4KULTRAHD),text
+2,ImageSensor 1/1.8”progressivescanCMOS,text
+2,"MaxResolution Primary (16:9)2688x1520,2560x1440,1920x1080 (16:9)3840x2160,3328x1872,3200x1800,3072x1728",text
+2,"(HxV)and (4:3)1984x1488 (4:3)2880x2160,2560x1920",text
+2,AspectRatio,text
+2,"Secondary (16:9)2688x1520*,1920x1080,1280x720,768x (16:9)3840x2160*,2560x1440,1920x1080,1280x720,",text
+2,"432,640x360,512x288 768x432,640x360,512x288",text
+2,"(4:3)1984x1488*,1920x1440,1600x1200,1280 (4:3)2880x2160*,2560x1920,2304x1728,1920x1440,",text
+2,"x960,768x576,640x480,512x384,384x288; 1600x1200,1280x960,768x576,640x480,512x384",text
+2,"Tertiary (16:9)1280x720,768x432,640x360,512x288, (16:9)1920x10801280x720,768x432,640x360,512x",text
+2,"384x216 288,384x216",text
+2,"(4:3)1280x960,800x600,640x480,512x384, (4:3)1920x1440,1600x1200,1280x960,800x600,640",text
+2,"368x264 x480,512x384,384x288,368x264",text
+2,DynamicRange WDROff Upto83dB,text
+2,"WDROn Upto106dB(dualexposure,30fps)Upto136dB Upto130dB(dualexposure,30fps)",text
+2,"(IEC62676) (tripleexposure,20fpsorless)",text
+2,"WDROn Upto120dB(dualexposure,30fps)Upto144dB Upto144dB(dualexposure,20fpsorless)",text
+2,"(tripleexposure,20fpsorless)",text
+2,MaxImageRate (50Hz/60Hz):50fps/60fpsinHighFrameRate (50Hz/60Hz):25fps/30fps,text
+2,"Mode1,otherwise25fps/30fps",text
+2,BandwidthManagement HDSMSmartCodectechnology;Idlescenemode,text
+2,Signal-to-NoiseRatio(SNR) >50d,text
+2,*Onlyavailableathalfframerateoftheprimarystream.,text
+2,1MaxFrameRateof60fpsisonlyachievablewithHighFrameRatemodeenabled.HighFrameRatemodewilldisableanalytics.,text
+2,LENSANDIR 4.4-9.3MM 10.9-29MM,text
+2,ILLUMINATION,text
+2,IRIlluminationMaxDistance2 50m(164ft)fulltele 70m(230ft)fulltele,text
+2,(highpower850nmLEDs) 25m(82ft)fullwide 40m(131ft)fullwide,text
+2,Minimum 4MP WithIR:0luxinmonochromemode WithIR:0luxinmonochromemode,text
+2,Illumination WithoutIR:0.003luxinmonochrome WithoutIR:0.004luxinmonochromemode;0.01luxincolormode,text
+2,mode;0.008luxincolormode,text
+2,8MP WithIR:0luxinmonochromemode WithIR:0luxinmonochromemode,text
+2,WithoutIR:0.006luxinmonochrome WithoutIR:0.008luxinmonochromemode;0.03luxincolormode,text
+2,mode;0.02luxincolormode,text
+2,HorizontalAngle 4MP (16:9)47°–111° (16:9)15°–42°,text
+2,ofViewBasedon (4:3)35°–78° (4:3)11°–31°,text
+2,AspectRatio,text
+2,8MP (16:9)47°–109° (16:9)15°–42°,text
+2,(4:3)35°–78° (4:3)11°–31°,text
+2,VerticalAngleof 4MP&8 (16:9)26°–57° (16:9)9°–23°,text
+2,ViewBasedon MP (4:3)26°–57° (4:3)9°–23°,text
+2,AspectRatio,text
+2,MaxAperture F1.3 F1.7,text
+2,"Control RemoteZoomandFocus,Autofocus,IRCutFilter",text
+2,2IRilluminationpowermaybereducedathigheroperatingtemperatures.,text
+3,IMAGECONTROL,text
+3,"ImageCompressionMethod H.264HDSMSmartCodec,H.265HDSMSmartCodec,MotionJPEG",text
+3,"Streaming Multi-streamH.264,Multi-streamH.265,MotionJPEG",text
+3,MotionDetection Pixelmotion:Selectablesensitivityandthreshold.Classifiedobjectdetection,text
+3,CameraTamperDetection Yes,text
+3,"ElectronicShutterControl Automatic,Manual(1/7.5to1/15000sec)",text
+3,"IrisControl Automatic,Open,Closed,P-iris",text
+3,"Day/NightControl Automatic,Manual,External",text
+3,"FlickerControl 60Hz,50Hz",text
+3,"WhiteBalance Automatic,Manual",text
+3,BacklightCompensation Adjustable,text
+3,"ImageRotation 0°,90°,180°,270°includingCorridorMode",text
+3,PrivacyZones Upto64zones,text
+3,ElectronicImageStabilization Yes,text
+3,NETWORK,text
+3,"Network 100BASE-TXforH6A,1000BASE-TforH6X",text
+3,Cabling CAT5e,text
+3,Connector RJ-45,text
+3,"ONVIF ONVIF®complianceProfileS,ProfileT,ProfileMandProfileG(www.onvif.org)",text
+3,"Security Passwordprotection,HTTPSencryption,digestauthentication,WSauthentication,useraccesslog,802.1xportbased",text
+3,"authentication,FIPS140-2L1(withoptionalcameralicense),onboardFIPS140-2L3certifiedTPM,SecureBoot,Signed",text
+3,andencryptedfirmware,text
+3,"Protocols IPv6,IPv4,HTTP,HTTPS,SOAP,DNS,NTP,RTSP,RTCP,RTP,TCP,UDP,IGMPv3,ICMP,DHCP,Zeroconf,HSTS,QoS,",text
+3,DSCP,text
+3,"StreamingProtocols RTP/UDP,RTP/UDPmulticast,RTP/RTSP/TCP,RTP/RTSP/HTTP/TCP,RTP/RTSP/HTTPS/TCP,HTTP,SRTP",text
+3,"DeviceManagement SNMPv2c,SNMPv3",text
+3,Protocols,text
+3,PERIPHERALS,text
+3,USBPort USB2.0,text
+3,OnboardStorage3 TwomicroSD/microSDHC/microSDXCslots–videospeedclasscardrequired.ClassV10orbetterrecommended.,text
+3,3Testedmaximumcapacityis1.5TB.,text
+3,AUXILIARYI/O,text
+3,"AudioCompressionMethod G.711PCM8kHz,Opus",text
+3,AudioInput/Output Linelevelinputandoutput,text
+3,"ExternalI/OTerminals 1xRelayIn,1xRelayOut,1x12VDCoutat50mA",text
+3,"Microphone Built-inmicrophoneforaudioanalytics,forcertainvariants,withphysicaldisableswitch",text
+4,MECHANICAL SURFACEMOUNT IN-CEILINGMOUNT PENDANTMOUNT,text
+4,"Dimensions(DxH) 182mmx132mm;7.16""x5.19"" 219mmx198mm;8.62""x7.79"" 182mmx190mm;7.16""x7.48""",text
+4,"AccessoryOnlyDimensions N/A 219mmx115mm;8.62""x4.52"" 155mmx65mm;6.1""x2.55""",text
+4,(DxH),text
+4,Weight Indoor 1.21kg;2.66lbs 1.83kg;4.03lbs 1.63kg;3.59lbs,text
+4,Dome,text
+4,Outdoor 1.59kg;3.5lbs 1.99kg;4.38lbs 2.01kg;4.43lbs,text
+4,Dome,text
+4,DomeBubble Polycarbonate Polycarbonate Polycarbonate,text
+4,Body Polycarbonateandaluminum Polycarbonateandaluminum Polycarbonateandaluminum,text
+4,Housing Surfacemount Recessedmount Pendantmount,text
+4,Finish Indoor Plasticinjectionmoldgrey(Pantone427C) Plasticinjectionmoldgrey Powdercoatgrey&plastic,text
+4,Dome (Pantone427C)&Powdercoat injectionmoldgrey(Pantone,text
+4,black 427C),text
+4,Outdoor Powdercoatgrey(Pantone427C) Plasticinjectionmoldgrey Powdercoatgrey(Pantone427C),text
+4,Dome (Pantone427C)&Powdercoat,text
+4,black,text
+4,"AdjustmentRange Pan360°,Azimuth349°,Tilt92°",text
+4,ELECTRICAL,text
+4,PowerConsumption 25W(18WwithnoIRorIRdisabled),text
+4,PowerSource PoE IEEE802.3afClass3,text
+4,PoE+ IEEE802.3atClass4,text
+4,IR Illumination PoE IRilluminatorwillturnoffifthetemperatureis65°C(149°F)orhigher.Theilluminatorwilloperateat50%powerand,text
+4,Behavior 25%powerifbelow-25°C(-13°F),text
+4,PoE+ IRilluminatorwillturnoffifthetemperatureis65°C(149°F)orhigher.Theilluminatorwilloperateat50%powerifthe,text
+4,temperatureisbetween55°C(131°F)and65°C(149°F)and50%powerifbelow-25°C(-13°F),text
+4,ExternalPower 12-24VDC+/-10%,text
+4,RTCBackupBattery 3Vmanganeselithium,text
+4,"Memory 4GBRAM,4GBFlash",text
+4,RedundantPower SeamlessfailoverbetweenPoEandAuxandbackwithoutinterruptincameraoperation(forH6Xonly),text
+4,ENVIRONMENTAL INDOORDOME OUTDOORDOME,text
+4,Operating PoE -10°Cto+55°C(-14°Fto -30°Cto+65°C(-22°Fto149°F)withIEEE802.3afClass3(13WPoE),text
+4,Temperature 131°F),text
+4,With -10°Cto+55°C(-14°Fto -50°Cto+65°C(-58°Fto149°F)withexternalpowerorIEEE802.3atClass4(25.5W,text
+4,External 131°F) PoE+),text
+4,Poweror,text
+4,PoE+,text
+4,Startup PoE -10°Cto+55°C(-14°Fto -30°Cto+65°C(-22°Fto149°F)withIEEE802.3afClass3(13WPoE),text
+4,Temperature 131°F),text
+4,With -10°Cto+55°C(-14°Fto -40°Cto+65°C(-40°Fto149°F)withexternalpowerorIEEE802.3atClass4(25.5W,text
+4,External 131°F) PoE+),text
+4,Poweror,text
+4,PoE+,text
+4,AbsoluteMaximum 74°C(165°F)perNEMATS2(Temp.)para2.2.7.2-2.2.7.7,text
+4,Temperature,text
+5,ENVIRONMENTAL INDOORDOME OUTDOORDOME,text
+5,StorageTemperature -10°Cto+70°C(14°Fto158°F),text
+5,Humidity 0-95%non-condensing,text
+5,CERTIFICATIONS,text
+5,"Certifications/Approvals UL,cUL,FCC,IC,Z-Wave",text
+5,"SafetyStandards UL62368-1,CSA62368-1,IEC/EN62368-1,IEC62471,UL2043Plenum4",text
+5,"Environmental IEC60529IP66,IP67,IP68(1.8mdepthfor2hours),NEMA4X,IEC60068-2Shock&Vibration,NEMATS2Sec2.2.7-",text
+5,"Standards/Ratings 2.2.9,IK11",text
+5,"ElectromagneticEmissions FCCPart15SubpartBClassB,ICES-003ClassB",text
+5,Standards,text
+5,ElectromagneticImmunity N/A,text
+5,Standards,text
+5,"Radio FCCPart15SubpartC,FCCKDB447498,RSS-210,RSS-102",text
+5,Warranty Limited5YearWarranty(avigilon.com/warranty),text
+5,4Onlyappliestothein-ceilingcameramodels.,text
+5,Analytics Specifications,text
+5,SUPPORTEDANALYTICSEVENTS1,text
+5,ObjectsinArea Theeventistriggeredwhentheselectedobjecttypemovesintotheregionofinterest.Thiseventcanbeusedtocount,text
+5,objects.,text
+5,ObjectLoitering Theeventistriggeredwhentheselectedobjecttypemovesintotheregionofinterestandthenstaysforanextended,text
+5,amountoftime.,text
+5,ObjectsCrossingBeam Theeventistriggeredwhenthespecifiednumberofobjectshavecrossedthedirectionalbeamthatisconfiguredover,text
+5,thecamera’sfieldofview.Thebeamcanbeunidirectionalorbidirectional.,text
+5,ObjectAppearsorEnters Theeventistriggeredbyeachobjectthatenterstheregionofinterest.,text
+5,Area,text
+5,ObjectNotPresentinArea Theeventistriggeredwhennoobjectsarepresentintheregionofinterest.,text
+5,ObjectsEnterArea Theeventistriggeredwhenthespecifiednumberofobjectshaveenteredtheregionofinterest.,text
+5,ObjectsLeaveArea Theeventistriggeredwhenthespecifiednumberofobjectshavelefttheregionofinterest.,text
+5,ObjectStopsinArea Theeventistriggeredwhenanobjectmovesintoaregionofinterestandthenstopsmovingforthespecifiedthreshold,text
+5,time.,text
+5,DirectionViolated Theeventistriggeredwhenanobjectmovesintheprohibiteddirectionoftravel.,text
+5,"SmartMotionRule Eventsaresentforperson(includingcrawling)andvehiclepresent,againstdefaultunchangeableparameters",text
+5,TamperDetection Theeventistriggeredwhenthesceneunexpectedlychanges.,text
+5,CrowdSize Thiseventistriggeredwhenthenumberofpeopleisexceededoveraconfigurableduration.,text
+5,UnusualCrowdGrowth Thiseventistriggeredwhenacrowdsizegrowsunexpectedly.,text
+5,UnusualCrowdSize Thiseventistriggeredwhenanunusualcrowdsizeisdetected.,text
+5,"1Analyticscapabilities,includingdetectionrange,mayvarybycameraline.PleaseconsulttheAvigilonSelf-LearningVideoAnalyticsDesignGuidefor",text
+5,details.,text
+6,SUPPORTEDCLASSIFIEDOBJECTTYPES,text
+6,"ObjectTypesinOutdoor Vehicle,sub-types:Car,PickupTruck,LargeTruck,Van,Bicycle,Motorcycle,Bus",text
+6,Mode Person,text
+6,ObjectTypesinIndoor Person,text
+6,Mode,text
+6,TEACHBYEXAMPLE,text
+6,"TeachByExample Yes,whenusedwithAvigilonControlCenter™orAvigilonUnityVideo",text
+6,SUPPORTEDAUDIOANALYTICSEVENTS,text
+6,Scream Upto15meters,text
+6,GlassBreak Upto15meters,text
+6,CarAlarm Upto30meters,text
+6,SmokeAlarm Upto15meters,text
+6,DogBark Upto15meters,text
+6,TireScreech2 Upto15meters,text
+6,LoudNoise Upto40meters,text
+6,UltrasonicPanicAlarm3 Upto40meters,text
+6,2Thedetectionrangeislimitedtoupto8metersinloudenvironments.,text
+6,3Thedetectionrangeisinfluencedbythequalityandpowerofthedeviceusedtocreatethepanicalarm.,text
+6,AVIGILONSOFTWARESUPPORTEDFEATURES,text
+6,AvigilonUnityVideo8.4or AlladvancedZ-Wavecompatibilityfeatures.,text
+6,higher,text
+6,AvigilonUnityVideo8.0or Allsupportedanalyticeventswithpeopleandvehiclesandallvehiclesub-typesasclassifiedobjects.Appearance,text
+6,higher searchwhenpairedwithappropriateserverhardware.UnusualActivityDetection.H.265supported.Audioanalytics.,text
+6,Crowdanalytics.Classifiedobjectprivacymasking.,text
+6,ACCVersion7.2orhigher Allsupportedanalyticeventswithpeopleandvehiclesasclassifiedobjects.Appearancesearchwhenpairedwith,text
+6,appropriateserverhardware.UnusualActivityDetection.H.265supported.,text
+7,Outline Dimensions,text
+7,Dome Camera with Surface Mount,text
+7,(H6XPDomecamera+providedsurfacemount),text
+7,[X.XX] INCHES,text
+7,X.X MM,text
+7,Dome Camera with In-Ceiling Mount,text
+7,(H6XPDomecamera+CLADP-1001),text
+8,Dome Camera WITH NPT Adapter,text
+8,(H6XPDomecamera+H6A-MT-NPTA1),text
+8,Dome Camera WITH NPT Adapter and Pendant wall mount,text
+8,(H6XPDomecamera+H6A-MT-NPTA1+WLMT-1021),text
+9,Z-Wave Sensors,text
+9,Z-WaveDoorContactSensor(SM810),text
+9,Z-WaveOutdoorMotionSensor(SP816),text
+10,Z-WaveIndoorMotionSensor(SP817),text
+10,Z-WavePanicButton(AC136),text
+11,Ordering Information,text
+11,MOUNTINGSCENARIO ORDERINGINFORMATION,text
+11,PendantWallMount Orderoneof:,text
+11,l Indoororoutdoorsurfacemount,text
+11,camera,text
+11,l H6A-MT-NPTA1,text
+11,l WLMT-1021,text
+11,Optional:,text
+11,l PLMT-1001(Polemountadapter),text
+11,l CRNMT-1001(Cornermountadapter),text
+11,PendantNPTMount Orderoneof:,text
+11,l Indoororoutdoorsurfacemount,text
+11,camera,text
+11,l H6A-MT-NPTA1,text
+11,SurfaceMount Orderoneof:,text
+11,l Indoororoutdoorsurfacemount,text
+11,camera,text
+11,Optional:,text
+11,l DMSLD-1001(weathershield),text
+11,In-CeilingMount Orderoneof:,text
+11,l Indoororoutdoorin-ceilingmount,text
+11,camera,text
+11,l CLADP-1001,text
+11,Optional:,text
+11,l CLPNL-1011(metalceilingpanel),text
+12,Dome Camera,text
+12,MODEL MP WDR LIGHTCATCHER LENS IR ANALYTICS HDSM MICROPHONE,text
+12,TECHNOLOGY SMARTCODEC,text
+12,4.4-9.3,text
+12,4.0C-H6XP-DO1-IR-NA 4.0 ✓ ✓ ✓ ✓ ✓ ✓,text
+12,10.9-29,text
+12,4.0C-H6XP-DO2-IR-NA 4.0 ✓ ✓ ✓ ✓ ✓ ✓,text
+12,4.4-9.3,text
+12,8.0C-H6XP-DO1-IR-NA 8.0 ✓ ✓ ✓ ✓ ✓ ✓,text
+12,10.9-29,text
+12,8.0C-H6XP-DO2-IR-NA 8.0 ✓ ✓ ✓ ✓ ✓ ✓,text
+12,Z-Wave Sensors,text
+12,SM810-NA-AVO Z-Wavedoorcontactsensor,text
+12,SP816-NA-AVO Z-Waveoutdoormotionsensor,text
+12,SP817-NA-AVO Z-Waveindoormotionsensor,text
+12,AC136-NA-AVO Z-Wavepanicbutton,text
+12,Dome Camera Accessories,text
+12,H6A-MT-NPTA1 PendantNPTadapter,text
+12,"WLMT-1021 Pendantwallarm,1.5""NPTfemale,20cm(7.8"")long",text
+12,CLADP-1001 In-Ceilingadapter,text
+12,CLPNL-1011 Metalceilingpanelforsuspendedceilinginstallations,text
+12,DMSLD-1001 Weathershieldfordomecameras,text
+12,DMBBL-1001 Replacementcleardomebubble,text
+12,DMBBL-1011 ReplacementIRdomebubble,text
+12,"DMSBL-1001 Optionalsmokeddomebubble,notcompatiblewiththeIRcameras",text
+12,"GROM-1001 Camerasealinggrommet,packof10",text
+12,"GROM-1011 Pipesealinggrommet,packof10",text
+12,PLMT-1001 Polemountadapter,text
+12,CRNMT-1001 Cornermountadapter,text
+12,CAM-FIPS CameralicensetoenableFIPScryptographicmodule.,text
+13,Support,text
+13,"Forproductsupport,visit:avigilon.comorsales@avigilon.com",text
+13,"To learn more, visit: avigilon.com",text
+13,"MotorolaSolutions,Inc.500WestMonroeStreet,Chicago,IL60661U.S.A.motorolasolutions.com",text
+13,"©2025,AvigilonCorporation.Allrightsreserved.MOTOROLA,MOTO,MOTOROLASOLUTIONSandtheStylizedMLogoaretrademarksorregisteredtrademarksof",text
+13,"MotorolaTrademarkHoldings,LLCandareusedunderlicense.Allothertrademarksarethepropertyoftheirrespectiveowners.",text
+13,20250908-enRev2,text
